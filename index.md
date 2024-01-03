@@ -16,11 +16,11 @@ doing better on job interview questions.
 
 **Lecture**
 
-Mondays and Wednesdays 1:15pm-2:30pm, Ballantine Hall (BH), Room 344.
+Section 1724, Tuesday and Thursdays 11:30am-12:45pm, Luddy Hall (IF), Room 1106.
 
 **Lab**
 
-Fridays 10:20am-12:15pm, Ballantine Hall (BH) 118.
+See iGPS for your lab's time location.
 
 Expect at least one quiz per month during lab time.
 * 15 minutes, at the beginning of a lab session
@@ -37,15 +37,17 @@ Expect at least one quiz per month during lab time.
 
 **Slack (communicating with instructors and other students)**
 
-[Workspace](https://datastructure-pjx3076.slack.com)
- ([signup](https://join.slack.com/t/datastructure-pjx3076/shared_invite/zt-20ibezcp3-U4q6ACCPxUux~OLxOPUYWA))
+[Workspace](https://datastructure-mq73289.slack.com)
+ ([signup](https://join.slack.com/t/slack-lnu5295/shared_invite/zt-29wtfkgte-lwQGy7F5pvioqQpBAl1t0Q))
 
 **Schedule**
 
 Day     | Lecture Topic                         | Reading Due  | Assignments and Due Dates | Link
-Jan. 9 | [Introduction](./lectures/Aug-21.md)              |              | |
-Jan. 11 | [Arrays, Rotation, Testing](./lectures/Aug-23.md) | Ch. 1        | |
+Jan. 9 | [Introduction](./lectures/introduction.md)              |              | |
+Jan. 11 | [Arrays, Rotation, Testing](./lectures/array-rotation.md) | Ch. 1        | |
 Jan. 11 or 12 |                                                   |              | [Lab 1: Array Search Testing](./lab1) | [submit](https://autograder.luddy.indiana.edu)
+March 10 - 17 | **Spring Break**
+April 30 | **Final Exam** 11:30am
 
 **Resources**
 
