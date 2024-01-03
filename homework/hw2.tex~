@@ -1,0 +1,64 @@
+\question[6] Prove that the following \texttt{insert} function
+produces a list whose length is one greater than the length of the
+input \texttt{list}. In other words, prove that
+\begin{lstlisting}
+  length(insert(x, list)) == 1 + length(list)
+\end{lstlisting}
+
+\noindent Do the proof by induction on the \texttt{length} of the
+\texttt{list}. Indicate where you use the induction hypothesis.
+
+\begin{lstlisting}
+public static Node<Integer> insert(int x, Node<Integer> list) {
+    if (list == null) {
+        return new Node<Integer>(x, null);
+    } else if (x <= list.data) {
+        return new Node<Integer>(x, list);
+    } else {
+        return new Node<Integer>(list.data, insert(x, list.next));
+    }
+}
+\end{lstlisting}
+The \texttt{length} of a list is defined as follows
+\begin{lstlisting}
+public static <T> int length(Node<T> node) {
+    if (node == null) {
+        return 0;
+    } else {
+        return 1 + length(node.next);
+    }
+}
+\end{lstlisting}
+
+\begin{solution}
+  \scriptsize
+  
+\textbf{Base Case:} \textbf{(2 points)}
+We have \texttt{length(list) == 0} and therefore \texttt{list == null}.
+\begin{lstlisting}
+length(insert(x, null)) == length(new Node(x, null)) == 1 + length(null)
+\end{lstlisting}
+
+\textbf{Induction Step:}
+Suppose we have a list \texttt{M} of length $k + 1$.
+From that we know two things: \texttt{M != null}
+and the length of \texttt{M.next} is $k$.
+We have two cases to consider regarding whether \texttt{x <= M.data}.
+
+Suppose \texttt{x <= M.data}. \textbf{(2 points)}
+\begin{lstlisting}
+length(insert(x, M)) == length(new Node(x, M)) == 1 + length(M)
+\end{lstlisting}
+
+
+Next, suppose that \texttt{x > M.data}.  \textbf{(2 points)}
+\begin{lstlisting}
+length(insert(x, M))
+== length(new Node(M.data, insert(x, M.next)))
+== 1 + length(insert(x, M.next))
+== 1 + (1 + length(M.next))           // by the induction hypothesis
+== 1 + length(M)
+\end{lstlisting}
+
+  
+\end{solution}
