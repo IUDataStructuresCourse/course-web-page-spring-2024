@@ -23,7 +23,7 @@ Section 1724, Tuesdays and Thursdays 11:30am-12:45pm, Luddy Hall (IF), Room 1106
 
 **Lab**
 
-See iGPS for your lab's time location.
+See iGPS for your lab's time and location.
 
 Expect at least one quiz per month during lab time.
 * 15 minutes, at the beginning of a lab session
