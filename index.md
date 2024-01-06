@@ -29,10 +29,30 @@ Expect at least one quiz per month during lab time.
 * 15 minutes, at the beginning of a lab session
 * Scope is everything turned in prior to the quiz, including homework and lab assignments
 
-**Instructors and Office Hours**
+**Instructors**
 
 * Jeremy Siek (jsiek), office hours TBD
+* Funda Ergun, office hours TBD
+
+**Teaching Assistants**
+
+Office hours with TAs are in Luddy Hall Room 0121.
+
 * Tianyu Chen (chen512), office hours TBD
+* Chenchao Ding (cd17), office hours TBD
+* Ganesh Arkanath (napoom), office hours TBD
+* Nishad Gupta (guptanis), office hours TBD
+* Meet Palod (mpalod), office hours TBD
+* Aditya Ramachandra (ar83), office hours TBD
+* Shreyas Sawant (shresawa), office hours TBD
+* Tirth Bhaveshbhai Shah (tbshah), office hours TBD
+* Anuj Mahajan (anujmaha), office hours TBD
+* Luke Nargang (lnargang), office hours TBD
+* Aaron Olson (aarolson), office hours TBD
+* Calvin Josenhans (cjosenha), office hours TBD
+* Matthew Hammans (mmhamman), office hours TBD
+* Kyle Li (kyleli), office hours TBD
+
 
 **Textbook**
 
