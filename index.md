@@ -16,7 +16,9 @@ doing better on job interview questions.
 
 **Lecture**
 
-Section 1724, Tuesday and Thursdays 11:30am-12:45pm, Luddy Hall (IF), Room 1106.
+Section 14377, Tuesdays and Thursdays 9:45am-11:00am, Wendell W. Wright Education Building (ED), Room 1120.
+Section 1724, Tuesdays and Thursdays 11:30am-12:45pm, Luddy Hall (IF), Room 1106.
+
 
 **Lab**
 
@@ -42,10 +44,11 @@ Expect at least one quiz per month during lab time.
 
 **Schedule**
 
-Day     | Lecture Topic                         | Reading Due  | Assignments and Due Dates | Link
-Jan. 9 | [Introduction](./lectures/introduction.md)              |              | |
-Jan. 11 | [Arrays, Rotation, Testing](./lectures/array-rotation.md) | Ch. 1        | |
-Jan. 11 or 12 |                                                   |              | [Lab 1: Array Search Testing](./lab1) | [submit](https://autograder.luddy.indiana.edu)
+Day     | Lecture Topic                                             | Reading Due  | Assignments and Due Dates | Link
+Jan. 9 | [Introduction](./lectures/introduction.md)                 |              |     |
+Jan. 11 | [Arrays, Rotation, Testing](./lectures/array-rotation.md) | Ch. 1        |     |
+Jan. 11 or 12 |                                                     |              | No lab
+Jan. 18 or 19 |                                                     |              | [Lab 1: Array Search Testing](./lab1) | [submit](https://autograder.luddy.indiana.edu)
 March 10 - 17 | **Spring Break**
 April 30 | **Final Exam** 11:30am
 
