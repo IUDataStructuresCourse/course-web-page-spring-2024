@@ -69,7 +69,7 @@ Day     | Lecture Topic                                             | Reading Du
 Jan. 9 | [Introduction](./lectures/introduction.md)                 |              |     |
 Jan. 11 | [Arrays, Rotation, Testing](./lectures/array-rotation.md) | Ch. 1        |     |
 Jan. 11 or 12 |                                                     |              | No lab
-Jan. 18 or 19 |                                                     |              | [Lab 1: Array Search Testing](./lab1) | [submit](https://autograder.luddy.indiana.edu)
+Jan. 18 or 19 |                                                     |              | Lab 1: Array Search and Testing | 
 March 10 - 17 | **Spring Break**
 April 30 | **Final Exam** 11:30am
 
