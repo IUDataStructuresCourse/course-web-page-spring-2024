@@ -16,14 +16,18 @@ doing better on job interview questions.
 
 **Lecture**
 
-Section 14377, Tuesdays and Thursdays 9:45am-11:00am, Wendell W. Wright Education Building (ED), Room 1120.
-
-Section 1724, Tuesdays and Thursdays 11:30am-12:45pm, Luddy Hall (IF), Room 1106.
+* Section 14377, Tuesdays and Thursdays 9:45am-11:00am, Wendell W. Wright Education Building (ED), Room 1120.
+* Section 1724, Tuesdays and Thursdays 11:30am-12:45pm, Luddy Hall (IF), Room 1106.
 
 
 **Lab**
 
-See iGPS for your lab's time and location.
+* Section 6635, Thursday 5:30pm-7:25pm
+* Section 6399, Friday 8:45am-10:40am, IF 1019
+* Section 6402, Friday 11:15am-1:10pm, GR 102A
+* Section 36105, Friday 11:30am-1:25pm, LI 402
+* Section 6637, Friday 12:45-2:40pm, I E150
+* Section 7896, Friday 1:45pm-3:40pm, BH 118
 
 Expect at least one quiz per month during lab time.
 * 15 minutes, at the beginning of a lab session
@@ -83,7 +87,7 @@ April 30 | **Final Exam** 11:30am
 
 * Final Exam with solutions from [2021](./final-2021.pdf) and [2022](./final-2022.pdf).
 
-* [Autograder](https://autograder.luddy.indiana.edu/web/course/59) for submitting coding assignments.
+* [Autograder](https://autograder.luddy.indiana.edu/web/course/77) for submitting coding assignments.
 
 * Code Editor and Debugger:
   [IntelliJ IDEA](https://www.jetbrains.com/idea/download) (Community Edition)
