@@ -82,7 +82,7 @@ public class Rotation {
 }
 ```
 
-Next we create unit tests for `rotate_ripple`. Right click on the root
+Our next task is to create unit tests for `rotate_ripple`. Right click on the root
 directory and select "New -> Directory". Name the new directory `test`.
 ![](assets/images/lab1/new_test_dir.png)
 
@@ -90,7 +90,7 @@ Right click on `test` in the file structure. Go to the last item in the pop-up m
 and select "Mark Directory As -> Test **Sources** Root". The `test` directory will be
 highlighted in green.
 
-Add a new Java class in `test` called `RotationTest`. Create `rotate_save_n_shift`
+Create a new Java class file in `test` called `RotationTest`. Create `rotate_save_n_shift`
 as a private static member function of `RotationTest`. We use `rotate_save_n_shift`
 as our [test oracle](https://en.wikipedia.org/wiki/Test_oracle).
 
@@ -106,6 +106,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 ```
 
+Careful readers may observe that some of the symbols are marked in red.
 Move cursor to `junit`, where IntelliJ tells me that it cannot resolve the symbol.
 Click on "Add 'JUnit' to classpath" and then "OK". Perform the same action on `jupiter`.
 
