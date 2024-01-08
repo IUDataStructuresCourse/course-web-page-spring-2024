@@ -2,7 +2,9 @@
 
 ## Overview
 
-Welcome to C343 "Data Structures"! In this lab, we will first go
+Welcome to CSCI-C343 "Data Structures"!
+
+In this lab, we will first go
 through software installation and review basic testing and
 debugging skills. You will then be asked to implement three array
 search algorithms. Finally, you are supposed to create test
@@ -32,7 +34,7 @@ cases to Autograder.
     to choose the root directory of that project.
     ![](assets/images/lab1/welcome.png)
   - In the pop-up window, enter the title of your lab assignment as "Name".
-    For lab 1, it should be `Search`.
+    For Lab 1, it should be `Search`.
   - Choose "Location", which is whatever directory that you prefer to contain
     all lab assignments. (Optional: ) check "Create Git repository" if you would
     like to use version control.
@@ -336,11 +338,12 @@ In Task 1 we have implemented three search functions. How do we know that
 those functions do what their specifications describe?
 In Task 2, you are supposed to create test cases for those three implementations.
 You have two options for test oracles: 1) using the Java standard library or
-2) implementing your own.
+2) implementing your own. You are only responsible for testing _correctness_,
+not time complexity.
 
 Think about the following questions before you start:
 
-1. What does it mean for each search algorithm to be correct?
+1. What does it mean for each search algorithm to be correct? Hint: their specifications.
 2. Can some of the three algorithms share the same test oracle? Why?
 3. What are possible _corner cases_? Hint: arrays with 0 or 1 element, arrays
    with even or odd lengths, start and end positions being equal, ...
@@ -401,11 +404,11 @@ provide instantaneous feedback to your lab submissions. Your grades will be
 decided by the number of test cases that your _best_ submission passes.
 Multiple attempts are allowed.
 
-- Submit `Search.java` to TBA.
+- Submit `Search.java` to [link](https://autograder.luddy.indiana.edu/web/project/927)
   + Autograder will run your submission on 8 test cases that thoroughly
     examine the correctness of all three search functions.
 
-- Submit `StudentTest.java` to TBA.
+- Submit `StudentTest.java` to [link](https://autograder.luddy.indiana.edu/web/project/941)
   + Autograder will run your submission on 8 problematic `Search` implementations.
     It also runs one correct implementation to rule out false positive.
     Your test cases are expected to throw exceptions on all implementations
