@@ -373,7 +373,7 @@ Inside each test function, `test_find_foo()` or `test_find_bar()`, use JUnit's
 [assertions](https://junit.org/junit5/docs/5.0.1/api/org/junit/jupiter/api/Assertions.html)
 such as `assertEquals` to check for the correct answer.
 
-**[Example 4]** Suppose you are testing
+**[Example 5]** Suppose we are testing
 `Search.find_first_true(A, begin, end)` and the expected result is `2`:
 
 ```java
