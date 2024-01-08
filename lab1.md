@@ -28,15 +28,15 @@ cases to Autograder.
   - In the welcome window, click "New Project".
     In general, we create a new project for each lab. Sometimes a project code
     skeleton is provided to you; in that case, you can use the "Open" button
-    to choose the root directory of that project.
+    to choose the root directory of that project:
     ![](assets/images/lab1/welcome.png)
   - In the pop-up window, enter the title of your lab assignment as "Name".
-    For lab 1, it should be `ArraySearch`.
+    For lab 1, it should be `Search`.
   - Choose "Location", which is whatever directory that you prefer to contain
     all lab assignments. (Optional: ) check "Create Git repository" if you would
     like to use version control.
   - Language: "Java"; build systems: "IntelliJ"
-  - Install JDK. Click "Add SDK -> Download JDK" in the "JDK" drop-down menu
+  - Install JDK. Click "Add SDK -> Download JDK" in the "JDK" drop-down menu:
     ![](assets/images/lab1/install_jdk.png)
   - In the pop-up window choose "Vendor" : "Oracle OpenJDK". "Version" should
     be filled in automatically (make sure version ≥15). "Location" can be left as default.
@@ -52,13 +52,14 @@ In this section I will show you how to:
 - Build and run the code
 - Debug and test
 
-You can download a copy of this demo [here](assets/RotationTest.tar.gz).
+<!-- You can download a copy of this demo [here](assets/RotationTest.tar.gz). -->
 
-We first create a IntelliJ project "RotationTest". After creation, the file structure looks like:
+Suppose our tasks are to implement and test the "ripple" approach of array rotation.
+We first create an IntelliJ project called "Rotation". The file structure looks like:
 ![](assets/images/lab1/mint_proj.png)
 
-Suppose we are to implement the "ripple" approach of array rotation. We right click on the
-`src` directory in the file structure and choose **"Java Class"**.
+To create the Java class file where our implementation code resides, we right click 
+on the `src` directory and choose **"Java Class"**:
 ![](assets/images/lab1/new_java_class.png)
 
 We enter "Rotation" as its name. IntelliJ creates a new file `src/Rotation.java` whose
