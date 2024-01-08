@@ -52,7 +52,7 @@ In this section I will show you how to:
 - Build and run the code
 - Debug and test
 
-<!-- You can download a copy of this demo [here](assets/RotationTest.tar.gz). -->
+The code for this demo is available [here](https://github.com/IUDataStructuresCourse/lab-demo-rotation).
 
 Suppose our tasks are to implement and test the "ripple" approach of array rotation.
 We first create an IntelliJ project called "Rotation". The file structure looks like:
