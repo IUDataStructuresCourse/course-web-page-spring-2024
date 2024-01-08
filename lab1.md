@@ -200,7 +200,7 @@ Alternatively, we can single-step through the program by pressing the down-arrow
 
 ## Task 1: Implementing Array Search
 
-### Overview and Submission
+### Task Overview
 
 In the first task, we are going to implement three search algorithms as
 methods of a Java class called `Search`. Each of the algorithms finds
@@ -209,21 +209,22 @@ an element in an array that meets certain criteria.
 Create file `src/Search.java` which contains a public class called `Search`.
 Implement each algorithm as a public function of the `Search` class.
 
-When Task 1 is complete, submit your `Search.java` file to Autograder.
-
 ### Problem 1: Linear Search on an Array of Booleans
 
-Implement the search function `find_first_true` that finds
-the position of the first `true` in array `A` of boolean values,
-that is, find the smallest index `i` such that `A[i]` is `true`.
-The search is restricted to the subarray within `A` that starts at the `begin`
-index and finishes one element before the `end` index
-(half-open interval `[begin,end)`).
-If there are no `true` elements in the subarray, then `find_first_true`
-returns the `end` position of the subarray.
-The caller of `find_first_true` always provides a valid half-open
-range: `begin <= end`, `0 <= begin`, `begin <= A.length`,
+The most basic but surprisingly useful search function involves an
+array `A` of boolean values (`true` or `false`).
+
+**Specification:** The `find_first_true(A, begin, end)` function
+returns the position of the first `true` in array `A`, that is, find
+the smallest index `i` such that `A[i]` is `true`.  The search is
+restricted to the subarray within `A` that starts at the `begin` index
+and finishes one element before the `end` index.  (This is called a
+half-open interval.) If there are no `true` elements in the subarray,
+then `find_first_true` returns the `end` position of the subarray. The
+caller of `find_first_true` is required to provide a valid half-open
+range, which means `begin <= end`, `0 <= begin`, `begin <= A.length`,
 `0 <= end`, and `end <= A.length`.
+
 _The time it takes for your algorithm to run should be proportional to the
 length of the array `A`._
 
@@ -253,16 +254,20 @@ implementation:
 
 ```java
 public static int find_first_true(boolean[] A, int begin, int end) {
-    // ...
+    // your code goes here
 }
 ```
 
 ### Problem 2: Linear Search on an Array of Integers
 
-⚠️ **Use `find_first_true`** to implement the function `find_first_equal`
-that searches on an array of _integers_, with the goal of finding the
-position of the first element that is equal to the `x` parameter.
+Another search function involves an array of integers.
+
+**Specification** The `find_first_equal(A, x)` function
+searches on an array of _integers_ `A`, with the goal of returning
+the position of the first element in `A` that is equal to the `x` argument.
 If there are no elements equal to `x`, the length of the array is returned.
+
+⚠️ **Use `find_first_true`** to implement the function `find_first_equal`.
 Again, the time it takes for your algorithm to run should be proportional
 to the length of `A`.
 
@@ -281,25 +286,24 @@ Implement the following method in the `Search` class:
 
 ``` java
 public static int find_first_equal(int[] A, int x) {
-    // ...
+    // your code goes here
 }
 ```
 
 ### Problem 3: Binary Search on an Array of Booleans
 
-Similar to Problem 1, we search on an array of booleans and look for the position
-of the first `true`. This time we suppose that all of the `false` elements in the array
-come before all of the `true` elements (sorted).
+We revisit searching an array of Booleans, but suppose that all of the
+`false` elements in the array come before all of the `true` elements (sorted) this time.
 
-Implement `find_first_true_sorted(A, begin, end)`, which returns
+**Specification:** The `find_first_true_sorted(A, begin, end)` returns
 the position of the first `true` in array `A`, that is, it finds the
 smallest index `i` greater or equal to `begin` and less than `end`
 such that `A[i]` is `true`.  If there is no `true` within the
-half-open range `[begin,end)`, it returns `end`.  The caller always supplies a
-valid half-open range which means `begin <= end`, `0 <= begin`,
-`begin <= A.length`, `0 <= end`, and `end <= A.length`. Furthermore,
-the caller also ensures that `A` must already be sorted, so that all the `false`
-elements come before any `true` elements.
+half-open range `[begin,end)`, it returns `end`.  The caller must supply a
+valid half-open range which means `begin <= end`, `0 <= begin`, `begin <= A.length`,
+`0 <= end`, and `end <= A.length`. Furthermore, the
+array must already be sorted so that all the `false` elements come before any
+`true` elements.
 
 The algorithm should be more efficient and runs in time proportional
 to the ⚠️**logarithm** of the length of the array, by
@@ -319,16 +323,18 @@ Again, restrict your search to the half-open interval `[begin,end)`:
 
 ```java
 public static int find_first_true_sorted(boolean[] A, int begin, int end) {
-    // ...
+    // your code goes here
 }
 ```
 
 ## Task 2: Testing Array Search
 
-### Overview
+### Task Overview
 
-Your tasks are to create test cases for three search algorithm implementations.
-You have two options for test oracles: 1) using the Java standard library
+In Task 1 we have implemented three search functions. How do we know that
+those functions do what their specifications describe?
+In Task 2, you are supposed to create test cases for those three implementations.
+You have two options for test oracles: 1) using the Java standard library or
 2) implementing your own.
 
 Think about the following questions before you start:
@@ -338,30 +344,32 @@ Think about the following questions before you start:
 3. What are possible _corner cases_? Hint: arrays with 0 or 1 element, arrays
    with even or odd lengths, start and end positions being equal, ...
 
-### Submission
+### Problem 4: Testing Three Search Functions
 
-**Testing locally**: create a class `Search` in `src/Search.java`,
-which contains the search algorithms to test. Create your test oracles
-as methods of `test/StudentTest.java`.
+**Testing locally:**
+Create file `test/StudentTest.java`, which contains `public class StudentTest`.
+Create your unit tests as methods of `test/StudentTest.java`.
+If you come up with your own test oracles, they should go in
+`test/StudentTest.java` as well.
 
-Submit your test file named `StudentTest.java`. The file should contain
-`public class StudentTest`. The class contains a member function
+The `StudentTest` class should contain a member function
 `public void test()` (marked with `@Test`) which serves as the main entrance.
-
-For example, if you have 2 test functions `test_foo()` and `test_bar()`,
+For example, if you have 2 test functions `test_find_foo()` and `test_find_bar()`,
 the `test()` function should be:
 
 ```java
 @Test
 public void test() {
-    test_foo();
-    test_bar();
+    test_find_foo();
+    test_find_bar();
 }
 ```
 
-Inside each test function, use JUnit's
+Inside each test function, `test_find_foo()` or `test_find_bar()`, use JUnit's
 [assertions](https://junit.org/junit5/docs/5.0.1/api/org/junit/jupiter/api/Assertions.html)
-such as `assertEquals` to check for the correct answer. Suppose you are testing
+such as `assertEquals` to check for the correct answer. 
+
+**[Example 4]** Suppose you are testing
 `Search.find_first_true(A, begin, end)` and the expected result is `2`:
 
 ```java
@@ -386,122 +394,8 @@ public class StudentTest {
 
 Autograder will run your submission on 8 problematic `Search` implementations.
 It also runs one correct implementation to rule out false positive.
-Your test cases are expected to throw exceptions on all implementations except the correct one.
+Your test cases are expected to throw exceptions on all implementations _except_ the correct one.
 
-### Problem Set
-
-#### Problem 1: Testing Linear Search on an Array of Booleans
-
-The most basic but surprisingly useful search function involves an
-array `A` of boolean values (`true` or `false`).
-
-**Specification:** The `find_first_true(A, begin, end)` function
-returns the position of the first `true` in array `A`, that is, find
-the smallest index `i` such that `A[i]` is `true`.  The search is
-restricted to the subarray within `A` that starts at the `begin` index
-and finishes one element before the `end` index.  (This is called a
-half-open interval.) If there are no `true` elements in the subarray,
-then `find_first_true` returns the `end` position of the subarray. The
-caller of `find_first_true` is required to provide a valid half-open
-range, which means `begin <= end`, `0 <= begin`, `begin <= A.length`,
-`0 <= end`, and `end <= A.length`.
-
-**[Example 1]** If the input array `A` is
-
-```java
-{false, false, true, false, true}
-```
-
-then the result should be 2 because `A[2] == true` and there are no
-`true` elements at lower indices (`A[0]` and `A[1]` are both `false`).
-
-**[Example 2]** Suppose `A` is the array
-
-```java
-{true, false, true, false, true}
-```
-
-and we search in the half-open interval `[1,3)`. The answer should be `2`.
-
-```java
-find_first_true(A, 1, 3) == 2
-```
-
-The search function has the following signature:
-
-```java
-public static int find_first_true(boolean[] A, int begin, int end) {
-    // ...
-}
-```
-
-Add test cases for function `Search.find_first_true(A, begin, end)`
-in the `StudentTest` class and call your tests in `test()`.
-
-#### Problem 2: Testing Linear Search on an Array of Integers
-
-Another search function involves an array of integers.
-
-**Specification** The `find_first_equal(A, x)` function
-returns the position of the first element in `A` that is equal to the `x` argument.
-If there are no elements equal to `x`, the length of the array is returned.
-
-**[Example 3]** Suppose `A` is the array
-
-```java
-{32, 11, 4, 5, 99, 5, 32, 75}
-```
-then the result of search for `5` should be `3`:
-
-```java
-find_first_equal(A, 5) == 3
-```
-
-The search function has the following signature:
-
-``` java
-public static int find_first_equal(int[] A, int x) {
-    // ...
-}
-```
-
-Add test cases for function `Search.find_first_equal(A, x)` in the `StudentTest`
-class and call your tests in `test()`.
-The implementation of `find_first_equal` could potentially depend on `find_first_true`.
-
-#### Problem 3: Testing Binary Search on an Array of Booleans
-
-We revisit searching an array of Booleans, but suppose that all of the
-`false` elements in the array come before all of the `true` elements (sorted) this time.
-
-**Specification:** The `find_first_true_sorted(A, begin, end)` returns
-the position of the first `true` in array `A`, that is, it finds the
-smallest index `i` greater or equal to `begin` and less than `end`
-such that `A[i]` is `true`.  If there is no `true` within the
-half-open range `[begin,end)`, it returns `end`.  The caller must supply a
-valid half-open range which means `begin <= end`, `0 <= begin`, `begin <= A.length`,
-`0 <= end`, and `end <= A.length`. Furthermore, the
-array must already be sorted so that all the `false` elements come before any
-`true` elements.
-
-**[Example 4]** Suppose `A` is the sorted array
-
-```java
-{false, false, true, true, true, true, true}
-```
-
-The position of the first `true` element is `2` in this case.
-
-The search function has the following signature:
-
-```java
-public static int find_first_true_sorted(boolean[] A, int begin, int end) {
-    // ...
-}
-```
-
-Add test cases for function `Search.find_first_true_sorted(A, begin, end)`
-in the `StudentTest` class and call your tests in `test()`.
 
 -----------------
 
