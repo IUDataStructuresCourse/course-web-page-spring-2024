@@ -57,7 +57,8 @@ In this section I will show you how to:
 
 The code for this demo is available [here](https://github.com/IUDataStructuresCourse/lab-demo-rotation).
 
-Suppose our tasks are to implement and test the "ripple" approach of array rotation.
+Suppose our tasks are to implement, test and debug the "ripple" approach of array rotation
+(recall [lecture](https://iudatastructurescourse.github.io/course-web-page-spring-2024/lectures/array-rotation.html)).
 We first create an IntelliJ project called "Rotation". The file structure looks like:
 ![](assets/images/lab1/mint_proj.png)
 
@@ -207,7 +208,7 @@ Alternatively, we can single-step through the program by pressing the down-arrow
 
 In the first task, we are going to implement three search algorithms as
 methods of a Java class called `Search`. Each of the algorithms finds
-an element in an array that meets certain criteria.
+an element in the input array that meets certain criteria.
 
 Create file `src/Search.java` which contains a public class called `Search`.
 Implement each algorithm as a public function of the `Search` class.
