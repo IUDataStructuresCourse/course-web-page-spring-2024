@@ -1,37 +1,50 @@
-# Lab 1: Array Search Testing
+# Lab 1: Array Search and Testing
 
-## Table of contents
+## Overview
 
-1. [Software installation and environment set-up](#software-installation-and-environment-set-up)
-2. [Instructor demonstration: testing and debugging array rotation](#instructor-demonstration-testing-and-debugging-array-rotation)
-3. [**Your assignment:** testing search algorithms](#your-assignment-testing-search-algorithms)
+Welcome to C343 "Data Structures"! In this lab, we will first go
+through software installation and review basic testing and
+debugging skills. You will then be asked to implement three array
+search algorithms. Finally, you are supposed to create test
+cases for those algorithms and submit both your code and your test
+cases to Autograder.
 
-## Software installation and environment set-up
+### Table of contents:
+
+1. [Software Installation](#software-installation)
+2. [Instructor Demonstration: Testing and Debugging](#instructor-demonstration-testing-and-debugging)
+3. [**Task 1:** Implementing Array Search](#task-1-implementing-array-search)
+4. [**Task 2:** Testing Array Search](#task-2-testing-array-search)
+
+## Software Installation
 
 + Download and install [IntelliJ IDEA](https://www.jetbrains.com/idea/download) Community Edition
-  - Alternatively you can use a package manager such as Homebrew: `brew install intellij-idea-ce`
+  - Alternatively, you may use a package manager such as Homebrew: `brew install intellij-idea-ce`
   - Software like IntelliJ is often referred to as
-    [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)s, 
+    [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)s,
     because they integrate a code editor, build tools and a debugger.
 
 + Launch the IntelliJ IDE
-  - In the welcome window, click "New Project". A new project should be created for each lab.
+  - In the welcome window, click "New Project".
+    In general, we create a new project for each lab. Sometimes a project code
+    skeleton is provided to you; in that case, you can use the "Open" button
+    to choose the root directory of that project.
+    ![](assets/images/lab1/welcome.png)
   - In the pop-up window, enter the title of your lab assignment as "Name".
-    For lab 1, it should be `SearchTest` .
+    For lab 1, it should be `ArraySearch`.
   - Choose "Location", which is whatever directory that you prefer to contain
-    all lab assignments. Check "Create Git repository" if you would like to use
-    version control (optional).
+    all lab assignments. (Optional: ) check "Create Git repository" if you would
+    like to use version control.
   - Language: "Java"; build systems: "IntelliJ"
   - Install JDK. Click "Add SDK -> Download JDK" in the "JDK" drop-down menu
     ![](assets/images/lab1/install_jdk.png)
   - In the pop-up window choose "Vendor" : "Oracle OpenJDK". "Version" should
-    be filled in automatically (`20` as of the time of writing).
-    Make sure version ≥15. "Location" can be left as default.
+    be filled in automatically (make sure version ≥15). "Location" can be left as default.
     ![](assets/images/lab1/jdk_version.png)
   - Click "Download" and wait for the download to finish. In the "New Project"
     window, uncheck "Add sample code" and leave everything else as is. Click "Create".
 
-## Instructor demonstration: testing and debugging array rotation
+## Instructor Demonstration: Testing and Debugging
 
 In this section I will show you how to:
 
@@ -253,7 +266,7 @@ Your test cases are expected to throw exceptions on all implementations except t
 #### Problem 1: Testing Linear Search on an Array of Booleans
 
 The most basic but surprisingly useful search function involves an
-array `A` of boolean values (`true` or `false`). 
+array `A` of boolean values (`true` or `false`).
 
 **Specification:** The `find_first_true(A, begin, end)` function
 returns the position of the first `true` in array `A`, that is, find
@@ -360,7 +373,7 @@ public static int find_first_true_sorted(boolean[] A, int begin, int end) {
 }
 ```
 
-Add test cases for function `Search.find_first_true_sorted(A, begin, end)` 
+Add test cases for function `Search.find_first_true_sorted(A, begin, end)`
 in the `StudentTest` class and call your tests in `test()`.
 
 -----------------
