@@ -15,6 +15,7 @@ cases to Autograder.
 2. [Instructor Demonstration: Testing and Debugging](#instructor-demonstration-testing-and-debugging)
 3. [**Task 1:** Implementing Array Search](#task-1-implementing-array-search)
 4. [**Task 2:** Testing Array Search](#task-2-testing-array-search)
+5. [Submission and Grading](#submission-and-grading)
 
 ## Software Installation
 
@@ -58,7 +59,7 @@ Suppose our tasks are to implement and test the "ripple" approach of array rotat
 We first create an IntelliJ project called "Rotation". The file structure looks like:
 ![](assets/images/lab1/mint_proj.png)
 
-To create the Java class file where our implementation code resides, we right click 
+To create the Java class file where our implementation code resides, we right click
 on the `src` directory and choose **"Java Class"**:
 ![](assets/images/lab1/new_java_class.png)
 
@@ -262,7 +263,7 @@ public static int find_first_true(boolean[] A, int begin, int end) {
 
 Another search function involves an array of integers.
 
-**Specification** The `find_first_equal(A, x)` function
+**Specification:** The `find_first_equal(A, x)` function
 searches on an array of _integers_ `A`, with the goal of returning
 the position of the first element in `A` that is equal to the `x` argument.
 If there are no elements equal to `x`, the length of the array is returned.
@@ -346,7 +347,6 @@ Think about the following questions before you start:
 
 ### Problem 4: Testing Three Search Functions
 
-**Testing locally:**
 Create file `test/StudentTest.java`, which contains `public class StudentTest`.
 Create your unit tests as methods of `test/StudentTest.java`.
 If you come up with your own test oracles, they should go in
@@ -367,7 +367,7 @@ public void test() {
 
 Inside each test function, `test_find_foo()` or `test_find_bar()`, use JUnit's
 [assertions](https://junit.org/junit5/docs/5.0.1/api/org/junit/jupiter/api/Assertions.html)
-such as `assertEquals` to check for the correct answer. 
+such as `assertEquals` to check for the correct answer.
 
 **[Example 4]** Suppose you are testing
 `Search.find_first_true(A, begin, end)` and the expected result is `2`:
@@ -392,9 +392,24 @@ public class StudentTest {
 }
 ```
 
-Autograder will run your submission on 8 problematic `Search` implementations.
-It also runs one correct implementation to rule out false positive.
-Your test cases are expected to throw exceptions on all implementations _except_ the correct one.
+Run the test cases. Does the result meet your expectation? Why?
+
+## Submission and Grading
+
+In this course we use [Autograder](https://autograder.luddy.indiana.edu/) to
+provide instantaneous feedback to your lab submissions. Your grades will be
+decided by the number of test cases that your _best_ submission passes.
+Multiple attempts are allowed.
+
+- Submit `Search.java` to TBA.
+  + Autograder will run your submission on 8 test cases that thoroughly
+    examine the correctness of all three search functions.
+
+- Submit `StudentTest.java` to TBA.
+  + Autograder will run your submission on 8 problematic `Search` implementations.
+    It also runs one correct implementation to rule out false positive.
+    Your test cases are expected to throw exceptions on all implementations
+    _except_ the correct one.
 
 
 -----------------
