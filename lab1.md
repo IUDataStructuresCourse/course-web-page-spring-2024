@@ -157,7 +157,7 @@ We can also generate random numbers to fill the input array:
 @Test
 public void test_rotation_random() {
     String test_description = "rotating an array with random integers";
-    Random r = new Random(0);
+    Random r = new Random();
     int[] A = new int[100];
     for (int i = 0; i != A.length; ++ i) {
         A[i] = r.nextInt();
