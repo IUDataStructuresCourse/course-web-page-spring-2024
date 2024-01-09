@@ -13,7 +13,20 @@
 
 ## Introduce course AI's
 
-* Tianyu Chen
+* Tianyu Chen (chen512)
+* Chenchao Ding (cd17)
+* Ganesh Arkanath (napoom)
+* Nishad Gupta (guptanis)
+* Meet Palod (mpalod)
+* Aditya Ramachandra (ar83)
+* Shreyas Sawant (shresawa)
+* Tirth Bhaveshbhai Shah (tbshah)
+* Anuj Mahajan (anujmaha)
+* Luke Nargang (lnargang)
+* Aaron Olson (aarolson)
+* Calvin Josenhans (cjosenha)
+* Matthew Hammans (mmhamman)
+* Kyle Li (kyleli)
 
 ## Course web page, syllabus, schedule (due dates, etc.)
 
