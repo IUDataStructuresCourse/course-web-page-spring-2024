@@ -1,37 +1,53 @@
-# Lab 1: Array Search Testing
+# Lab 1: Array Search and Testing
 
-## Table of contents
+## Overview
 
-1. [Software installation and environment set-up](#software-installation-and-environment-set-up)
-2. [Instructor demonstration: testing and debugging array rotation](#instructor-demonstration-testing-and-debugging-array-rotation)
-3. [**Your assignment:** testing search algorithms](#your-assignment-testing-search-algorithms)
+Welcome to CSCI-C343 "Data Structures"!
 
-## Software installation and environment set-up
+In this lab, we will first go
+through software installation and review basic testing and
+debugging skills. You will then be asked to implement three array
+search algorithms. Finally, you are supposed to create test
+cases for those algorithms and submit both your code and your test
+cases to Autograder.
+
+### Table of contents:
+
+1. [Software Installation](#software-installation)
+2. [Instructor Demonstration: Testing and Debugging](#instructor-demonstration-testing-and-debugging)
+3. [**Task 1:** Implementing Array Search](#task-1-implementing-array-search)
+4. [**Task 2:** Testing Array Search](#task-2-testing-array-search)
+5. [Submission and Grading](#submission-and-grading)
+
+## Software Installation
 
 + Download and install [IntelliJ IDEA](https://www.jetbrains.com/idea/download) Community Edition
-  - Alternatively you can use a package manager such as Homebrew: `brew install intellij-idea-ce`
+  - Alternatively, you may use a package manager such as Homebrew: `brew install intellij-idea-ce`
   - Software like IntelliJ is often referred to as
-    [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)s, 
+    [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)s,
     because they integrate a code editor, build tools and a debugger.
 
 + Launch the IntelliJ IDE
-  - In the welcome window, click "New Project". A new project should be created for each lab.
+  - In the welcome window, click "New Project".
+    In general, we create a new project for each lab. Sometimes a project code
+    skeleton is provided to you; in that case, you can use the "Open" button
+    to choose the root directory of that project.
+    ![](assets/images/lab1/welcome.png)
   - In the pop-up window, enter the title of your lab assignment as "Name".
-    For lab 1, it should be `SearchTest` .
+    For Lab 1, it should be `Search`.
   - Choose "Location", which is whatever directory that you prefer to contain
-    all lab assignments. Check "Create Git repository" if you would like to use
-    version control (optional).
+    all lab assignments. (Optional: ) check "Create Git repository" if you would
+    like to use version control.
   - Language: "Java"; build systems: "IntelliJ"
-  - Install JDK. Click "Add SDK -> Download JDK" in the "JDK" drop-down menu
+  - Install JDK. Click "Add SDK -> Download JDK" in the "JDK" drop-down menu:
     ![](assets/images/lab1/install_jdk.png)
   - In the pop-up window choose "Vendor" : "Oracle OpenJDK". "Version" should
-    be filled in automatically (`20` as of the time of writing).
-    Make sure version ≥15. "Location" can be left as default.
+    be filled in automatically (make sure version ≥15). "Location" can be left as default.
     ![](assets/images/lab1/jdk_version.png)
   - Click "Download" and wait for the download to finish. In the "New Project"
     window, uncheck "Add sample code" and leave everything else as is. Click "Create".
 
-## Instructor demonstration: testing and debugging array rotation
+## Instructor Demonstration: Testing and Debugging
 
 In this section I will show you how to:
 
@@ -39,13 +55,15 @@ In this section I will show you how to:
 - Build and run the code
 - Debug and test
 
-You can download a copy of this demo [here](assets/RotationTest.tar.gz).
+The code for this demo is available [here](https://github.com/IUDataStructuresCourse/lab-demo-rotation).
 
-We first create a IntelliJ project "RotationTest". After creation, the file structure looks like:
+Suppose our tasks are to implement, test and debug the "ripple" approach of array rotation
+(recall [lecture](https://iudatastructurescourse.github.io/course-web-page-spring-2024/lectures/array-rotation.html)).
+We first create an IntelliJ project called "Rotation". The file structure looks like:
 ![](assets/images/lab1/mint_proj.png)
 
-Suppose we are to implement the "ripple" approach of array rotation. We right click on the
-`src` directory in the file structure and choose **"Java Class"**.
+To create the Java class file where our implementation code resides, we right click
+on the `src` directory and choose **"Java Class"**:
 ![](assets/images/lab1/new_java_class.png)
 
 We enter "Rotation" as its name. IntelliJ creates a new file `src/Rotation.java` whose
@@ -68,7 +86,7 @@ public class Rotation {
 }
 ```
 
-Next we create unit tests for `rotate_ripple`. Right click on the root
+Our next task is to create unit tests for `rotate_ripple`. Right click on the root
 directory and select "New -> Directory". Name the new directory `test`.
 ![](assets/images/lab1/new_test_dir.png)
 
@@ -76,7 +94,7 @@ Right click on `test` in the file structure. Go to the last item in the pop-up m
 and select "Mark Directory As -> Test **Sources** Root". The `test` directory will be
 highlighted in green.
 
-Add a new Java class in `test` called `RotationTest`. Create `rotate_save_n_shift`
+Create a new Java class file in `test` called `RotationTest`. Create `rotate_save_n_shift`
 as a private static member function of `RotationTest`. We use `rotate_save_n_shift`
 as our [test oracle](https://en.wikipedia.org/wiki/Test_oracle).
 
@@ -92,6 +110,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 ```
 
+Careful readers may observe that some of the symbols are marked in red.
 Move cursor to `junit`, where IntelliJ tells me that it cannot resolve the symbol.
 Click on "Add 'JUnit' to classpath" and then "OK". Perform the same action on `jupiter`.
 
@@ -138,7 +157,7 @@ We can also generate random numbers to fill the input array:
 @Test
 public void test_rotation_random() {
     String test_description = "rotating an array with random integers";
-    Random r = new Random(0);
+    Random r = new Random();
     int[] A = new int[100];
     for (int i = 0; i != A.length; ++ i) {
         A[i] = r.nextInt();
@@ -183,77 +202,21 @@ using the "View Breakpoints" pop-up (the two-overlapping-red-circles button).
 We can resume the execution by hitting the green play button ("Resume Program").
 Alternatively, we can single-step through the program by pressing the down-arrow button.
 
-## Your assignment: testing search algorithms
+## Task 1: Implementing Array Search
 
-### Overview
+### Task Overview
 
-Your tasks are to create test cases for three search algorithm implementations.
-You have two options for test oracles: 1) using the Java standard library
-2) implementing your own.
+In the first task, we are going to implement three search algorithms as
+methods of a Java class called `Search`. Each of the algorithms finds
+an element in the input array that meets certain criteria.
 
-Think about the following questions before you start:
+Create file `src/Search.java` which contains a public class called `Search`.
+Implement each algorithm as a public function of the `Search` class.
 
-1. What does it mean for each search algorithm to be correct?
-2. Can some of the three algorithms share the same test oracle? Why?
-3. What are possible _corner cases_? Hint: arrays with 0 or 1 element, arrays
-   with even or odd lengths, start and end positions being equal, ...
-
-### Submission
-
-**Testing locally**: create a class `Search` in `src/Search.java`,
-which contains the search algorithms to test. Create your test oracles
-as methods of `test/StudentTest.java`.
-
-Submit your test file named `StudentTest.java`. The file should contain
-`public class StudentTest`. The class contains a member function
-`public void test()` (marked with `@Test`) which serves as the main entrance.
-
-For example, if you have 2 test functions `test_foo()` and `test_bar()`,
-the `test()` function should be:
-
-```java
-@Test
-public void test() {
-    test_foo();
-    test_bar();
-}
-```
-
-Inside each test function, use JUnit's
-[assertions](https://junit.org/junit5/docs/5.0.1/api/org/junit/jupiter/api/Assertions.html)
-such as `assertEquals` to check for the correct answer. Suppose you are testing
-`Search.find_first_true(A, begin, end)` and the expected result is `2`:
-
-```java
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
-import static org.junit.jupiter.api.Assertions.*;
-
-public class StudentTest {
-
-    @Test
-    public void test() {
-        test_find_first_true();
-    }
-
-    @Test
-    public void test_find_first_true() {
-        // ...
-        assertEquals(2, Search.find_first_true(A, begin, end));
-    }
-}
-```
-
-Autograder will run your submission on 8 problematic `Search` implementations.
-It also runs one correct implementation to rule out false positive.
-Your test cases are expected to throw exceptions on all implementations except the correct one.
-
-### Problem Set
-
-#### Problem 1: Testing Linear Search on an Array of Booleans
+### Problem 1: Linear Search on an Array of Booleans
 
 The most basic but surprisingly useful search function involves an
-array `A` of boolean values (`true` or `false`). 
+array `A` of boolean values (`true` or `false`).
 
 **Specification:** The `find_first_true(A, begin, end)` function
 returns the position of the first `true` in array `A`, that is, find
@@ -265,6 +228,9 @@ then `find_first_true` returns the `end` position of the subarray. The
 caller of `find_first_true` is required to provide a valid half-open
 range, which means `begin <= end`, `0 <= begin`, `begin <= A.length`,
 `0 <= end`, and `end <= A.length`.
+
+_The time it takes for your algorithm to run should be proportional to the
+length of the array `A`._
 
 **[Example 1]** If the input array `A` is
 
@@ -287,24 +253,27 @@ and we search in the half-open interval `[1,3)`. The answer should be `2`.
 find_first_true(A, 1, 3) == 2
 ```
 
-The search function has the following signature:
+Add the following method to the `Search` class and fill-in the
+implementation:
 
 ```java
 public static int find_first_true(boolean[] A, int begin, int end) {
-    // ...
+    // your code goes here
 }
 ```
 
-Add test cases for function `Search.find_first_true(A, begin, end)`
-in the `StudentTest` class and call your tests in `test()`.
-
-#### Problem 2: Testing Linear Search on an Array of Integers
+### Problem 2: Linear Search on an Array of Integers
 
 Another search function involves an array of integers.
 
-**Specification** The `find_first_equal(A, x)` function
-returns the position of the first element in `A` that is equal to the `x` argument.
+**Specification:** The `find_first_equal(A, x)` function
+searches on an array of _integers_ `A`, with the goal of returning
+the position of the first element in `A` that is equal to the `x` argument.
 If there are no elements equal to `x`, the length of the array is returned.
+
+⚠️ **Use `find_first_true`** to implement the function `find_first_equal`.
+Again, the time it takes for your algorithm to run should be proportional
+to the length of `A`.
 
 **[Example 3]** Suppose `A` is the array
 
@@ -317,19 +286,15 @@ then the result of search for `5` should be `3`:
 find_first_equal(A, 5) == 3
 ```
 
-The search function has the following signature:
+Implement the following method in the `Search` class:
 
 ``` java
 public static int find_first_equal(int[] A, int x) {
-    // ...
+    // your code goes here
 }
 ```
 
-Add test cases for function `Search.find_first_equal(A, x)` in the `StudentTest`
-class and call your tests in `test()`.
-The implementation of `find_first_equal` could potentially depend on `find_first_true`.
-
-#### Problem 3: Testing Binary Search on an Array of Booleans
+### Problem 3: Binary Search on an Array of Booleans
 
 We revisit searching an array of Booleans, but suppose that all of the
 `false` elements in the array come before all of the `true` elements (sorted) this time.
@@ -344,7 +309,12 @@ valid half-open range which means `begin <= end`, `0 <= begin`, `begin <= A.leng
 array must already be sorted so that all the `false` elements come before any
 `true` elements.
 
-**[Example 4]** Suppose `A` is the sorted array
+The algorithm should be more efficient and runs in time proportional
+to the ⚠️**logarithm** of the length of the array, by
+_looking at the element in the middle and restricting
+the search to the right or left subarray_ depending on its value.
+
+**[Example 4]** Suppose `A` is the _sorted_ array
 
 ```java
 {false, false, true, true, true, true, true}
@@ -352,16 +322,99 @@ array must already be sorted so that all the `false` elements come before any
 
 The position of the first `true` element is `2` in this case.
 
-The search function has the following signature:
+Implement your algorithm in the following method of the `Search` class.
+Again, restrict your search to the half-open interval `[begin,end)`:
 
 ```java
 public static int find_first_true_sorted(boolean[] A, int begin, int end) {
-    // ...
+    // your code goes here
 }
 ```
 
-Add test cases for function `Search.find_first_true_sorted(A, begin, end)` 
-in the `StudentTest` class and call your tests in `test()`.
+## Task 2: Testing Array Search
+
+### Task Overview
+
+In Task 1 we have implemented three search functions. How do we know that
+those functions do what their specifications describe?
+In Task 2, you are supposed to create test cases for those three implementations.
+You have two options for test oracles: 1) using the Java standard library or
+2) implementing your own. You are only responsible for testing _correctness_,
+not time complexity.
+
+Think about the following questions before you start:
+
+1. What does it mean for each search algorithm to be correct? Hint: their specifications.
+2. Can some of the three algorithms share the same test oracle? Why?
+3. What are possible _corner cases_? Hint: arrays with 0 or 1 element, arrays
+   with even or odd lengths, start and end positions being equal, ...
+
+### Problem 4: Testing Three Search Functions
+
+Create file `test/StudentTest.java`, which contains `public class StudentTest`.
+Create your unit tests as methods of `test/StudentTest.java`.
+If you come up with your own test oracles, they should go in
+`test/StudentTest.java` as well.
+
+The `StudentTest` class should contain a member function
+`public void test()` (marked with `@Test`) which serves as the main entrance.
+For example, if you have 2 test functions `test_find_foo()` and `test_find_bar()`,
+the `test()` function should be:
+
+```java
+@Test
+public void test() {
+    test_find_foo();
+    test_find_bar();
+}
+```
+
+Inside each test function, `test_find_foo()` or `test_find_bar()`, use JUnit's
+[assertions](https://junit.org/junit5/docs/5.0.1/api/org/junit/jupiter/api/Assertions.html)
+such as `assertEquals` to check for the correct answer.
+
+**[Example 5]** Suppose we are testing
+`Search.find_first_true(A, begin, end)` and the expected result is `2`:
+
+```java
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class StudentTest {
+
+    @Test
+    public void test() {
+        test_find_first_true();
+    }
+
+    @Test
+    public void test_find_first_true() {
+        // ...
+        assertEquals(2, Search.find_first_true(A, begin, end));
+    }
+}
+```
+
+Run the test cases. Does the result meet your expectation? Why?
+
+## Submission and Grading
+
+In this course we use [Autograder](https://autograder.luddy.indiana.edu/) to
+provide instantaneous feedback to your lab submissions. Your grades will be
+decided by the number of test cases that your _best_ submission passes.
+Multiple attempts are allowed.
+
+- Submit `Search.java` to [link](https://autograder.luddy.indiana.edu/web/project/927)
+  + Autograder will run your submission on 8 test cases that thoroughly
+    examine the correctness of all three search functions.
+
+- Submit `StudentTest.java` to [link](https://autograder.luddy.indiana.edu/web/project/941)
+  + Autograder will run your submission on 8 problematic `Search` implementations.
+    It also runs one correct implementation to rule out false positive.
+    Your test cases are expected to throw exceptions on all implementations
+    _except_ the correct one.
+
 
 -----------------
 
