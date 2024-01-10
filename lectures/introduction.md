@@ -16,7 +16,6 @@
 * Tianyu Chen (chen512)
 * Chenchao Ding (cd17)
 * Ganesh Arkanath (napoom)
-* Nishad Gupta (guptanis)
 * Meet Palod (mpalod)
 * Aditya Ramachandra (ar83)
 * Shreyas Sawant (shresawa)
