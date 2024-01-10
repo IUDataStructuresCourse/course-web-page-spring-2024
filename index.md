@@ -30,7 +30,7 @@ doing better on job interview questions.
 * Section 7896, Friday 1:45pm-3:40pm, BH 118
 
 Expect at least one quiz per month during lab time.
-* 15 minutes, at the beginning of a lab session
+* 15 minutes, at the end of a lab session
 * Scope is everything turned in prior to the quiz, including homework and lab assignments
 
 **Instructors**
