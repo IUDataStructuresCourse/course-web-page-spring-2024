@@ -20,18 +20,44 @@ doing better on job interview questions.
 * Section 1724, Tuesdays and Thursdays 11:30am-12:45pm, Luddy Hall (IF), Room 1106.
 
 
-**Lab**
+**Labs and Teaching Assistants**
 
 * Section 6635, Thursday 5:30pm-7:25pm
+
+  - Aaron Olson
+  - Luke Nargang
+  - Meet Palod
+
 * Section 6399, Friday 8:45am-10:40am, IF 1019
+
+  - Calvin Josenhand
+  - Chenchao Ding
+
 * Section 6402, Friday 11:15am-1:10pm, GR 102A
+
+  - Tianyu Chen
+  - Tirth Shah
+
 * Section 36105, Friday 11:30am-1:25pm, LI 402
+
+  - Kyle Li
+  - Ganesh Arkanath
+
 * Section 6637, Friday 12:45-2:40pm, I E150
+
+  - Chenchao Ding
+  - Shreyas Sawant
+  - Matthew Hammans
+
 * Section 7896, Friday 1:45pm-3:40pm, BH 118
+
+  - Tianyu Chen
+  - Anuj Mahajan
+  - Aditya Ramachandra
 
 Expect at least one quiz per month during lab time.
 * 15 minutes, at the beginning of a lab session
-* Scope is everything turned in prior to the quiz, including homework and lab assignments
+* The scope of each quiz is everything turned in prior to the quiz, including homework and lab assignments
 
 **Instructors**
 
@@ -45,7 +71,6 @@ Office hours with TAs are in Luddy Hall Room 0121.
 * Tianyu Chen (chen512), office hours TBD
 * Chenchao Ding (cd17), office hours TBD
 * Ganesh Arkanath (napoom), office hours TBD
-* Nishad Gupta (guptanis), office hours TBD
 * Meet Palod (mpalod), office hours TBD
 * Aditya Ramachandra (ar83), office hours TBD
 * Shreyas Sawant (shresawa), office hours TBD
