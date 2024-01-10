@@ -45,7 +45,6 @@ Office hours with TAs are in Luddy Hall Room 0121.
 * Tianyu Chen (chen512), office hours TBD
 * Chenchao Ding (cd17), office hours TBD
 * Ganesh Arkanath (napoom), office hours TBD
-* Nishad Gupta (guptanis), office hours TBD
 * Meet Palod (mpalod), office hours TBD
 * Aditya Ramachandra (ar83), office hours TBD
 * Shreyas Sawant (shresawa), office hours TBD
