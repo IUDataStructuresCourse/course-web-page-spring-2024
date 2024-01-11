@@ -97,8 +97,8 @@ Day     | Lecture Topic                                             | Reading Du
 Jan. 9 | [Introduction](./lectures/introduction.md)                 |              |         |
 Jan. 11 | [Arrays, Rotation, Testing](./lectures/array-rotation.md) | Ch. 1        |         |
 Jan. 11 or 12 |                                                     |              | No lab
-Jan. 16 | [Time Complexity](./lectures/time-complexity.md)          | Ch. 2        | 
-Jan. 18 | [Time Complexity, continued](./lectures/more-time-complexity.md)
+Jan. 16 | [Algorithm Analysis](./lectures/algo-analysis.md)          | Ch. 2        | 
+Jan. 18 | [Algorithm Analysis, continued](./lectures/more-algo-analysis.md)
 Jan. 18 or 19 |                                                     |              | [Lab 1: Array Search and Testing](./lab1) | [code](https://autograder.luddy.indiana.edu/web/project/927), [test](https://autograder.luddy.indiana.edu/web/project/941)
 March 10 - 17 | **Spring Break**
 April 30 | **Final Exam** 11:30am
