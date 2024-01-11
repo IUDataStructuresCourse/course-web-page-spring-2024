@@ -22,7 +22,7 @@ doing better on job interview questions.
 
 **Labs and Teaching Assistants**
 
-* Section 6635, Thursday 5:30pm-7:25pm
+* Section 6635, Thursday 5:30pm-7:25pm, BH 118
 
   - Aaron Olson
   - Luke Nargang
