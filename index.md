@@ -36,6 +36,7 @@ doing better on job interview questions.
 * Section 6402, Friday 11:15am-1:10pm, GR 102A
 
   - Tianyu Chen
+  - Niloy Deb Roy Mishu
 
 * Section 36105, Friday 11:30am-1:25pm, LI 402
 
@@ -65,21 +66,33 @@ Expect at least one quiz per month during lab time.
 
 **Teaching Assistants**
 
+* Tianyu Chen (chen512)
+* Chenchao Ding (cd17)
+* Niloy Deb Roy Mishu (nilmish)
+* Ganesh Arkanath (napoom)
+* Meet Palod (mpalod)
+* Aditya Ramachandra (ar83)
+* Shreyas Sawant (shresawa)
+* Anuj Mahajan (anujmaha)
+* Luke Nargang (lnargang)
+* Aaron Olson (aarolson)
+* Calvin Josenhans (cjosenha)
+* Matthew Hammans (mmhamman)
+* Kyle Li (kyleli)
+
+**Office Hours**
+
 Office hours with TAs are in Luddy Hall Room 0121.
 
-* Tianyu Chen (chen512), office hours TBD
-* Chenchao Ding (cd17), office hours TBD
-* Niloy Deb Roy Mishu (nilmish), office hours TBD
-* Ganesh Arkanath (napoom), office hours TBD
-* Meet Palod (mpalod), office hours TBD
-* Aditya Ramachandra (ar83), office hours TBD
-* Shreyas Sawant (shresawa), office hours TBD
-* Anuj Mahajan (anujmaha), office hours TBD
-* Luke Nargang (lnargang), office hours TBD
-* Aaron Olson (aarolson), office hours TBD
-* Calvin Josenhans (cjosenha), office hours TBD
-* Matthew Hammans (mmhamman), office hours TBD
-* Kyle Li (kyleli), office hours TBD
+        | Day
+Time    | Monday    | Tuesday    | Wednesday    | Thursday    | Friday
+11am    | Anuj      |            | Chenchao     |             | Aaron
+12pm    | Anuj      |            | Chenchao     |             | 
+1pm     | Shreyas   |            |              | Ganesh      | Meet
+2pm     | Shreyas   |            |              | Ganesh      | 
+3pm     |           | Kyle       | Calvin       | Kyle        | Aaron
+4pm     |           | Luke       | Calvin       | Meet        | Tianyu
+5pm     |           | Luke       |              |             | Tianyu
 
 
 **Textbook**
