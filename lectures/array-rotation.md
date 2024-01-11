@@ -1,5 +1,10 @@
 # Lecture: Arrays, Rotation, and Correctness Proofs
 
+Overview
+* Arrays in Java
+* Array Rotation Algorithm
+* Testing
+
 ## Arrays in Java
 
 Create an array of length `n`
@@ -217,7 +222,7 @@ public class RotateTest {
 }
 ```
 
-## Testing Regular Cases
+### Testing Regular Cases
 
 To get your bearings, its good to start with a test that captures the
 common case and that you already know the solution, such as the
@@ -237,7 +242,7 @@ example above.
     }
 ```
 
-## Testing Corner Cases
+### Testing Corner Cases
 
 In the code for `rotate_1_swap_bkwd`, there's a branch for length
 greater than 1. So let's create tests that take different branches.
@@ -277,7 +282,7 @@ greater than 1. So let's create tests that take different branches.
     }
 ```
 
-## Testing Big Inputs using Random Input Generation
+### Testing Big Inputs using Random Input Generation
 
 We'll need a way to check whether the `rotate` method did it's job.
 We can do this by taking the specification for `rotate` and coding it
