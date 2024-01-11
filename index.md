@@ -62,7 +62,7 @@ Expect at least one quiz per month during lab time.
 **Instructors**
 
 * Jeremy Siek (jsiek), office hours Mondays 3-4pm, Wednesdays 1-2pm, Luddy Room 3014
-* Funda Ergun, office hours TBD
+* Funda Ergun
 
 **Teaching Assistants**
 
