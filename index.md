@@ -46,7 +46,6 @@ doing better on job interview questions.
 * Section 6637, Friday 12:45-2:40pm, I E150
 
   - Chenchao Ding
-  - Shreyas Sawant
   - Matthew Hammans
 
 * Section 7896, Friday 1:45pm-3:40pm, BH 118
@@ -72,7 +71,6 @@ Expect at least one quiz per month during lab time.
 * Ganesh Arkanath (napoom)
 * Meet Palod (mpalod)
 * Aditya Ramachandra (ar83)
-* Shreyas Sawant (shresawa)
 * Anuj Mahajan (anujmaha)
 * Luke Nargang (lnargang)
 * Aaron Olson (aarolson)
@@ -87,8 +85,8 @@ Office hours with TAs are in Luddy Hall Room 0121.
 Time    | Monday            | Tuesday    | Wednesday    | Thursday    | Friday
 11am    | Anuj              |            | Chenchao     |             | Aaron
 12pm    | Anuj              |            | Chenchao     | Niloy       | 
-1pm     | Shreyas           |            |              | Ganesh      | Meet
-2pm     | Shreyas           |            |              | Ganesh      | 
+1pm     |                   |            |              | Ganesh      | Meet
+2pm     |                   |            |              | Ganesh      | 
 3pm     | Niloy             | Kyle       | Calvin       | Kyle        | Aaron
 4pm     | Niloy (unil 4:30) | Luke       | Calvin       | Meet        | Tianyu
 5pm     |                   | Luke       |              |             | Tianyu
