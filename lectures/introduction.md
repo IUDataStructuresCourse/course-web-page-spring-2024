@@ -18,7 +18,6 @@
 * Ganesh Arkanath (napoom)
 * Meet Palod (mpalod)
 * Aditya Ramachandra (ar83)
-* Tirth Bhaveshbhai Shah (tbshah)
 * Anuj Mahajan (anujmaha)
 * Luke Nargang (lnargang)
 * Aaron Olson (aarolson)
