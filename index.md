@@ -117,12 +117,16 @@ April 30 | **Final Exam** 11:30am
 **Resources**
 
 * Midterm Exams from
-  * 2021 [with solutions](./midterm-2021-solns.pdf) 
+  * 2021 [with solutions](./midterm-2021-solns.pdf)
      and [without solutions](./midterm-2021.pdf).
   * 2022 [with solutions](./midterm-a-2022.pdf)
      and [without solutions](./midterm-a-2022-questions.pdf).
 
-* Final Exam with solutions from [2021](./final-2021.pdf) and [2022](./final-2022.pdf).
+* Final Exam from
+  * 2021 [with solutions](./final-2021-solns.pdf)
+     and [without solutions](./final-2021.pdf).
+  * 2022 [with solutions](./final-2022-solns.pdf)
+     and [without solutions](./final-2022.pdf).
 
 * [Autograder](https://autograder.luddy.indiana.edu/web/course/77) for submitting coding assignments.
 
