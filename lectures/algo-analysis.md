@@ -60,7 +60,7 @@ Let's see these rules used in an example.
 
 ## Example of ∃
 
-We define "x is even" as ∃ k. 2 × k = x.
+We define "x is even" as ∃ k. 2 k = x.
 
 Theorem. 6 is even
 Proof. Choose k=3 and note that 2 × 3 = 6. QED.
@@ -84,6 +84,10 @@ QED
 
 Proof rules:
 
+     ∀ x. x + x = 2x 
+	 fix y arbitrary number
+	 y + y = 2y   (cause math)
+
 To prove ∀ x. P(x), 
    (⇒∀) prove that P(y) is true for some unknown entity y.
    (Induction) If x is a natural number, use induction:
@@ -97,7 +101,7 @@ To prove ∀ x. P(x),
 
 Theorem. ∀ n. n is even implies n + 2 is even.
 Proof.
- Let p be a number. (⇒∀)
+ Let p be a arbitrary number. (⇒∀)
  Assume that p is even, that is, (∃k. 2 × k = p).
  So 2 × k₁ = p by (∃⇒)      (1)
  

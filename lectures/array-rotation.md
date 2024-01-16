@@ -297,7 +297,7 @@ static boolean is_rotated(int[] A_orig, int[] A_new) {
 	} else {
 		boolean result = A_new[0] == A_orig[A_orig.length - 1];
 		for (int i = 0; i != A_orig.length - 1; ++i) {
-			result &= A_orig[i] == A_new[i + 1];
+			result = result && (A_orig[i] == A_new[i + 1]);
 		}
 		return result;
 	}
@@ -325,7 +325,7 @@ apply `rotate` to `A`, and then check the result by calling
                 }
                 int[] A_orig = Arrays.copyOf(A, A.length);
                 Rotate.rotate(A);
-                is_rotated(A_orig, A);
+                assertTrue(is_rotated(A_orig, A));
             }
         } catch (Exception e) {
             fail(e.toString());
