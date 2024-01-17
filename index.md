@@ -60,7 +60,7 @@ Expect at least one quiz per month during lab time.
 
 **Instructors**
 
-* Jeremy Siek (jsiek), office hours Mondays 3-4pm, Wednesdays 1-2pm, Luddy Room 3014
+* Jeremy Siek (jsiek), office hours Mondays 3-4pm, Wednesdays 1-2pm, Luddy Room 3014, [make a reservation](https://outlook.office.com/bookwithme/user/7e2eaedb9dbb43868ba3f4dbe81e2972@iu.edu/meetingtype/SVRwCe7HMUGxuT6WGxi68g2?anonymous&ep=mlink)
 * Funda Ergun
 
 **Teaching Assistants**
