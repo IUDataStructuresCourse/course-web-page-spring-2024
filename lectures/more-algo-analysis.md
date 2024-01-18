@@ -2,7 +2,9 @@
 
 **Definition** (Big-O) For a given function g, we define **O(g)** as the
 the set of functions that grow similarly or slower than g. More
-precisely, f ∈ O(g) iff ∃ k c. ∀ n ≥ k. f(n) ≤ c g(n).
+precisely, 
+
+    f ∈ O(g) iff ∃ k c. ∀ n ≥ k. f(n) ≤ c g(n).
 
 **Notation** We write f ≲ g iff f ∈ O(g), and say that f is
 asymptotically less-or-equal to g.
@@ -100,21 +102,22 @@ To make it easy to compute log n, let's look at powers of 2.
 Choose k = 16.
 Choose c = 1.
 
-	We need to show that ∀ n ≥ 16. 2 log n ≤ n / 2.
-	Proof by induction.
-	Base case n = 16. 2 log 16 = 8 = n / 2.
-	Induction step. Assume k > 16.
-	  Assume 2 log(k) ≤ k/2 (Induction Hypothesis).
-	  We need to show that 2 log (k + 1) ≤ (k + 1) / 2.
-	  Work backwards through the following:
-	  2 log(k + 1) ≤ 2 log(1.18 × k)
-				   = 2 (log(1.18) + log(k))      (log(ab) = log(a) + log(n))
-				   ≤ 2 (1/4  + log(k))
-				   = 2(1/4) + 2 log(k)
-				   ≤ 1/2 + 2 log(k) 
-				   ≤ 1/2 + k/2   by IH
-				   = (1 + k) / 2.
-	QED.
+    We need to show that ∀ n ≥ 16. 2 log n ≤ n / 2.
+    Proof by induction.
+    Base case n = 16. 
+	  2 log 16 = 8 = n / 2.
+    Induction step. Assume k > 16.
+      Assume 2 log(k) ≤ k/2 (Induction Hypothesis).
+      We need to show that 2 log (k + 1) ≤ (k + 1) / 2.
+      Work backwards through the following:
+      2 log(k + 1) ≤ 2 log(1.18 × k)
+                   = 2 (log(1.18) + log(k))      (log(ab) = log(a) + log(n))
+                   ≤ 2 (1/4  + log(k))
+                   = 2(1/4) + 2 log(k)
+                   ≤ 1/2 + 2 log(k) 
+                   ≤ 1/2 + k/2   by IH
+                   = (1 + k) / 2.
+    QED
 
 # Practice analyzing the time complexity of an algorithm: Insertion Sort
 
