@@ -89,15 +89,15 @@ Show that 2 log n ≲ n / 2.
 We need to choose k and c.
 To make it easy to compute log n, let's look at powers of 2.
 
-|  n  | log n | n/2 | 2 log n |
-| --- | ----- | --- | ------- |
-|  1  |   0   | 1/2 |    0    |
-|  2  |   1   |  1  |    2    |
-|  4  |   2   |  2  |    4    |
-|  8  |   3   |  4  |    6    |
-| 16  |   4   |  8  |    8    |
-| 32  |   5   | 16  |   10    |
-| 64  |   6   | 32  |   12    |
+|  n  | log n | 2 log n | n/2 |
+| --- | ----- | ------- | --- |
+|  1  |   0   |    0    | 1/2 |
+|  2  |   1   |    2    |  1  |
+|  4  |   2   |    4    |  2  |
+|  8  |   3   |    6    |  4  |
+| 16  |   4   |    8    |  8  |
+| 32  |   5   |   10    | 16  |
+| 64  |   6   |   12    | 32  |
 
 Choose k = 16.
 Choose c = 1.
@@ -111,7 +111,7 @@ Choose c = 1.
       We need to show that 2 log (k + 1) ≤ (k + 1) / 2.
       Work backwards through the following:
       2 log(k + 1) ≤ 2 log(1.18 × k)
-                   = 2 (log(1.18) + log(k))      (log(ab) = log(a) + log(n))
+                   = 2 (log(1.18) + log(k))      (log(ab) = log(a) + log(b))
                    ≤ 2 (1/4  + log(k))
                    = 2(1/4) + 2 log(k)
                    ≤ 1/2 + 2 log(k) 
