@@ -22,33 +22,33 @@ doing better on job interview questions.
 
 **Labs and Teaching Assistants**
 
-* Section 6635, Thursday 5:30pm-7:25pm, BH 118
+* Section 6635, Thursday 5:30pm-7:25pm, Wells Library (LI) 402
 
   - Aaron Olson
   - Luke Nargang
   - Meet Palod
 
-* Section 6399, Friday 8:45am-10:40am, IF 1019
+* Section 6399, Friday 8:45am-10:40am, Luddy Hall (IF) 1019
 
   - Calvin Josenhand
   - Chenchao Ding
 
-* Section 6402, Friday 11:15am-1:10pm, GR 102A
+* Section 6402, Friday 11:15am-1:10pm, Gresham Hall (GR) 102A
 
   - Tianyu Chen
   - Niloy Deb Roy Mishu
 
-* Section 36105, Friday 11:30am-1:25pm, LI 402
+* Section 36105, Friday 11:30am-1:25pm, Wells Librayr (LI) 402
 
   - Kyle Li
   - Ganesh Arkanath
 
-* Section 6637, Friday 12:45-2:40pm, I E150
+* Section 6637, Friday 12:45-2:40pm, Myles Brand Hall (I) E150
 
   - Chenchao Ding
   - Matthew Hammans
 
-* Section 7896, Friday 1:45pm-3:40pm, BH 118
+* Section 7896, Friday 1:45pm-3:40pm, Ballantine Hall (BH) 118
 
   - Tianyu Chen
   - Anuj Mahajan
