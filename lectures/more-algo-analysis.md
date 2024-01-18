@@ -59,26 +59,26 @@ asymptotically less-or-equal to g.
 
 ## Proof of the rule for addition
 
-Theorem. If f₁ ≲ g and f₂ ≲ g, then f₁ + f₂ ≲ g.
-Proof.
- Suppose f₁ ≲ g and f₂ ≲ g.
- So   ∀n ≥ k₁. f₁(n) ≤ c₁ × g(n)    (1)
- and  ∀n ≥ k₂. f₂(n) ≤ c₂ × g(n)    (2)
- by (∃⇒).
+	Theorem. If f₁ ≲ g and f₂ ≲ g, then f₁ + f₂ ≲ g.
+	Proof.
+	 Suppose f₁ ≲ g and f₂ ≲ g.
+	 So   ∀n ≥ k₁. f₁(n) ≤ c₁ × g(n)    (1)
+	 and  ∀n ≥ k₂. f₂(n) ≤ c₂ × g(n)    (2)
+	 by (∃⇒).
 
- We need to show that ∃k c. ∀n ≥ k. f₁(n) + f₂(n) ≤ c × g(n)
- Choose k = k₁ + k₂ (⇒∃).
- Choose c = c₁ + c₂ (⇒∃).
- ∀n ≥ k₁ + k₂. f₁(n) + f₂(n) ≤ (c₁ + c₂) × g(n)
- Let n be a number and assume n ≥ k₁ + k₂. (⇒∀)
- We need to show that f₁(n) + f₂(n) ≤ (c₁ + c₂) × g(n)
- equivalently: f₁(n) + f₂(n) ≤ c₁ × g(n) + c₂ × g(n)
- From (1) and (2) we have
-   f₁(n) ≤ c₁ × g(n)
-   f₂(n) ≤ c₂ × g(n)
- and therefore
-   f₁(n) + f₂(n) ≤ c₁ × g(n) + c₂ × g(n).
-QED.
+	 We need to show that ∃k c. ∀n ≥ k. f₁(n) + f₂(n) ≤ c × g(n)
+	 Choose k = k₁ + k₂ (⇒∃).
+	 Choose c = c₁ + c₂ (⇒∃).
+	 ∀n ≥ k₁ + k₂. f₁(n) + f₂(n) ≤ (c₁ + c₂) × g(n)
+	 Let n be a number and assume n ≥ k₁ + k₂. (⇒∀)
+	 We need to show that f₁(n) + f₂(n) ≤ (c₁ + c₂) × g(n)
+	 equivalently: f₁(n) + f₂(n) ≤ c₁ × g(n) + c₂ × g(n)
+	 From (1) and (2) we have
+	   f₁(n) ≤ c₁ × g(n)
+	   f₂(n) ≤ c₂ × g(n)
+	 and therefore
+	   f₁(n) + f₂(n) ≤ c₁ × g(n) + c₂ × g(n).
+	QED.
 
 ## Student Exercise
 
@@ -100,21 +100,21 @@ To make it easy to compute log n, let's look at powers of 2.
 Choose k = 16.
 Choose c = 1.
 
-We need to show that ∀ n ≥ 16. 2 log n ≤ n / 2.
-Proof by induction.
-Base case n = 16. 2 log 16 = 8 = n / 2.
-Induction step. Assume k > 16.
-  Assume 2 log(k) ≤ k/2 (Induction Hypothesis).
-  We need to show that 2 log (k + 1) ≤ (k + 1) / 2.
-  Work backwards through the following:
-  2 log(k + 1) ≤ 2 log(1.18 × k)
-			   = 2 (log(1.18) + log(k))      (log(ab) = log(a) + log(n))
-			   ≤ 2 (1/4  + log(k))
-			   = 2(1/4) + 2 log(k)
-			   ≤ 1/2 + 2 log(k) 
-			   ≤ 1/2 + k/2   by IH
-			   = (1 + k) / 2.
-QED.
+	We need to show that ∀ n ≥ 16. 2 log n ≤ n / 2.
+	Proof by induction.
+	Base case n = 16. 2 log 16 = 8 = n / 2.
+	Induction step. Assume k > 16.
+	  Assume 2 log(k) ≤ k/2 (Induction Hypothesis).
+	  We need to show that 2 log (k + 1) ≤ (k + 1) / 2.
+	  Work backwards through the following:
+	  2 log(k + 1) ≤ 2 log(1.18 × k)
+				   = 2 (log(1.18) + log(k))      (log(ab) = log(a) + log(n))
+				   ≤ 2 (1/4  + log(k))
+				   = 2(1/4) + 2 log(k)
+				   ≤ 1/2 + 2 log(k) 
+				   ≤ 1/2 + k/2   by IH
+				   = (1 + k) / 2.
+	QED.
 
 # Practice analyzing the time complexity of an algorithm: Insertion Sort
 
@@ -167,7 +167,7 @@ Answer:
 **Definition** (Omega) For a given function g(n), we define **Ω(g)** as
 the set of functions that grow at least as fast a g(n):
 
-f ∈ Ω(g) iff ∃ k c, ∀ n ≥ k, 0 ≤ c g(n) ≤ f(n).
+    f ∈ Ω(g) iff ∃ k c, ∀ n ≥ k, 0 ≤ c g(n) ≤ f(n).
 
 **Notation** f ≳ g means f ∈ Ω(g). (Or instead write g ≲ f.)
 
@@ -177,7 +177,7 @@ f ∈ Ω(g) iff ∃ k c, ∀ n ≥ k, 0 ≤ c g(n) ≤ f(n).
 **Definition** (Theta) For a given function g(n), **Θ(g)** is the set
 of functions that grow at the same rate as g(n):
 
-f ∈ Θ(g) iff ∃ k c₁ c₂, ∀ n ≥ k, 0 ≤ c₁ g(n) ≤ f(n) ≤ c₂ g(n).
+    f ∈ Θ(g) iff ∃ k c₁ c₂, ∀ n ≥ k, 0 ≤ c₁ g(n) ≤ f(n) ≤ c₂ g(n).
 
 We say that g is an *asymptotically tight bound* for each function
 in Θ(g).
