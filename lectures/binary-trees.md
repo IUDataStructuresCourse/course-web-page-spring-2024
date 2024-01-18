@@ -1,4 +1,4 @@
-# More Abstract Data Types
+# More Interfaces (aka. Abstract Data Types)
 
 ## Stack (LIFO)
 
