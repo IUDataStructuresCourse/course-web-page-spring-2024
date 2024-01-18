@@ -188,7 +188,7 @@ Proof. We proceed by induction on n.
 
 ## Student exercise
 
-Show that 2 log n ∈ O(n / 2). 
+Show that 2 log n ≲ n / 2. 
 
 Hint: experiment with values of n that are powers of 2 because it is
 easy to take the log of them:
@@ -202,17 +202,17 @@ easy to take the log of them:
 
 * Polynomials:
     If f(n) = cᵢ nⁱ + ... + c₁ n¹ + c₀, 
-	then f ∈ O(nⁱ).
+	then f ≲ nⁱ.
 * Addition:
-    If f₁ ∈ O(g) and f₂ ∈ O(g),
-    then f₁ + f₂ ∈ O(g).
+    If f₁ ≲ g and f₂ ≲ g,
+    then f₁ + f₂ ≲ g.
 * Multiplication:
-    If f₁ ∈ O(g₁) and f₂ ∈ O(g₂),
-    then f₁ * f₂ ∈ O(g₁*g₂).
+    If f₁ ≲ g₁ and f₂ ≲ g₂,
+    then f₁×f₂ ≲ g₁×g₂.
 * Reflexivity:
-    f ∈ O(f)
+    f ≲ f
 * Transitivity:
-    f ∈ O(g) and g ∈ O(h) implies f ∈ O(h)
+    f ≲ g and g ≲ h implies f ≲ h
 
 * Example: anagram detection
 

@@ -7,7 +7,57 @@ precisely, f ∈ O(g) iff ∃ k c. ∀ n ≥ k. f(n) ≤ c g(n).
 **Notation** We write f ≲ g iff f ∈ O(g), and say that f is
 asymptotically less-or-equal to g.
 
-## Example
+## Example: anagram detection
+
+    Two words are **anagrams** of each other if they contain the same
+    characters, that is, they are a rearrangement of each other.
+
+    examples: mary <-> army, silent <-> listen, doctor who <-> torchwood
+
+    For the following algorithms, what's the time complexity? space
+    complexity?
+
+    * Algorithm 0:
+      Generate all permutations of the first word.
+      This is O(n!) time and O(n) space.
+
+    * Algorithm 1:
+      For each character in the first string
+      check it off in the second string.
+      This is O(n²) time and O(n) space.
+
+    * Algorithm 2:
+      Sort both strings then 
+      compare the sorted strings for equality
+      This is O(n lg n) time and O(1) space.
+
+    * Algorithm 3:
+      Count letter occurences in both words and then compare
+          the number of occurences of each letter.
+      This is O(n) time and O(k) space
+      (where k is the number of characters in the alphabet).
+
+## Reasoning about asymptotic upper bounds
+
+* Polynomials:
+    If f(n) = cᵢ nⁱ + ... + c₁ n¹ + c₀, 
+	then f ≲ nⁱ.
+	
+* Addition:
+    If f₁ ≲ g and f₂ ≲ g,
+    then f₁ + f₂ ≲ g.
+	
+* Multiplication:
+    If f₁ ≲ g₁ and f₂ ≲ g₂,
+    then f₁ × f₂ ≲ g₁ × g₂.
+	
+* Reflexivity:
+    f ≲ f
+	
+* Transitivity:
+    f ≲ g and g ≲ h implies f ≲ h
+
+## Proof of the rule for addition
 
 Theorem. If f₁ ≲ g and f₂ ≲ g, then f₁ + f₂ ≲ g.
 Proof.
@@ -30,9 +80,16 @@ Proof.
    f₁(n) + f₂(n) ≤ c₁ × g(n) + c₂ × g(n).
 QED.
 
-## Example
+## Student Exercise
 
 Show that 2 log n ≲ n / 2.
+
+
+
+
+
+
+
 
 We need to choose k and c.
 To make it easy to compute log n, let's look at powers of 2.
@@ -119,7 +176,7 @@ the set of functions that grow at least as fast a g(n):
 
 f ∈ Ω(g) iff ∃ k c, ∀ n ≥ k, 0 ≤ c g(n) ≤ f(n).
 
-**Notation** f ≳ g means f ∈ Ω(g).
+**Notation** f ≳ g means f ∈ Ω(g). (Or instead write g ≲ f.)
 
 
 # Tight bounds
@@ -132,7 +189,7 @@ f ∈ Θ(g) iff ∃ k c₁ c₂, ∀ n ≥ k, 0 ≤ c₁ g(n) ≤ f(n) ≤ c₂ 
 We say that g is an *asymptotically tight bound* for each function
 in Θ(g).
 
-**Notation** f ≈ g means f ∈ Θ(g)
+**Notation** f ≈ g means f ∈ Θ(g). We say f and g are asympotically equivalent.
 
 
 # Reasoning about bounds.
@@ -143,11 +200,11 @@ in Θ(g).
 
 # Relationships between Θ, O, and Ω.
 
-* Θ(g) ⊆ O(g)
+* Θ(g) ⊆ O(g), f ≈ g implies f ≲ g
 
-* Θ(g) ⊆ Ω(g)
+* Θ(g) ⊆ Ω(g), f ≈ g implies g ≲ f
 
-* Θ(g) = Ω(g) ∩ O(g)
+* Θ(g) = Ω(g) ∩ O(g), f ≈ g iff (f ≲ g and g ≲ f)
 
 # Example: Merge Sort
 
