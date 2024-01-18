@@ -16,6 +16,42 @@ characters, that is, they are a rearrangement of each other.
 
 examples: mary <-> army, silent <-> listen, doctor who <-> torchwood
 
+1)
+Do an array search on an array made of the letters of the second word
+and search for each letter of the first word.
+Cross off the letter you find.
+
+for ...  n
+  for ... n
+
+O(n^2)
+
+2) Generate all permutations of the first word.
+Check whether the second word is in the list of permutations.
+
+O(n!)
+
+3) sort both words, trim spaces, check for equality.
+
+O(n log(n)) + O(n) + O(n)
+= O(n log(n))
+
+4) create a hashmap that maps letters to # occurences for each word,
+   then compare the hashmaps for equality
+
+O(n)*
+
+* assuming O(1) access to the hashtable
+
+
+
+
+
+
+
+
+
+
 For the following algorithms, what's the time complexity? space
 complexity?
 
@@ -80,13 +116,32 @@ complexity?
 	   f₂(n) ≤ c₂ × g(n)
 	 and therefore
 	   f₁(n) + f₂(n) ≤ c₁ × g(n) + c₂ × g(n).
-	QED.
+	QED
 
 ## Student Exercise
 
 Show that 2 log n ≲ n / 2.
 
 We need to choose k and c.
+
+k=1, c=2
+k=4, c=2
+k=16, c=1
+
+n    log n   2 log n   n / 2
+1     0        0       1/2
+2     1        2       1
+4     2        4       2
+8     3        6       4
+
+16    4        8       8
+32    5       10      16
+
+∀ n ≥ 16. 2 log n ≤ n / 2
+
+
+
+
 To make it easy to compute log n, let's look at powers of 2.
 
 |  n  | log n | 2 log n | n/2 |
@@ -122,17 +177,19 @@ Choose c = 1.
 # Practice analyzing the time complexity of an algorithm: Insertion Sort
 
 	public static void insertion_sort(int[] A) { // let n = A.length 
-		for (int j = 1; j != A.length; ++j) {
-			int key = A[j];
-			int i = j - 1;
-			while (i >= 0 && A[i] > key) {
-				A[i+1] = A[i];
-				i -= 1;
+		for (int j = 1; j != A.length; ++j) { // n iterations, body: O(1)+O(1)+O(n)+O(1)=O(n), for loop total: O(n)*O(n)=O(n^2)
+			int key = A[j]; O(1)
+			int i = j - 1;  O(1)
+			while (i >= 0 && A[i] > key) { // n iterations, body: O(n), while loop total: O(1)*O(n) = O(n) 
+				A[i+1] = A[i];  O(1)
+				i -= 1;         O(1)
 			}
-			A[i+1] = key;
+			A[i+1] = key;       O(1)
 		}
 	}
-	
+
+
+
 What is the time complexity of insertion_sort?
 
 Answer:
@@ -149,7 +206,7 @@ Answer:
 	* remove: O(1)
 
 * ArrayList
-	* add: O(1)
+	* add: O(1)*
 	* get: O(1)
 	* contains: O(n)
 	* remove: O(n)
@@ -164,6 +221,8 @@ Answer:
 * O(2^n), O(3^n), etc.        exponential
 * O(n!)                       factorial
 
+O(5n)
+O(n^n)? 
 
 # Lower bounds
 

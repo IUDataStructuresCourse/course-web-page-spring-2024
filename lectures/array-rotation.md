@@ -314,22 +314,18 @@ apply `rotate` to `A`, and then check the result by calling
 ```
     @Test
     public void rotate_big() {
-        // rotate a big array
-        try {
-            Random r = new Random(0);
-            for (int t = 0; t != 50; ++t) {
-                int n = r.nextInt(1000);
-                int[] A = new int[n];
-                for (int i = 0; i != n; ++i) {
-                    A[i] = r.nextInt(100);
-                }
-                int[] A_orig = Arrays.copyOf(A, A.length);
-                Rotate.rotate(A);
-                assertTrue(is_rotated(A_orig, A));
-            }
-        } catch (Exception e) {
-            fail(e.toString());
-        }
+        // rotate a big, randomly generated array
+		Random r = new Random(0);
+		for (int t = 0; t != 50; ++t) {
+			int n = r.nextInt(1000);
+			int[] A = new int[n];
+			for (int i = 0; i != n; ++i) {
+				A[i] = r.nextInt(100);
+			}
+			int[] A_orig = Arrays.copyOf(A, A.length);
+			Rotate.rotate(A);
+			assertTrue(is_rotated(A_orig, A));
+		}
     }
 ```
 
