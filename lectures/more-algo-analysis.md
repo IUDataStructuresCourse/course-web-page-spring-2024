@@ -112,7 +112,7 @@ Choose c = 1.
       Work backwards through the following:
       2 log(k + 1) ≤ 2 log(1.18 × k)
                    = 2 (log(1.18) + log(k))      (log(ab) = log(a) + log(b))
-                   ≤ 2 (1/4  + log(k))
+                   ≤ 2 (1/4  + log(k))           log(1.18) < 0.239 < 1/4
                    = 2(1/4) + 2 log(k)
                    ≤ 1/2 + 2 log(k) 
                    ≤ 1/2 + k/2   by IH
