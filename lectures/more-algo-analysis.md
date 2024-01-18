@@ -84,13 +84,6 @@ QED.
 
 Show that 2 log n ≲ n / 2.
 
-
-
-
-
-
-
-
 We need to choose k and c.
 To make it easy to compute log n, let's look at powers of 2.
 
