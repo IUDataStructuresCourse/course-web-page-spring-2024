@@ -113,7 +113,7 @@ Jan. 18 or 19 |                                                     |           
 Jan. 22 | | | <mark>Lab 1 due</mark> |
 Jan. 23 | [Linked Lists and Interfaces](./lectures/linked-lists.md) | Ch. 3 sec. 1-5 |
 Jan. 25 | [More Interfaces, Binary Trees](./lectures/binary-trees.md) | Ch. 3 sec. 6-7,<br> Ch. 4 sec. 1-2
-Jan. 25 or 26 | | | [Project 1: Flood It](./proj1) | [code](https://autograder.luddy.indiana.edu/web/project/922)
+Jan. 25 or 26 | | | [Project 1: Flood It](./proj1-flood-it) | [code](https://autograder.luddy.indiana.edu/web/project/922)
 Jan. 29 | | | <mark>Project 1 due</mark> |
 March 5 | **Midterm Exam** (in class)
 March 10 - 17 | **Spring Break**
