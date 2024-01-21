@@ -108,9 +108,11 @@ Jan. 9 | [Introduction](./lectures/introduction.md)                 |           
 Jan. 11 | [Arrays, Rotation, Testing](./lectures/array-rotation.md) | Ch. 1        |         |
 Jan. 11 or 12 |                                                     |              | No lab
 Jan. 16 | [Algorithm Analysis](./lectures/algo-analysis.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_uluqvhj2))  | Ch. 2        | 
-Jan. 18 | [Algorithm Analysis, continued](./lectures/more-algo-analysis.md)
+Jan. 18 | [Algorithm Analysis, continued](./lectures/more-algo-analysis.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_cvtootj1))
 Jan. 18 or 19 |                                                     |              | [Lab 1: Array Search and Testing](./lab1) | [code](https://autograder.luddy.indiana.edu/web/project/927), [test](https://autograder.luddy.indiana.edu/web/project/941)
 Jan. 22 | | | <mark>Lab 1 due</mark> |
+Jan. 23 | [Linked Lists and Interfaces](./lectures/linked-lists.md) | Ch. 3 sec. 1-5 |
+Jan. 25 | [More Interfaces, Binary Trees](./lectures/binary-trees.md) | Ch. 3 sec. 6-7,<br> Ch. 4 sec. 1-2
 Jan. 25 or 26 | | | [Project 1: Flood It](./proj1) | [code](https://autograder.luddy.indiana.edu/web/project/922)
 Jan. 29 | | | <mark>Project 1 due</mark> |
 March 5 | **Midterm Exam** (in class)

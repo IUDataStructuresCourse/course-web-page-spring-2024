@@ -1,4 +1,4 @@
-# Lecture: Linked lists and Abstract Data Types
+# Lecture: Linked lists and Interfaces
 
 > "The Tao gave birth to machine language. Machine language gave birth
 > to the assembler. The assembler gave birth to the compiler. Now
@@ -13,7 +13,7 @@
 
 * Announcements
 * Linked lists
-* Abstract data types (ADTs): e.g. Sequence, Iterator
+* Interfaces (aka. Abstract data types, ADTs): e.g. Sequence, Iterator
 
 ## Lab about MergeSort on linked lists. Quiz in lab.
 
