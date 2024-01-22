@@ -117,7 +117,7 @@ Jan. 25 or 26 | | | [Project 1: Flood It](./proj1-flood-it) | [code](https://aut
 Jan. 29 | | | <mark>Project 1 due</mark> |
 March 5 | **Midterm Exam** (in class)
 March 10 - 17 | **Spring Break**
-April 30 | **Final Exam** 11:30am
+April 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
 
 **Resources**
 
