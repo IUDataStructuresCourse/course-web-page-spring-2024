@@ -61,7 +61,7 @@ Expect at least one quiz per month during lab time.
 **Instructors**
 
 * Jeremy Siek (jsiek), office hours Mondays 2:30-4pm, Wednesdays 1-2pm, Luddy Room 3014, [make a reservation](https://outlook.office.com/bookwithme/user/7e2eaedb9dbb43868ba3f4dbe81e2972@iu.edu/meetingtype/SVRwCe7HMUGxuT6WGxi68g2?anonymous&ep=mlink)
-* Funda Ergun
+* Funda Ergun (fergun), office hours Tuesdays 2:30-4:30pm, Luddy Room 2058.
 
 **Teaching Assistants**
 
@@ -117,7 +117,7 @@ Jan. 25 or 26 | | | [Project 1: Flood It](./proj1-flood-it) | [code](https://aut
 Jan. 29 | | | <mark>Project 1 due</mark> |
 March 5 | **Midterm Exam** (in class)
 March 10 - 17 | **Spring Break**
-April 30 | **Final Exam** 11:30am
+April 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
 
 **Resources**
 
