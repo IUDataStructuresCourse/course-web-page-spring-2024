@@ -11,11 +11,9 @@
 
 ## Overview of the lecture
 
-* Announcements
+* Upcoming due dates
 * Linked lists
 * Interfaces (aka. Abstract data types, ADTs): e.g. Sequence, Iterator
-
-## Lab about MergeSort on linked lists. Quiz in lab.
 
 ## Linked Lists
 
