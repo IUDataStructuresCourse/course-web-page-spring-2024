@@ -84,8 +84,8 @@ What are the disadvantages of linked lists?
        ... n.data ...
     }
 
-where `begin` and `end` are nodes and specify a half-open interval
-within a linked list.
+where `begin` and `end` are references to nodes and specify a
+half-open interval within a linked list.
 
 To process an entire list, `begin` is the head of the list and
 `end` is null.
@@ -198,7 +198,7 @@ without them.
 
 Answer: code reuse.
 
-Example: `equals` algorithm for comparing contents of two
+Example: the `equals` algorithm for comparing the contents of two
 sequences. Consider how much code is needed to implement this
 algorithm for arrays (A), singly-linked lists (SL), doubly-linked
 lists (DL), and combinations of them.  The algorithm has two
@@ -289,4 +289,4 @@ also be used with Array!
     Iter<Integer> i = find_first_equal(B, 30);
     assert i == B.end();
 
-The solutions to the in-class exercises are [here](./Sep-6-solutions.md).
+The solutions to the in-class exercises are [here](./linked-list-solutions.md).
