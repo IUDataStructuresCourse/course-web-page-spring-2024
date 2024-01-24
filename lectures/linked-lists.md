@@ -93,10 +93,9 @@ To process an entire list, `begin` is the head of the list and
 
 Example `find_first_equal` on linked list
 
-    Node find_first_equal(Node begin, int x) {
-        int total = 0;
+    Node find_first_equal(Node begin, Node end, int x) {
         Node n;
-        for (n = begin; n != null; n = n.next) {
+        for (n = begin; n != end; n = n.next) {
            if (n.data == x)
              break;
         }
@@ -114,6 +113,12 @@ anywhere you would use other types (variable declarations, etc.).
     class Node<T> {
       T data;
       Node<T> next;
+    }
+
+    class MapNode<K, V> {
+      K key;
+	  V value;
+      MapNode<K,V> next;
     }
 
 When using the class, choose a *type argument* for each parameter.
@@ -157,7 +162,7 @@ Enables visiting all the elements in order.
 Example: Linear Search using the Sequence and Iterator Interfaces
 
     static <T> Iter<T> find_first_equal(Sequence<T> S, T x) {
-       for (Iter<T> i = S.begin(); ! i.equals(S.end()); i.advance()) {
+       for (Iter<T> i = S.begin(); ! i.equals(S.end()); i.advance()) { // i != S.end()
           if (i.get() == x) {
              return i;
           }
@@ -177,7 +182,9 @@ List implementation of Sequence
 		 void advance() { 
 		    position = position.next;
 		 }
-		 boolean equals(Iter<T> other) { ... }
+		 boolean equals(Iter<T> other) {
+		    return this.position == other.position;
+		 }
 		 Iter<T> clone() { ... }
 	   }
        ...

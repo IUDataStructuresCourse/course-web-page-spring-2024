@@ -17,7 +17,7 @@ doing better on job interview questions.
 **Lecture**
 
 * Section 14377, Tuesdays and Thursdays 9:45am-11:00am, Wendell W. Wright Education Building (ED), Room 1120.
-* Section 1724, Tuesdays and Thursdays 11:30am-12:45pm, Luddy Hall (IF), Room 1106.
+* Section 1737, Tuesdays and Thursdays 11:30am-12:45pm, Luddy Hall (IF), Room 1106.
 
 
 **Labs and Teaching Assistants**
