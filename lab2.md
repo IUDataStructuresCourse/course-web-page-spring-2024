@@ -50,9 +50,9 @@ should rearrange the nodes into the following order:
   You may find the helper functions in `Utils.java` helpful.
 + Submit your code file `MergeSort.java` ([Problem 1](#problem-1-implementing-merge-sort))
   and lab write-up `README.md` ([Problem 3](#problem-3-lab-report)) to
-  [link](https://autograder.luddy.indiana.edu/web/project/942).
-+ Submit your test file `MergeSortTest.java` ([Problem 2](#problem-2-testing-merge-sort)) to
   [link](https://autograder.luddy.indiana.edu/web/project/936).
++ Submit your test file `MergeSortTest.java` ([Problem 2](#problem-2-testing-merge-sort)) to
+    [link](https://autograder.luddy.indiana.edu/web/project/942).
 
 ## Problem Set
 
