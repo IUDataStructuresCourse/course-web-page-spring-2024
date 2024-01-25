@@ -1,132 +1,128 @@
-# Lab 2: Array Search
+# Lab 2: Merge Sort on Linked Lists
 
-## Overview and Submission
+## Background and Overview
 
-In the previous lab, we developed test cases for three array search algorithms.
-This time we are going to implement those algorithms as methods of a class called
-`Search`.
+In this lab you are asked to implement two versions of merge sort on linked lists:
+one that produces a _new_, sorted list and another that works _in-place_ by changing
+the input list.
 
-You may reuse the IntelliJ project from last time.
-Create file `src/Search.java` which contains a public class called `Search`.
-When your lab is complete, submit your `Search.java` file to Autograder.
+Section 7.6 of the textbook describes merge sort on an array.
+You’ll need to adapt the algorithm for linked lists. The steps of the algorithms are
 
-By the way, make sure to test your solutions locally using the test cases
-from Lab 1 first!
+1. Split the input sequence in half
+2. Recursively sort the two halves
+3. Merge the two results into one:
+   - scan through the two input sequences and choose the smaller of the two
+     current elements for the output sequence
+
+The main difference between the two versions that you are supposed to write
+is that the sorted list is new in the first, [functional](https://en.wikipedia.org/wiki/Functional_programming)
+version, while it overwrites the input list in the second, in-place version.
+We will explain the difference using examples:
+
+**[Example 1]** The `sort` function applied to the following linked list
+
+```
+[5] -> [2] -> [7] -> [1]
+```
+
+produces the following new linked list, while leaving _the original one unchanged_:
+
+```
+[1] -> [2] -> [5] -> [7]
+```
+
+**[Example 2]** The `sort_in_place()` function applied to the following list
+
+```
+[6] -> [3] -> [8] -> [2]
+```
+
+should rearrange the nodes into the following order:
+
+```
+[2] -> [3] -> [6] -> [8]
+```
+
+## Support Code and Submission
+
++ Student support code is at [link](https://github.com/IUDataStructuresCourse/merge-sort-list-student-support-code).
+  You may find the helper functions in `Utils.java` helpful.
++ Submit your test file `MergeSortTest.java` ([Problem 1](#problem-1-testing-merge-sort)) to
+  [link](https://autograder.luddy.indiana.edu/web/project/936).
++ Submit your code file `MergeSort.java` ([Problem 2](#problem-2-implementing-merge-sort))
+  and lab write-up `README.md` ([Problem 3](#problem-3-lab-report)) to
+  [link](https://autograder.luddy.indiana.edu/web/project/942).
 
 ## Problem Set
 
-### Problem 1: Linear Search on an Array of Booleans
+Download student support code and import the project into IntelliJ.
 
-Implement the search function `find_first_true` that finds
-the position of the first `true` in array `A` of boolean values,
-that is, find the smallest index `i` such that `A[i]` is `true`.
-The search is restricted to the subarray within `A` that starts at the `begin`
-index and finishes one element before the `end` index
-(half-open interval `[begin,end)`).
-If there are no `true` elements in the subarray, then `find_first_true`
-returns the `end` position of the subarray.
-The caller of `find_first_true` always provides a valid half-open
-range: `begin <= end`, `0 <= begin`, `begin <= A.length`,
-`0 <= end`, and `end <= A.length`.
-_The time it takes for your algorithm to run should be proportional to the
-length of the array `A`._
+### Problem 1: Testing Merge Sort
 
-**[Example 1]** If the input array `A` is
+Look at `MergeSort.java` in the student support code. Apart from `sort()` and `sort_in_place()`,
+it also contains type signatures for `merge()` and `merge_in_place()`. The sort functions call
+their respective merge functions to combine two sorted halves into one. Similar to their sorting
+counterparts, `merge()` creates a _new_ list from two input lists while `merge_in_place()` works
+in-place by rearranging the nodes.
 
-```java
-{false, false, true, false, true}
+**[Example 3]** The `merge()` function applied to the following two sorted lists
+
+```
+[1] -> [2] -> [5] -> [7]
+[2] -> [3] -> [6] -> [8]
 ```
 
-then the result should be 2 because `A[2] == true` and there are no
-`true` elements at lower indices (`A[0]` and `A[1]` are both `false`).
+produces the following newly allocated list
 
-**[Example 2]** Suppose `A` is the array
-
-```java
-{true, false, true, false, true}
+```
+[1] -> [2] -> [2] -> [3] -> [5] -> [6] -> [7] -> [8]
 ```
 
-and we search in the half-open interval `[1,3)`. The answer should be `2`.
+Before implementing the two versions of merge sort, think about their correctness criteria.
+_Write regular, corner, and random test cases_ for `merge()`, `sort()`, `merge_in_place()`,
+and `sort_in_place()`.
 
-```java
-find_first_true(A, 1, 3) == 2
-```
+Run your test cases on Autograder against four buggy implementations and see whether they can
+catch all the bugs!
 
-Add the following method to the `Search` class and fill-in the
-implementation:
+<details open="true">
+  <summary>Hints: a few things to test...</summary>
+  <ul>
+    <li>Whether <code>merge()</code> and <code>sort()</code> create <em>new</em> output lists</li>
+    <li>Whether the output lists of <code>sort()</code> and <code>sort_in_place()</code> are sorted</li>
+    <li>Whether the output lists of <code>sort()</code> and <code>sort_in_place()</code> are permutations
+        of their input lists</li>
+    <li>Corner cases</li>
+    <li>...</li>
+  </ul>
+</details>
 
-```java
-public static int find_first_true(boolean[] A, int begin, int end) {
-    // ...
-}
-```
+### Problem 2: Implementing Merge Sort
 
-### Problem 2: Linear Search on an Array of Integers
+Implement both `sort()` (functional) and `sort_in_place()` (in-place) in class `MergeSort`.
 
-⚠️ **Use `find_first_true`** to implement the function `find_first_equal`
-that searches on an array of _integers_, with the goal of finding the
-position of the first element that is equal to the `x` parameter.
-If there are no elements equal to `x`, the length of the array is returned.
-Again, the time it takes for your algorithm to run should be proportional
-to the length of `A`.
+Both functions have a `Node`-typed parameter and `Node` return type, which point to the first node
+in the input list and the first node in the output list respectively.
+As is mentioned in Problem 1, they should call `merge()` and
+`merge_in_place()` respectively, which you are supposed to implement as well.
+The `Node` class is defined in `Node.java`.
 
-**[Example 3]** Suppose `A` is the array
+Before running your code on Autograder, test locally using your own test cases from Problem 1.
 
-```java
-{32, 11, 4, 5, 99, 5, 32, 75}
-```
-then the result of search for `5` should be `3`:
+### Problem 3: Lab Report
 
-```java
-find_first_equal(A, 5) == 3
-```
+Answer the following questions in your lab write-up (`README.md`):
 
-Implement the following method in the `Search` class:
++ **[Question 1]** What is the time and space complexity of your `merge()` function?
++ **[Question 2]** What is the time and space complexity of your `sort()` function?
++ **[Question 3]** What is the time and space complexity of your `merge_in_place()` function?
++ **[Question 4]** What is the time and space complexity of your `sort_in_place()` function?
 
-``` java
-public static int find_first_equal(int[] A, int x) {
-    // ...
-}
-```
+### Last Step: Checking Your Submission
 
-### Problem 3: Binary Search on an Array of Booleans
-
-Similar to Problem 1, we search on an array of booleans and look for the position
-of the first `true`. This time we suppose that all of the `false` elements in the array
-come before all of the `true` elements (sorted).
-
-Implement `find_first_true_sorted(A, begin, end)`, which returns
-the position of the first `true` in array `A`, that is, it finds the
-smallest index `i` greater or equal to `begin` and less than `end`
-such that `A[i]` is `true`.  If there is no `true` within the
-half-open range `[begin,end)`, it returns `end`.  The caller always supplies a
-valid half-open range which means `begin <= end`, `0 <= begin`,
-`begin <= A.length`, `0 <= end`, and `end <= A.length`. Furthermore,
-the caller also ensures that `A` must already be sorted, so that all the `false`
-elements come before any `true` elements.
-
-The algorithm should be more efficient and runs in time proportional
-to the ⚠️**logarithm** of the length of the array, by
-_looking at the element in the middle and restricting
-the search to the right or left subarray_ depending on its value.
-
-**[Example 4]** Suppose `A` is the _sorted_ array
-
-```java
-{false, false, true, true, true, true, true}
-```
-
-The position of the first `true` element is `2` in this case.
-
-Implement your algorithm in the following method of the `Search` class.
-Again, restrict your search to the half-open interval `[begin,end)`:
-
-```java
-public static int find_first_true_sorted(boolean[] A, int begin, int end) {
-    // ...
-}
-```
+Make sure `MergeSort.java`, `MergeSortTest.java` and `README.md` were submitted.
 
 -----------------
 
-* You have reached the end of Lab 2. Yay!
+* You have reached the end of Lab 3. Yay!
