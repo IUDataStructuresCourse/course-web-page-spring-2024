@@ -6,7 +6,7 @@ In this lab you are asked to implement two versions of merge sort on linked list
 one that produces a _new_, sorted list and another that works _in-place_ by changing
 the input list.
 
-Section 7.6 of the textbook describes merge sort on an array.
+Section 7.6 of the textbook describes merge sort on an array ([lecture notes](./lectures/more-algo-analysis.html)).
 You’ll need to adapt the algorithm for linked lists. The steps of the algorithms are
 
 1. Split the input sequence in half
@@ -48,17 +48,17 @@ should rearrange the nodes into the following order:
 
 + Student support code is at [link](https://github.com/IUDataStructuresCourse/merge-sort-list-student-support-code).
   You may find the helper functions in `Utils.java` helpful.
-+ Submit your test file `MergeSortTest.java` ([Problem 1](#problem-1-testing-merge-sort)) to
-  [link](https://autograder.luddy.indiana.edu/web/project/936).
-+ Submit your code file `MergeSort.java` ([Problem 2](#problem-2-implementing-merge-sort))
++ Submit your code file `MergeSort.java` ([Problem 1](#problem-1-implementing-merge-sort))
   and lab write-up `README.md` ([Problem 3](#problem-3-lab-report)) to
   [link](https://autograder.luddy.indiana.edu/web/project/942).
++ Submit your test file `MergeSortTest.java` ([Problem 2](#problem-2-testing-merge-sort)) to
+  [link](https://autograder.luddy.indiana.edu/web/project/936).
 
 ## Problem Set
 
-Download student support code and import the project into IntelliJ.
+Prerequisite: download student support code and import the project into IntelliJ.
 
-### Problem 1: Testing Merge Sort
+### Problem 1: Implementing Merge Sort
 
 Look at `MergeSort.java` in the student support code. Apart from `sort()` and `sort_in_place()`,
 it also contains type signatures for `merge()` and `merge_in_place()`. The sort functions call
@@ -79,12 +79,20 @@ produces the following newly allocated list
 [1] -> [2] -> [2] -> [3] -> [5] -> [6] -> [7] -> [8]
 ```
 
-Before implementing the two versions of merge sort, think about their correctness criteria.
+Implement both `sort()` (functional) and `sort_in_place()` (in-place) in class `MergeSort`.
+Both sort functions have a `Node`-typed parameter and `Node` return type, which point to
+the first node in the input list and the first node in the output list.
+The `Node` class is defined in `Node.java`.
+The two sort functions should call their respective merge functions, `merge()` and
+`merge_in_place()`, so you are supposed to implement those merge functions as well.
+
+
+### Problem 2: Testing Merge Sort
+
+Before running your code on Autograder, create your own test cases and run them locally.
+Think about their correctness criteria of the two versions of merge sort.
 _Write regular, corner, and random test cases_ for `merge()`, `sort()`, `merge_in_place()`,
 and `sort_in_place()`.
-
-Run your test cases on Autograder against four buggy implementations and see whether they can
-catch all the bugs!
 
 <details open="true">
   <summary>Hints: a few things to test...</summary>
@@ -98,17 +106,9 @@ catch all the bugs!
   </ul>
 </details>
 
-### Problem 2: Implementing Merge Sort
+Run your test cases on Autograder against four buggy implementations and see whether they can
+catch all the bugs!
 
-Implement both `sort()` (functional) and `sort_in_place()` (in-place) in class `MergeSort`.
-
-Both functions have a `Node`-typed parameter and `Node` return type, which point to the first node
-in the input list and the first node in the output list respectively.
-As is mentioned in Problem 1, they should call `merge()` and
-`merge_in_place()` respectively, which you are supposed to implement as well.
-The `Node` class is defined in `Node.java`.
-
-Before running your code on Autograder, test locally using your own test cases from Problem 1.
 
 ### Problem 3: Lab Report
 
