@@ -1,3 +1,8 @@
+# Lecture Overview
+
+* More Interfaces
+* Binary Trees
+
 # More Interfaces (aka. Abstract Data Types)
 
 ## Stack (LIFO)
@@ -66,7 +71,7 @@ of the elements is not important, only membership matters.
 
 Implementations of `Set` are the topic of several future lectures.
 
-# Binary Search Trees
+# Binary Trees and Binary Search Trees
 
 ## Motivation 
 
@@ -95,7 +100,7 @@ Taking stock with respect to Flood-it! and the Set ADT
 * This lecture we discuss binary trees as a lead-up to discussing
   binary search trees in the next lecture.
 
-## Binary Node and Tree Classes
+## BinaryNode and BinaryTree Classes
 
 	class BinaryNode<T> {
 		T data;
@@ -119,6 +124,24 @@ We can traverse a binary tree in several different ways:
 * inorder: left, me, right
 * postorder: left, right, me
 
+preorder(node) {
+   output node.data
+   preorder(node.left)
+   preorder(node.right)
+}
+
+inorder(node) {
+   inorder(node.left)
+   output node.data
+   inorder(node.right)
+}
+
+postorder(node) {
+   postorder(node.left)
+   postorder(node.right)
+   output node.data
+}
+
 Example:
 
                  10
@@ -132,6 +155,26 @@ Example:
             in:   2,5,7,10,14,19
             post: 2,7,5,19,14,10
 
+Recursion Tree written as an "outline"
+* pre(Node(10))
+  * me: output 10
+  * left: pre(Node(5)
+    * me: output 5
+	* left: pre(Node(2))
+	  * me: output 2
+	  * left: null
+	  * right: null
+	* right: pre(Node(7))
+	  * me: output 7
+	  * left: null
+	  * right: null
+  * right: pre(Node(14)
+    * me: output 14
+	* left: null
+	* right: pre(Node(19))
+	  * me: output 19
+	  * left: null
+	  * right: null
 
 ## Next and Previous operations with respect to inorder traversal
 
@@ -145,11 +188,12 @@ Running example binary tree:
     1   6      14
        / \    /
       4   7  13
-    
+
+inorder: 1, 3, 4, 6, 7, 8, 10, 13, 14
+
 ### Helper functions first and last
 
-Find the first node according to an inorder traversal
-within a subtree. 
+Find the first node according to an inorder traversal of the subtree.
 
 Examples:
 
@@ -177,7 +221,16 @@ You may assume that each node has a `parent` attribute.
 
 **Student in-class exercise**:
 
-	BinaryNode<T> nextAncestor();
+	BinaryNode<T> nextAncestor() {
+	 if (this.parent == null) {
+	   return null;
+	 } else if (this.parent.right == this) {
+	   return this.parent.nextAncestor();
+	 } else if (this.parent.left == this) {
+	   return this.parent;
+	 }
+	}
+	
 	
 keep going up so long as the node is the right child, 
 when left child, return parent
