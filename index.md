@@ -112,7 +112,7 @@ Jan. 18 | [Algorithm Analysis, continued](./lectures/more-algo-analysis.md) ([vi
 Jan. 18 or 19 |                                                     |              | [Lab 1: Array Search and Testing](./lab1) | [code](https://autograder.luddy.indiana.edu/web/project/927), [test](https://autograder.luddy.indiana.edu/web/project/941)
 Jan. 22 | | | <mark>Lab 1 due</mark> |
 Jan. 23 | [Linked Lists and Interfaces](./lectures/linked-lists.md) | Ch. 3 sec. 1-5 |
-Jan. 25 | [More Interfaces, Binary Trees](./lectures/binary-trees.md) | Ch. 3 sec. 6-7,<br> Ch. 4 sec. 1-2
+Jan. 25 | [More Interfaces, Binary Trees](./lectures/binary-trees.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_m7ud77ew)) | Ch. 3 sec. 6-7,<br> Ch. 4 sec. 1-2
 Jan. 25 or 26 | | | [Project 1: Flood It](./proj1-flood-it), [Quiz 1](https://iu.instructure.com/courses/2201400/quizzes/4164125) | [code](https://autograder.luddy.indiana.edu/web/project/922)
 Jan. 29 | | | <mark>Project 1 due</mark> |
 Feb. 1 or 2 | | | [Lab 2: Merge Sort on Linked Lists](./lab2) | [code](https://autograder.luddy.indiana.edu/web/project/936), [test](https://autograder.luddy.indiana.edu/web/project/942)
