@@ -17,7 +17,7 @@ doing better on job interview questions.
 **Lecture**
 
 * Section 14377, Tuesdays and Thursdays 9:45am-11:00am, Wendell W. Wright Education Building (ED), Room 1120.
-* Section 1724, Tuesdays and Thursdays 11:30am-12:45pm, Luddy Hall (IF), Room 1106.
+* Section 1737, Tuesdays and Thursdays 11:30am-12:45pm, Luddy Hall (IF), Room 1106.
 
 
 **Labs and Teaching Assistants**
@@ -60,8 +60,8 @@ Expect at least one quiz per month during lab time.
 
 **Instructors**
 
-* Jeremy Siek (jsiek), office hours Mondays 3-4pm, Wednesdays 1-2pm, Luddy Room 3014, [make a reservation](https://outlook.office.com/bookwithme/user/7e2eaedb9dbb43868ba3f4dbe81e2972@iu.edu/meetingtype/SVRwCe7HMUGxuT6WGxi68g2?anonymous&ep=mlink)
-* Funda Ergun
+* Jeremy Siek (jsiek), office hours Mondays 2:30-4pm, Wednesdays 1-2pm, Luddy Room 3014, [make a reservation](https://outlook.office.com/bookwithme/user/7e2eaedb9dbb43868ba3f4dbe81e2972@iu.edu/meetingtype/SVRwCe7HMUGxuT6WGxi68g2?anonymous&ep=mlink)
+* Funda Ergun (fergun), office hours Tuesdays 2:30-4:30pm, Luddy Room 2058.
 
 **Teaching Assistants**
 
@@ -113,13 +113,13 @@ Jan. 18 or 19 |                                                     |           
 Jan. 22 | | | <mark>Lab 1 due</mark> |
 Jan. 23 | [Linked Lists and Interfaces](./lectures/linked-lists.md) | Ch. 3 sec. 1-5 |
 Jan. 25 | [More Interfaces, Binary Trees](./lectures/binary-trees.md) | Ch. 3 sec. 6-7,<br> Ch. 4 sec. 1-2
-Jan. 25 or 26 | | | [Project 1: Flood It](./proj1-flood-it) | [code](https://autograder.luddy.indiana.edu/web/project/922)
+Jan. 25 or 26 | | | [Project 1: Flood It](./proj1-flood-it), [Quiz 1](https://iu.instructure.com/courses/2201400/quizzes/4164125) | [code](https://autograder.luddy.indiana.edu/web/project/922)
 Jan. 29 | | | <mark>Project 1 due</mark> |
 Feb. 1 or 2 | | | [Lab 2: Merge Sort on Linked Lists](./lab2) | [code](https://autograder.luddy.indiana.edu/web/project/936), [test](https://autograder.luddy.indiana.edu/web/project/942)
 Feb. 5 | | | <mark>Lab 2 due</mark> |
 March 5 | **Midterm Exam** (in class)
 March 10 - 17 | **Spring Break**
-April 30 | **Final Exam** 11:30am
+April 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
 
 **Resources**
 
