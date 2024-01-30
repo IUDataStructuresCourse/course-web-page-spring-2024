@@ -1,4 +1,4 @@
-# Lab 4: Next Prev Binary Tree
+# Lab 3: Next Prev Binary Tree
 
 ## Background and Overview
 
@@ -15,9 +15,9 @@ should provide an *inorder traversal*. Traversing according to the
 
 + Student support code is at [link](https://github.com/IUDataStructuresCourse/next-prev-bt-student-support-code).
 + Submit your code file `BinaryTree.java` ([Problem 1](#problem-1-tree-traversal)) to
-  [link](https://autograder.luddy.indiana.edu/web/project/693).
+  [link](https://autograder.luddy.indiana.edu/web/project/924).
 + Submit your test file `BinaryTreeTest.java` ([Problem 2](#problem-2-testing)) to
-  [link](https://autograder.luddy.indiana.edu/web/project/831).
+  [link](https://autograder.luddy.indiana.edu/web/project/943).
 
 
 ## Problem Set
@@ -109,4 +109,4 @@ to rule out false positives.
 
 -----------------
 
-* You have reached the end of Lab 4. Yay!
+* You have reached the end of Lab 3. Yay!
