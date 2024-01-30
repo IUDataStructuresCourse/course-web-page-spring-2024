@@ -125,4 +125,4 @@ Make sure `MergeSort.java`, `MergeSortTest.java` and `README.md` were submitted.
 
 -----------------
 
-* You have reached the end of Lab 3. Yay!
+* You have reached the end of Lab 2. Yay!
