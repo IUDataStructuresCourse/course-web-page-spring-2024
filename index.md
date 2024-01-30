@@ -113,12 +113,14 @@ Jan. 18 or 19 |                                                     |           
 Jan. 22 | | | Lab 1 due |
 Jan. 23 | [Linked Lists and Interfaces](./lectures/linked-lists.md) | Ch. 3 sec. 1-5 |
 Jan. 25 | [More Interfaces, Binary Trees](./lectures/binary-trees.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_m7ud77ew)) | Ch. 3 sec. 6-7,<br> Ch. 4 sec. 1-2
-Jan. 25 or 26 | | | [Project 1: Flood It](./proj1-flood-it), [<mark>Quiz 1</mark>](https://iu.instructure.com/courses/2201400/quizzes/4164125) | [code](https://autograder.luddy.indiana.edu/web/project/922)
-Jan. 29 | | | <mark>Project 1 due</mark> |
+Jan. 25 or 26 | | | [Project 1: Flood It](./proj1-flood-it), [Quiz 1](https://iu.instructure.com/courses/2201400/quizzes/4164125) | [code](https://autograder.luddy.indiana.edu/web/project/922)
+Jan. 29 | | | Project 1 due |
 Jan. 30 | [Binary Search Trees](./lectures/binary-search-trees.md)                   | Ch. 4 sec. 3 and 7  |
 Feb. 1  | [Balanced Search Trees (AVL)](./lectures/balanced-search-trees.md) | Ch. 4 sec. 4 |
 Feb. 1 or 2 | | | [Lab 2: Merge Sort on Linked Lists](./lab2) | [code](https://autograder.luddy.indiana.edu/web/project/936), [test](https://autograder.luddy.indiana.edu/web/project/942)
 Feb. 5 | | | <mark>Lab 2 due</mark> |
+Feb. 8 or 9 | | | [Lab 3: Next Prev Binary Tree](./lab3) | [code](https://autograder.luddy.indiana.edu/web/project/924), [test](https://autograder.luddy.indiana.edu/web/project/943)
+Feb. 12 | | | <mark>Lab 3 due</mark> |
 March 5 | **Midterm Exam** (in class)
 March 10 - 17 | **Spring Break**
 April 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
