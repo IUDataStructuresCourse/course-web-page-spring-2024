@@ -3,9 +3,37 @@
 Idea: use binary trees to implement the Set interface, such that doing
 a search for an element is like doing binary search.
 
+```java
+interface Set<T> {
+   void insert(T e);
+   void remove();
+   boolean member(T e); // aka contains
+   ...
+}
+
+another option:
+interface Set<T extends Comparable<T> > {
+   void insert(T e);
+   void remove();
+   boolean member(T e); // aka contains
+   ...
+}
+
+class BST<T> implements Set<T> {
+   BiPredicate comparison;
+   
+   BST(BiPredicate pred) { comparison = pred; }
+   void insert(T e) { ... }
+   void remove() { ... }
+   boolean member(T e) {...}
+   ...
+}
+```
+
 The **Binary-Search-Tree Property**:
 For every node x in the tree,
-1. if node y is in the left subtree of x, then `y.data <= x.data`, and
+1. if node y is in the left subtree of x, then `y.data < x.data`
+   (or `y.data <= x.data` for MultiSet, that is, allow duplicates), and
 2. if node z is in the right subtree of x, then `x.data < z.data`.
 
 We can also use BSTs to implement the Map interface (aka. "dictionary").
@@ -28,7 +56,7 @@ convenience:
 
 
 ``` java
-public class BinarySearchTree<K> {
+public class BinarySearchTree<K> implements Set<K> {
 
     static class Node<K> {
         K data;
@@ -38,6 +66,7 @@ public class BinarySearchTree<K> {
 
     Node<K> root;
     protected BiPredicate<K, K> lessThan;
+	BinarySearchTree(BiPredicate<K, K> less) { lessThan = less; }
     // ...
 }
 ```
@@ -81,10 +110,12 @@ if the key is found.
 ```java
 public Node<K> search(K key) {
 	Node<K> n = find(key, root, null);
-	if (n != null && n.data.equals(key))
-		return n;
+	if (n == null)
+	  return null;
+	else if (n.data.equals(key)))
+	  return n;
 	else
-		return null;
+	  return null;
 }
 ```
 
@@ -111,16 +142,19 @@ public void insert_rec(K key) {
 	root = insert_helper(key, root);
 }
 
-private Node<K> insert_helper(K key, Node<K> curr) {
+protected static Node<K> insert_helper(K key, Node<K> curr) {
 	if (curr == null)
 		return new Node<>(key, null, null);
-	else if (lessThan.test(key, curr.data))
+	else if (lessThan.test(key, curr.data)) {
 		curr.left = insert_helper(key, curr.left);
-	else if (lessThan.test(curr.data, key))
+        return curr;
+	} else if (lessThan.test(curr.data, key)) {
 		curr.right = insert_helper(key, curr.right);
-	else
-		; // duplicate; do nothing
-	return curr;
+        return curr;
+	} else {
+		// duplicate; do nothing
+        return curr;
+	}
 }
 ```
 
@@ -140,16 +174,16 @@ Fill in the blanks:
 public Node<K> insert(K key) {
 	Node<K> n = find(key, root, null);
 	if (n == null){
-		// ?
-		return /* ? */;
+		root = new Node<K>(key, null, null);
+		return root;
 	} else if (lessThan.test(key, n.data)) {
-		// ?
-		return /* ? */;
+		n.left = new Node<K>(key, null, null);
+		return n.left;
 	}  else if (lessThan.test(n.data, key)) {
-		// ?
-		return /* ? */;
+		n.right = new Node<K>(key, null, null);
+		return n.right;
 	} else
-		return null;  // duplicate
+		return null; // duplicate, no insert
 }
 ```
 

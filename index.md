@@ -151,9 +151,16 @@ April 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
 
 **Late Policy**
 
+This policy applies to labs, projects, textbook exercises, and
+quizzes.  For quizzes, you can do a make-up quiz during office hours.
+This policy does not apply to the midterm and final exam.  When you
+complete something late, there is a 10% deduction to its grade.
+
 100% | before 1st deadline
 90%  | before 2nd deadline (one week after 1st)
 0%   | after  2nd deadline
+
+
 
 **Bias-Based Incident Reporting.**
 
