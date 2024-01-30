@@ -197,30 +197,30 @@ The time complexity is O(h).
 Solution for `remove()` (similar to book Figure 4.25):
 
 ```java
-    public void remove(K key) {
-        root = remove_helper(root, key);
-    }
+public void remove(K key) {
+	root = remove_helper(root, key);
+}
 
-    private Node remove_helper(Node<K> curr, K key) {
-        if (curr == null) {
-            return null;
-        } else if (lessThan.test(key, curr.data)) { // remove in left subtree
-            curr.left = remove_helper(curr.left, key);
-            return curr;
-        } else if (lessThan.test(curr.data, key)) { // remove in right subtree
-            curr.right = remove_helper(curr.right, key);
-            return curr;
-        } else {      // remove this node
-            if (curr.left == null) {
-                return curr.right;
-            } else if (curr.right == null) {
-                return curr.left;
-            } else {   // two children, replace with first of right subtree
-                Node<K> min = curr.right.first();
-                curr.data = min.data;
-                curr.right = remove_helper(curr.right, min.data);
-                return curr;
-            }
-        }
-    }
+private Node remove_helper(Node<K> curr, K key) {
+	if (curr == null) {
+		return null;
+	} else if (lessThan.test(key, curr.data)) { // remove in left subtree
+		curr.left = remove_helper(curr.left, key);
+		return curr;
+	} else if (lessThan.test(curr.data, key)) { // remove in right subtree
+		curr.right = remove_helper(curr.right, key);
+		return curr;
+	} else {      // remove this node
+		if (curr.left == null) {
+			return curr.right;
+		} else if (curr.right == null) {
+			return curr.left;
+		} else {   // two children, replace with first of right subtree
+			Node<K> min = curr.right.first();
+			curr.data = min.data;
+			curr.right = remove_helper(curr.right, min.data);
+			return curr;
+		}
+	}
+}
 ```
