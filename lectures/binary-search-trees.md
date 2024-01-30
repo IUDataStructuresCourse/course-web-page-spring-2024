@@ -63,38 +63,38 @@ The `find()` method looks for the node with the specified key; if there is none,
 the parent of where such a node would be.
 
 ```java
-    protected Node<K> find(K key, Node<K> curr, Node<K> parent) {
-        if (curr == null)
-            return parent;
-        else if (lessThan.test(key, curr.data))
-            return find(key, curr.left, curr);
-        else if (lessThan.test(curr.data, key))
-            return find(key, curr.right, curr);
-        else
-            return curr;
-    }
+protected Node<K> find(K key, Node<K> curr, Node<K> parent) {
+	if (curr == null)
+		return parent;
+	else if (lessThan.test(key, curr.data))
+		return find(key, curr.left, curr);
+	else if (lessThan.test(curr.data, key))
+		return find(key, curr.right, curr);
+	else
+		return curr;
+}
 ```
 
 The `search()` method looks for the specified key and returns the node
 if the key is found.
 
 ```java
-    public Node<K> search(K key) {
-        Node<K> n = find(key, root, null);
-        if (n != null && n.data.equals(key))
-            return n;
-        else
-            return null;
-    }
+public Node<K> search(K key) {
+	Node<K> n = find(key, root, null);
+	if (n != null && n.data.equals(key))
+		return n;
+	else
+		return null;
+}
 ```
 
 The `contains()` method returns true if the key is found and false otherwise.
 
 ```java
-    public boolean contains(K key) {
-        Node<K> p = search(key);
-        return p != null;
-    }
+public boolean contains(K key) {
+	Node<K> p = search(key);
+	return p != null;
+}
 ```
 
 What is the time complexity? $O(h)$, where $h$ is the height of the tree.
@@ -107,30 +107,30 @@ Similarly we can perform insertions on BSTs. The `insert()` method takes
 the key to add to the tree and returns the new root.
 
 ```java
-    public Node<K> insert_rec(K key) {
-        root = insert_helper(key, root);
-        return root;
-    }
+public Node<K> insert_rec(K key) {
+	root = insert_helper(key, root);
+	return root;
+}
 
-    private Node<K> insert_helper(K key, Node<K> curr) {
-        if (curr == null)
-            return new Node<>(key, null, null);
-        else if (lessThan.test(key, curr.data))
-            curr.left = insert_helper(key, curr.left);
-        else if (lessThan.test(curr.data, key))
-            curr.right = insert_helper(key, curr.right);
-        else
-            ; // duplicate; do nothing
-        return curr;
-    }
+private Node<K> insert_helper(K key, Node<K> curr) {
+	if (curr == null)
+		return new Node<>(key, null, null);
+	else if (lessThan.test(key, curr.data))
+		curr.left = insert_helper(key, curr.left);
+	else if (lessThan.test(curr.data, key))
+		curr.right = insert_helper(key, curr.right);
+	else
+		; // duplicate; do nothing
+	return curr;
+}
 ```
 
 What is the time complexity? $O(h)$, where $h$ is the height of the tree.
 
 ## In-class Exercise: insert using `find`
 
-Insert into a binary search tree using the `find` method. Return the inserted node,
-or null if the key is already in the tree.
+Insert into a binary search tree using the `find` method. Return the
+inserted node, or null if the key is already in the tree.
 
 Fill in the blanks:
 
@@ -150,6 +150,8 @@ Fill in the blanks:
             return null;  // duplicate
     }
 ```
+
+[Solution](./insert-find-solution.md)
 
 
 ## `remove`  method of `BinarySearchTree`
@@ -186,35 +188,9 @@ Book 4.3.4.
 The main idea is to replace z with the node after z, which is the
 first node y in subtree B. We then recursively delete y from B.
 
-
-<!-- Two cases to consider: -->
-
-<!-- - Case a) B is y -->
-
-<!-- ``` -->
-<!--              |                  | -->
-<!--            z=o        ==>       y -->
-<!--             / \                / \ -->
-<!--            A   y              A   C -->
-<!--                 \ -->
-<!--                  C -->
-<!-- ``` -->
-
-<!-- - Case b) B is not y (y is properly inside B) -->
-
-<!-- ``` -->
-<!--              |                  | -->
-<!--            z=o        ==>       y -->
-<!--             / \                / \ -->
-<!--            A   B             A    B -->
-<!--               ...                ... -->
-<!--                |                  | -->
-<!--                y                  C -->
-<!--                 \ -->
-<!--                  C -->
-<!-- ``` -->
-
-What is the time complexity? $O(h)$, where $h$ is the height.
+What is the time complexity? 
+Let h be the height of the tree.
+The time complexity is O(h).
 
 Solution for `remove()` (similar to book Figure 4.25):
 
