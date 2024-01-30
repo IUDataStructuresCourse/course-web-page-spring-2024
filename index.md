@@ -115,6 +115,8 @@ Jan. 23 | [Linked Lists and Interfaces](./lectures/linked-lists.md) | Ch. 3 sec.
 Jan. 25 | [More Interfaces, Binary Trees](./lectures/binary-trees.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_m7ud77ew)) | Ch. 3 sec. 6-7,<br> Ch. 4 sec. 1-2
 Jan. 25 or 26 | | | [Project 1: Flood It](./proj1-flood-it), [<mark>Quiz 1</mark>](https://iu.instructure.com/courses/2201400/quizzes/4164125) | [code](https://autograder.luddy.indiana.edu/web/project/922)
 Jan. 29 | | | <mark>Project 1 due</mark> |
+Jan. 30 | [Binary Search Trees](./lectures/binary-search-trees.md)                   | Ch. 4 sec. 3 and 7  |
+Feb. 1  | [Balanced Search Trees (AVL)](./lectures/balanced-search-trees.md) | Ch. 4 sec. 4 |
 Feb. 1 or 2 | | | [Lab 2: Merge Sort on Linked Lists](./lab2) | [code](https://autograder.luddy.indiana.edu/web/project/936), [test](https://autograder.luddy.indiana.edu/web/project/942)
 Feb. 5 | | | <mark>Lab 2 due</mark> |
 March 5 | **Midterm Exam** (in class)
@@ -149,9 +151,16 @@ April 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
 
 **Late Policy**
 
+This policy applies to labs, projects, textbook exercises, and
+quizzes.  For quizzes, you can do a make-up quiz during office hours.
+This policy does not apply to the midterm and final exam.  When you
+complete something late, there is a 10% deduction to its grade.
+
 100% | before 1st deadline
 90%  | before 2nd deadline (one week after 1st)
 0%   | after  2nd deadline
+
+
 
 **Bias-Based Incident Reporting.**
 
