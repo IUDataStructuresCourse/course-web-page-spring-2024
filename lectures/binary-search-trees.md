@@ -97,7 +97,7 @@ public boolean contains(K key) {
 }
 ```
 
-What is the time complexity? $O(h)$, where $h$ is the height of the tree.
+What is the time complexity? O(h), where h is the height of the tree.
 
 ## `insert` method of `BinarySearchTree`
 
@@ -124,7 +124,7 @@ private Node<K> insert_helper(K key, Node<K> curr) {
 }
 ```
 
-What is the time complexity? $O(h)$, where $h$ is the height of the tree.
+What is the time complexity? O(h), where h is the height of the tree.
 
 ## In-class Exercise: insert and return the inserted node
 
