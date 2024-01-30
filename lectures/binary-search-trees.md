@@ -103,13 +103,12 @@ What is the time complexity? $O(h)$, where $h$ is the height of the tree.
 
 Book 4.3.3.
 
-Similarly we can perform insertions on BSTs. The `insert()` method takes
-the key to add to the tree and returns the new root.
+Similarly we can perform insertions on BSTs. The `insert()` method
+adds the given key to the tree.
 
 ```java
-public Node<K> insert_rec(K key) {
+public void insert_rec(K key) {
 	root = insert_helper(key, root);
-	return root;
 }
 
 private Node<K> insert_helper(K key, Node<K> curr) {
@@ -127,28 +126,31 @@ private Node<K> insert_helper(K key, Node<K> curr) {
 
 What is the time complexity? $O(h)$, where $h$ is the height of the tree.
 
-## In-class Exercise: insert using `find`
+## In-class Exercise: insert and return the inserted node
 
-Insert into a binary search tree using the `find` method. Return the
-inserted node, or null if the key is already in the tree.
+Insert into a binary search tree, returning the inserted node, or null
+if the key is already in the tree.
+
+This can be accomplished using the `find` method to do most of the
+work of finding the location for the insert.
 
 Fill in the blanks:
 
 ```java
-    public Node<K> insert(K key) {
-        Node<K> n = find(key, root, null);
-        if (n == null){
-            // ?
-            return /* ? */;
-        } else if (lessThan.test(key, n.data)) {
-            // ?
-            return /* ? */;
-        }  else if (lessThan.test(n.data, key)) {
-            // ?
-            return /* ? */;
-        } else
-            return null;  // duplicate
-    }
+public Node<K> insert(K key) {
+	Node<K> n = find(key, root, null);
+	if (n == null){
+		// ?
+		return /* ? */;
+	} else if (lessThan.test(key, n.data)) {
+		// ?
+		return /* ? */;
+	}  else if (lessThan.test(n.data, key)) {
+		// ?
+		return /* ? */;
+	} else
+		return null;  // duplicate
+}
 ```
 
 [Solution](./insert-find-solution.md)
