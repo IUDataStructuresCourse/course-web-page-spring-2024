@@ -15,6 +15,7 @@ Book 4.3.4.
 * Case 1: no left child
 
 ```
+          o              o
           |              |
         z=o              A
            \       ==>
@@ -24,6 +25,7 @@ Book 4.3.4.
 * Case 2: no right child
 
 ```
+            o            o
             |            |
           z=o            A
            /       ==>
@@ -171,7 +173,7 @@ Equivalently, the number of nodes is Ω(2ʰ) where h is the height.
 ## AVL Trees (Adelson-Velskii and Landis, 1962)
 
 **Definition** The AVL Invariant: the height of two child subtrees may
-only differ by 1.
+only differ by 1, for every node in the tree.
 
 Examples of trees that are AVL:
 
