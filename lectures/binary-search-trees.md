@@ -10,24 +10,6 @@ interface Set<T> {
    boolean member(T e); // aka contains
    ...
 }
-
-another option:
-interface Set<T extends Comparable<T> > {
-   void insert(T e);
-   void remove();
-   boolean member(T e); // aka contains
-   ...
-}
-
-class BST<T> implements Set<T> {
-   BiPredicate comparison;
-   
-   BST(BiPredicate pred) { comparison = pred; }
-   void insert(T e) { ... }
-   void remove() { ... }
-   boolean member(T e) {...}
-   ...
-}
 ```
 
 The **Binary-Search-Tree Property**:
