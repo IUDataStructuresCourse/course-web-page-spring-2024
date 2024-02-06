@@ -68,8 +68,8 @@ in $O(log(n))$ time.
 As usual, this project contains a programming part and a testing part.
 You are expected to test your code locally as you develop the program.
 
-+ Submit your code `AVLTree.java` and `BinarySearchTree.java` to [link](https://autograder.luddy.indiana.edu/web/project/700).
-+ Submit your test cases `StudentTest.java` to [link](https://autograder.luddy.indiana.edu/web/project/833).
++ Submit your code `AVLTree.java` and `BinarySearchTree.java` to [link](https://autograder.luddy.indiana.edu/web/project/929).
++ Submit your test cases `StudentTest.java` to [link](https://autograder.luddy.indiana.edu/web/project/944).
   * We have included a small test case in the support code to get you started.
 
 ## Student Support Code and Task Description

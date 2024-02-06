@@ -123,6 +123,8 @@ Feb. 6 | [More AVL, Code Review (Flood It!)](./lectures/more-avl-trees.md)
 Feb. 8 | Hash Tables
 Feb. 8 or 9 | | | [Lab 3: Next Prev Binary Tree](./lab3) | [code](https://autograder.luddy.indiana.edu/web/project/924), [test](https://autograder.luddy.indiana.edu/web/project/943)
 Feb. 12 | | | <mark>Lab 3 due</mark> |
+Feb. 15 or 16 | | | [Project 2: Segment Intersection](./proj2-seg-int) | [code](https://autograder.luddy.indiana.edu/web/project/929), [test](https://autograder.luddy.indiana.edu/web/project/944)
+Feb. 19 | | | <mark>Project 2 due</mark> |
 March 5 | **Midterm Exam** (in class)
 March 10 - 17 | **Spring Break**
 April 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
