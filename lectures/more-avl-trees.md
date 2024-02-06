@@ -104,7 +104,7 @@ This looks familiar, now we can rotate right.
             50(A)
 
 
-### Insert Example with Two Violations 
+### Insert Example with Two Violations (not really!)
 
       _6[2]_
      /      \
@@ -286,10 +286,18 @@ Solution:
 
 ## Algorithm for fixing AVL property
 
-Starting from the changed node, repeat the following up to the root of
+add or remove using the BST algorithm: O(log n)
+
+number of iterations of the below "repeat"? O(log n)
+how much time per iteration (fix step): O(1)
+O(log n) * O(1) = O(log n)
+
+total for add/remove and rebalance: O(log n) +  O(log n) = O(log n)
+
+Starting from the lowest changed node, repeat the following up to the root of
 the tree (because there can be several AVL violations).
-* check whether node x is AVL, if not do the following.
-* if height(x.left) ≤ height(x.right)
+* check whether node x is AVL, if not do the following. O(1) (assuming we store the height of node)
+* if height(x.left) ≤ height(x.right)    O(1)
 
     1. if height(x.right.left) ≤ height(x.right.right)
 
