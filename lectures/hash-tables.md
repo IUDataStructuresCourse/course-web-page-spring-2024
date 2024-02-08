@@ -7,16 +7,19 @@
                              Tile[][] tiles,
                              Integer board_size) {
         int i;
-        for (i = 0; i < flooded_list.size(); ++i) {
-            List<Coord> neighbors = flooded_list.get(i).neighbors(tiles.length);
-            for (int j = 0; j < neighbors.size(); ++j) {
-                if (tiles[neighbors.get(j).getY()][neighbors.get(j).getX()].getColor().equals(color) 
-				    && !flooded_list.contains(neighbors.get(j))) {
-                    flooded_list.add(neighbors.get(j));
+        for (i = 0; i < flooded_list.size(); ++i) { // n iterations * O(n) = O(n^2)
+            List<Coord> neighbors = flooded_list.get(i).neighbors(tiles.length); // O(n) + O(1)=O(n)
+            for (Coord neighbor : neighbors) { // 4 iterations * O(n) = O(n)
+                if (tiles[neighbor.getY()][neighbor.getX()].getColor().equals(color) 
+				    && !flooded_list.contains(neighbor)) { // O(1) + O(n) = O(n)
+                    flooded_list.add(neighbor);            // O(1)
                 }
             }
         }
     }
+
+    time: O(n^2)
+	space: O(n)
 
 ## Straightforward but fast
 
@@ -24,21 +27,24 @@
                             LinkedList<Coord> flooded_list,
                             Tile[][] tiles,
                             Integer board_size) {
-        HashSet<Coord> is_flooded = new HashSet<>(flooded_list);
-        ArrayList<Coord> flooded_array = new ArrayList<>(flooded_list);
-        for (int i = 0; i != flooded_array.size(); ++i) {
-            Coord c = flooded_array.get(i);
-            for (Coord n : c.neighbors(board_size)) {
-                if (!is_flooded.contains(n)
-                    && tiles[n.getY()][n.getX()].getColor() == color) {
-                    flooded_array.add(n);
-                    flooded_list.add(n);
-                    is_flooded.add(n);
+        HashSet<Coord> is_flooded = new HashSet<>(flooded_list);          // O(n)
+        ArrayList<Coord> flooded_array = new ArrayList<>(flooded_list);   // O(n)
+        for (int i = 0; i != flooded_array.size(); ++i) {  // n iterations * O(1) = O(n)
+            Coord c = flooded_array.get(i);             // O(1)
+            for (Coord n : c.neighbors(board_size)) {  // O(1) iterations * O(1) = O(1)
+                if (!is_flooded.contains(n) 
+                    && tiles[n.getY()][n.getX()].getColor() == color) {  // O(1)
+                    flooded_array.add(n); // O(1)*
+                    flooded_list.add(n);  // O(1)
+                    is_flooded.add(n);    // O(1)
                 }
             }
         }
     }
 
+    time: O(n)
+	space: O(n)
+	
 ## Depth-first search
 
     public static void flood(WaterColor color,
@@ -70,6 +76,9 @@
         }
     }
 	
+	time: O(n) (after fixing the data structures wrt. get and contains)
+	space: O(n) + O(n) (call stack) = O(n)
+	
 ## Breadth-first search
 
     public static void flood(WaterColor color,
@@ -96,8 +105,9 @@
         }
     }
 
-
-
+    time: O(n)
+    space: O(n)
+	
 # Hash Tables
 
 Java's `HashMap` and `HashSet` classes are implemented with hash tables
@@ -114,6 +124,8 @@ The Map Abstract Data Type (aka. "dictionary")
 	   boolean containsKey(K key);
 	}
 
+    Map<K, Boolean> ~~ Set<K>
+	
 Compared to Binary Search Trees, the Map ADT does not provide an
 ordering of the elements.
 
@@ -201,10 +213,11 @@ Towards proving that the average case time is O(1).
 
 * Search:
 	1. hash the key: O(1)
-	2. find the chain: O(1)
+	2. index into the table (array) slot: O(1)
 	3. linear search in the chain: O(λ)
 
     total for search: O(1 + λ)
+	but λ <= 2, so total is O(1)
 
 Takeaway: need to grow table size m as n increases so that λ stays small.
 

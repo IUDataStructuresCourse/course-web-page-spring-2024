@@ -120,7 +120,7 @@ Feb. 1  | [Balanced Search Trees (AVL)](./lectures/balanced-search-trees.md) ([v
 Feb. 1 or 2 | | | [Lab 2: Merge Sort on Linked Lists](./lab2) | [code](https://autograder.luddy.indiana.edu/web/project/936), [test](https://autograder.luddy.indiana.edu/web/project/942)
 Feb. 5 | | | <mark>Lab 2 due</mark> |
 Feb. 6 | [More AVL](./lectures/more-avl-trees.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_383q33uk))
-Feb. 8 | [Code Review (Flood It!), Hash Tables](./lectures/hash-tables.md) | Ch. 5 sec. 1,2,3,5,6
+Feb. 8 | [Code Review (Flood It!), Hash Tables](./lectures/hash-tables.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_2lijykzx)) | Ch. 5 sec. 1,2,3,5,6
 Feb. 8 or 9 | | | [Lab 3: Next Prev Binary Tree](./lab3) | [code](https://autograder.luddy.indiana.edu/web/project/924), [test](https://autograder.luddy.indiana.edu/web/project/943)
 Feb. 12 | | | <mark>Lab 3 due</mark> |
 Feb. 15 or 16 | | | [Project 2: Segment Intersection](./proj2-seg-int) | [code](https://autograder.luddy.indiana.edu/web/project/929), [test](https://autograder.luddy.indiana.edu/web/project/944)
