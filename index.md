@@ -83,8 +83,8 @@ Expect at least one quiz per month during lab time.
 Office hours with TAs are in Luddy Hall Room 0121.
 
 Time    | Monday            | Tuesday    | Wednesday    | Thursday    | Friday
-11am    | Anuj              |            | Chenchao     |             | Aaron
-12pm    | Anuj              |            | Chenchao     | Niloy       |
+11am    | Anuj              |            | Chenchao     |             | 
+12pm    | Anuj, Aaron       |            | Chenchao     | Niloy       |
 1pm     | Tianyu            |            |              | Ganesh      | Meet
 2pm     | Tianyu            |            |              | Ganesh      |
 3pm     | Niloy             | Kyle       | Calvin       | Kyle        | Aaron

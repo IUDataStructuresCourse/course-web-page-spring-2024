@@ -85,8 +85,25 @@ number of iterations is O(n)
 time of body is O(1)
 time of `for` loop is O(n) * O(1) = O(n)
 
-Example:
+Example (nested loops):
 
+	int i = n;
+	while (i > 0) {
+		for (int j = 0; j < n; j++)
+		    System.out.println("*");
+	    i = i / 2;
+	}
+
+number of iterations of `while` loop is O(log(n))
+time of body of `while` is the sum of
+  time of `for` loop: ?
+  the statement `i = i / 2;`: O(1)
+
+number of iterations of `for` loop is O(n)
+time of body of `for` is O(1)
+time of `for` loop is O(n) * O(1) = O(n)
+
+time of `while` loop is O(log(n)) * O(n) = O(n log(n))
 
 
 ## Recursive Functions
@@ -202,4 +219,58 @@ analysis:
 
 # Testing Checklist
 
-UNDER CONSTRUCTION
+1. common cases (find in lecture, textbook, internet)
+2. corner cases
+3. code coverage -> more cases
+4. big, randomized input
+
+Let's go through the autograder's tests for `merge` and merge `sort`.
+
+## Common Case Test for `merge`
+
+    @Test
+    public void merge_small() {
+        int[] A = {1,3,4,6,8,8,12,13};
+        int[] B = {2,4,5,7,9,11,14};
+        Node N1 = Utils.array_to_list(A);
+        Node N2 = Utils.array_to_list(B);
+        Node M = MergeSort.merge(N1, N2);
+        assertArrayEquals(A, Utils.list_to_array(N1));
+        assertArrayEquals(B, Utils.list_to_array(N2));
+        assertTrue(Utils.is_sorted(M));
+        assertTrue(Utils.is_permutation(M, Utils.append(N1, N2)));
+    }
+
+## Common Case Test for `merge_in_place`
+
+    @Test
+    public void merge_in_place() {
+        int[] A = {1,3,4,6,8,8,12,13};
+        int[] B = {2,4,5,7,9,11,14};
+        Node N1 = Utils.array_to_list(A);
+        Node N2 = Utils.array_to_list(B);
+        Node M = MergeSort.merge_in_place(N1, N2);
+        assertTrue(Utils.is_sorted(M));
+        assertTrue(Utils.is_permutation(M, Utils.append(Utils.array_to_list(A),
+                                                 Utils.array_to_list(B))));
+        // Check that the merge was done in place.
+        assertTrue(Utils.is_permutation(M, N1));
+    }
+
+## Big, Randomized Test for merge `sort`
+
+    @Test
+    public void sort_big() {
+        Random r = new Random(0);
+        for (int n = 0; n != 100; ++n) {
+            int[] A = new int[n];
+            for (int i = 0; i != n; ++i)
+                A[i] = r.nextInt(50);
+            Node N = Utils.array_to_list(A);
+            Arrays.sort(A);
+            N = MergeSort.sort(N);
+            int[] B = Utils.list_to_array(N);
+            assertArrayEquals(A, B);
+        }
+    }
+
