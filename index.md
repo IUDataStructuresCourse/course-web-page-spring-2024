@@ -30,7 +30,7 @@ doing better on job interview questions.
 
 * Section 6399, Friday 8:45am-10:40am, Luddy Hall (IF) 1019
 
-  - Calvin Josenhand
+  - Calvin Josenhans
   - Chenchao Ding
 
 * Section 6402, Friday 11:15am-1:10pm, Gresham Hall (GR) 102A

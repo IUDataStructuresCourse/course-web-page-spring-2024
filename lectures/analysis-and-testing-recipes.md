@@ -224,7 +224,8 @@ analysis:
 3. code coverage -> more cases
 4. big, randomized input
 
-Let's go through the autograder's tests for `merge` and merge `sort`.
+Let's go through some of the autograder's tests for the
+`MergeSortList` and `NextPrevBinaryTree` labs.
 
 ## Common Case Test for `merge`
 
@@ -274,3 +275,4 @@ Let's go through the autograder's tests for `merge` and merge `sort`.
         }
     }
 
+## 
