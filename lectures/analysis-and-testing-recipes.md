@@ -9,20 +9,59 @@ Lecture Overview
 
 ## Simple Statements
 
+* Most are O(1)
+* Some can be more expensive: method and function calls, object constructors.
+    1. If the method is a standard one (`get` on `LinkedList`), lookup up the
+      time complexity.
+    2. If you have access to the code for the method, analyze the code.
+    3. If all else fails, do empirical tests that measure the time for
+      different input sizes.
 
 ## Composing Statements Sequentially
 
 Recipe:
 
-    time_of_two_stmt = time_of_first + time_of_second
+    time_of_sequence = time_of_first + time_of_second + ...
 
 Example:
+
+    public static void flood(WaterColor color,
+                            LinkedList<Coord> flooded_list,
+                            Tile[][] tiles, Integer board_size) {
+        HashSet<Coord> flooded = new HashSet<>(flooded_list);   // O(n)
+        for (int i = 0; i != flooded_list.size(); ++i) { ... }  // O(n^2)
+    }
+
+The construction of the `flooded` HashSet is O(n).
+The `for` loop is O(n^2).
+Adding those together yields O(n^2).
+
 
 ## If-Then-Else Statements
 
 Recipe:
 
     time_of_if_then_else = time_of_condition + time_of_then + time_of_else
+
+Example:
+
+	static boolean is_rotated(int[] A_orig, int[] A_new) {
+		if (A_orig.length < 2) {
+			return Arrays.equals(A_orig, A_new);
+		} else {
+			boolean result = A_new[0] == A_orig[A_orig.length - 1];
+			for (int i = 0; i != A_orig.length - 1; ++i) {
+				result = result && (A_orig[i] == A_new[i + 1]);
+			}
+			return result;
+		}
+	}
+
+The time of the condition `A_orig.length < 2` is O(1).
+The time of the then-branch `Arrays.equals(A_orig, A_new)` is O(n).
+The time of the else-branch is O(n) (we shall discuss loops below).
+
+So the time of the `if-then-else` is O(1) + O(n) + O(n) = O(n)
 
 ## If-Then Statements
 
@@ -38,6 +77,15 @@ Recipe:
 
 Example:
 
+	for (int i = 0; i != A_orig.length - 1; ++i) {
+		result = result && (A_orig[i] == A_new[i + 1]);
+	}
+
+number of iterations is O(n)
+time of body is O(1)
+time of `for` loop is O(n) * O(1) = O(n)
+
+Example:
 
 
 
@@ -68,7 +116,8 @@ changes (e.g. doubling at each level: 1, 2, 4, 8, ..., 2^d) and
 the time_per_call also changes because the input size gets smaller
 (e.g. cut in half at each level: n, n/2, n/4, ..., 1),
 but in many examples, these two affects cancel out and the
-time per level stays the same.
+time per level stays the same. (If not, one needs to use a more
+advanced analysis called the Master Theorem.)
 
 Example:
 
@@ -85,7 +134,7 @@ analysis:
 * `recursion_depth` = O(n), input size reduced by one: `append(N1.next, N2)`
 
 * `number_calls_per_level` = 1 (only one call to append)
-	
+    
 * `time_per_call` = O(1)  (allocate one node)
 
 * `time_per_level` = `number_calls_per_level` * `time_per_call` = O(1)
@@ -113,7 +162,7 @@ analysis:
    `find(key, curr.left, curr)`
 
 * `number_calls_per_level` = 1 (only one call to `find`)
-	
+    
 * `time_per_call` = O(1)  (assuming call to `test` is O(1))
 
 * `time_per_level` = `number_calls_per_level` * `time_per_call` = O(1)
@@ -141,7 +190,7 @@ analysis:
 
 * `number_calls_per_level` = 1, 2, 4, 8, ... 
    doubling because there are 2 recursive calls to `merge_sort`
-	
+    
 * `time_per_call` = n, n/2, n/4, n/8, ...
     (Utils.length + Utils.take + Utils.drop + merge)
 
