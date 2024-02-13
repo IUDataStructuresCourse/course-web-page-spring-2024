@@ -85,10 +85,10 @@ Office hours with TAs are in Luddy Hall Room 0121.
 Time    | Monday            | Tuesday    | Wednesday    | Thursday    | Friday
 11am    | Anuj              |            | Chenchao     |             | 
 12pm    | Anuj, Aaron       |            | Chenchao     | Niloy       |
-1pm     | Tianyu            |            |              | Ganesh      | Meet
+1pm     | Tianyu, Luke      |            |              | Ganesh      | Meet
 2pm     | Tianyu            |            |              | Ganesh      |
 3pm     | Niloy             | Kyle       | Calvin       | Kyle        | Aaron
-4pm     | Niloy (unil 4:30) | Luke       | Calvin       | Meet        |
+4pm     | Niloy (unil 4:30) |            | Calvin       | Meet        |
 5pm     |                   | Luke       |              |             |
 
 
