@@ -3,11 +3,10 @@
 Motivations:
 
  1. (Priority Queue) Need a data structure that returns the
-    maximum-keyed element of a set, that is, a data structure called a
-    priority queue. The key's are the priorities.
+    maximum-keyed element of a set. The keys are the priorities.
 
-    (We could implement a priority queue using an AVL tree, but we
-    want to be more space efficient.)
+    We could implement a priority queue using an AVL tree, but we
+    want to be more space efficient.
 
  2. Want to do in-place sorting in O(n log(n)).
 
@@ -61,7 +60,7 @@ We store the elements in an array left-to-right, one level at a time,
 top-to-bottom.
 
               0  1  2  3  4  5  6  7  8  9 
-            [16,14,10, 8, 7, 9, 3, 2, 4, 1]
+          A=[16,14,10, 8, 7, 9, 3, 2, 4, 1]
 
 Note that the root of the tree is stored at A[0] and for a node stored
 at index i, the left child is stored at index 2i+1 and the right child
