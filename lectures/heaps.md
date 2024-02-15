@@ -2,9 +2,9 @@
 
 Motivations:
 
- 1. Need a data structure that returns the maximum-keyed
-    element of a set, that is, a data structure called a priority
-    queue. The key's are the priorities.
+ 1. (Priority Queue) Need a data structure that returns the
+    maximum-keyed element of a set, that is, a data structure called a
+    priority queue. The key's are the priorities.
 
     (We could implement a priority queue using an AVL tree, but we
     want to be more space efficient.)
@@ -15,6 +15,31 @@ Motivations:
 
 ## Heaps
 
+A **complete binary tree** is a binary tree in which every level, except
+possibly the last, is filled. Here are some examples:
+
+        o         _o_            _o_          o
+	   / \       /   \          /   \        /
+	  o   o     o     o        o     o      o
+	           / \   / \      / \
+		      o   o o   o    o   o
+
+
+Def. A **max heap** is a complete binary tree in which for every node
+n, its key is less or equal to its parent's key (except for the root):
+
+    key(n) ≤ key(parent(n))
+
+This is called the **heap property** or max-heap property.
+
+(Not to be confused with the use of "heap" to mean a computer's main
+ memory.)
+
+Def. A **min heap** is similar, except that each node's key is greater
+or equal to its parent's key.
+
+Here is an example of a max heap. 
+    
             __16__
            /      \
          14        10
@@ -24,30 +49,29 @@ Motivations:
      / \    /
     2   4  1
 
-Idea: store elements in an array left-to-right, one level at a
-time, top-to-bottom.
+Note that the maximum element must be the root, which makes this data
+structure good for implementing a priority queue.
+
+## Array Representation
+
+The choice of using complete binary trees is to enable a
+space-efficient representation.
+
+We store the elements in an array left-to-right, one level at a time,
+top-to-bottom.
 
               0  1  2  3  4  5  6  7  8  9 
             [16,14,10, 8, 7, 9, 3, 2, 4, 1]
 
-Def. A **heap** is an array viewed as a nearly complete binary tree.
-Given an array A, the root of the tree is stored at A[0] and for a
-node stored at index i, the left child is stored at index 2i+1 and
-the right child is stored at index 2(i+1).
-(Not to be confused with the use of "heap" to mean a computer's
-main memory.)
+Note that the root of the tree is stored at A[0] and for a node stored
+at index i, the left child is stored at index 2i+1 and the right child
+is stored at index 2(i+1).
 
     left(i) = 2*i + 1
 
     right(i) = 2*(i + 1)
 
     parent(i) =  floor( (i-1) / 2 )
-
-Def. A **max heap** is a heap in which for every node other than the root, 
-A[i] ≤ A[parent(i)]
-
-This is called the **heap property** or max-heap property.
-One can instead create a min-heap by flipping this around.
 
 
 Overview of the Heap operations
@@ -135,7 +159,8 @@ Answer: O(n log(n)) is the easy answer, but not tight.
 The tight upper bound is O(n) which can be obtained by
 observing that the time for `max_heapify` depends on the
 height of the node, and `build_max_heap` calls `max_heapify
-many times on nodes with a low height.
+many times on nodes with a low height. We can obtain
+a tighter bound by more accurately counting the time.
 
 Consider how many nodes there can be in an n-element heap at each
 height. The worst cast is a complete tree. For example,
@@ -175,6 +200,7 @@ Reorganize the `h / 2^h`
     time(n) ≤  n × ∑      h × (1/2)^h        (1)
                    h=0
 
+Next we focus on simplifying the summation.
 Recall formula A.8.
 
     ∞
