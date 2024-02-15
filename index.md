@@ -123,8 +123,8 @@ Feb. 6 | [More AVL](./lectures/more-avl-trees.md) ([video](https://iu.mediaspace
 Feb. 8 | [Code Review (Flood It!), Hash Tables](./lectures/hash-tables.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_2lijykzx)) | Ch. 5 sec. 1,2,3,5,6
 Feb. 8 or 9 | | | [Lab 3: Next Prev Binary Tree](./lab3) | [code](https://autograder.luddy.indiana.edu/web/project/924), [test](https://autograder.luddy.indiana.edu/web/project/943)
 Feb. 12 | | | Lab 3 due |
-Feb. 13 | [Recipes for Time Analysis and Testing](./lectures/analysis-and-testing-recipes.md)
-Feb. 15 | [Heaps and Priority Queues](./lectures/heaps.md) | Ch. 6 sec. 1-4, 9 |
+Feb. 13 | [Recipes for Time Analysis and Testing](./lectures/analysis-and-testing-recipes.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_suf7596w))
+Feb. 15 | [Heaps and Priority Queues](./lectures/heaps.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_d98gzzu8)) | Ch. 6 sec. 1-4, 9 |
 Feb. 15 or 16 | | | Lab: work on <br> [Project 2: Segment Intersection](./proj2-seg-int), <br> [<mark>Quiz 2</mark>](https://iu.instructure.com/courses/2201400/quizzes/4171264) | [code](https://autograder.luddy.indiana.edu/web/project/929), [test](https://autograder.luddy.indiana.edu/web/project/944)
 Feb. 22 or 23 | | | Lab: finish <br> [Project 2: Segment Intersection](./proj2-seg-int) | [code](https://autograder.luddy.indiana.edu/web/project/929), [test](https://autograder.luddy.indiana.edu/web/project/944)
 Feb. 26 | | | <mark>Project 2 due</mark> |

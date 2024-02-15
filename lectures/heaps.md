@@ -23,6 +23,14 @@ possibly the last, is filled. Here are some examples:
 	           / \   / \      / \
 		      o   o o   o    o   o
 
+Non example
+
+              o
+		    /   \
+		   o     o
+		  /     /
+	     o     o 
+
 
 Def. A **max heap** is a complete binary tree in which for every node
 n, its key is less or equal to its parent's key (except for the root):
@@ -240,13 +248,15 @@ array is expensive. So we move the last element of the heap to
 property with `max_heapify`.
 
     E extract_max() {
-        E max = data.get(0);
-        data.set(0, data.get(data.size()-1));
-        data.remove(data.size()-1);
-        max_heapify(0, data.size());
-        return max;
+        E max = data.get(0);                   // O(1)
+        data.set(0, data.get(data.size()-1));  // O(1)
+        data.remove(data.size()-1);            // O(1)  (because at the end of the array)
+        max_heapify(0, data.size());           // O(log(n))
+        return max;                            // O(1)
     }
     
+Time complexity: O(log n)
+	
 ## `sortInPlace` method
 
 Idea: swap the max (the root) with the last element, call `max_heapify`, 
@@ -256,12 +266,12 @@ Similar to `extract_max` but does a swap instead of move.
     static <E> void sortInPlace(ArrayList<E> A, 
                                 BiPredicate<E,E> lessThanOrEqual)
     {
-        Heap<E> H = new Heap<E>(lessThanOrEqual);
-        H.data = A;
-        H.build_max_heap();
-        for (int i  = H.data.size() - 1; i != 0; --i) {
-            swap(H.data, 0, i);
-            H.max_heapify(0, i);
+        Heap<E> H = new Heap<E>(lessThanOrEqual);    // O(1)
+        H.data = A;           // O(1)
+        H.build_max_heap();   // O(n)
+        for (int i  = H.data.size() - 1; i != 0; --i) { // n iterations * O(log(n)) = O(n log(n))
+            swap(H.data, 0, i);   // O(1)
+            H.max_heapify(0, i);  // O(log(n))
         }
     }
 
@@ -311,14 +321,8 @@ becomes
 ## `insert` method
 
     void insert(E k) {
-        if (data.size() + 1 ≥ data.size()) {
-            ArrayList<E> d = new ArrayList<>((data.size() + 1) * 2);
-            for (E e : data)
-                d.add(e);
-            data = d;
-        }
-        data.add(k);
-        increase_key(data.size() - 1);
+        data.add(k);                   // O(1)
+        increase_key(data.size() - 1); // O(log(n))
     }
 
 ## Priority Queues
