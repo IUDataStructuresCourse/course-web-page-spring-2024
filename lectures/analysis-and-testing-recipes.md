@@ -17,6 +17,8 @@ Lecture Overview
     3. If all else fails, do empirical tests that measure the time for
       different input sizes.
 
+For many calls on the same line, add their time complexity. (See the next item.)
+
 ## Composing Statements Sequentially
 
 Recipe:
@@ -45,17 +47,17 @@ Recipe:
 
 Example:
 
-	static boolean is_rotated(int[] A_orig, int[] A_new) {
-		if (A_orig.length < 2) {
-			return Arrays.equals(A_orig, A_new);
-		} else {
-			boolean result = A_new[0] == A_orig[A_orig.length - 1];
-			for (int i = 0; i != A_orig.length - 1; ++i) {
-				result = result && (A_orig[i] == A_new[i + 1]);
-			}
-			return result;
-		}
-	}
+    static boolean is_rotated(int[] A_orig, int[] A_new) {
+        if (A_orig.length < 2) {
+            return Arrays.equals(A_orig, A_new);
+        } else {
+            boolean result = A_new[0] == A_orig[A_orig.length - 1];
+            for (int i = 0; i != A_orig.length - 1; ++i) {
+                result = result && (A_orig[i] == A_new[i + 1]);
+            }
+            return result;
+        }
+    }
 
 The time of the condition `A_orig.length < 2` is O(1).
 The time of the then-branch `Arrays.equals(A_orig, A_new)` is O(n).
@@ -77,9 +79,9 @@ Recipe:
 
 Example:
 
-	for (int i = 0; i != A_orig.length - 1; ++i) {
-		result = result && (A_orig[i] == A_new[i + 1]);
-	}
+    for (int i = 0; i != A_orig.length - 1; ++i) {
+        result = result && (A_orig[i] == A_new[i + 1]);
+    }
 
 number of iterations is O(n)
 time of body is O(1)
@@ -87,12 +89,12 @@ time of `for` loop is O(n) * O(1) = O(n)
 
 Example (nested loops):
 
-	int i = n;
-	while (i > 0) {
-		for (int j = 0; j < n; j++)
-		    System.out.println("*");
-	    i = i / 2;
-	}
+    int i = n;
+    while (i > 0) {
+        for (int j = 0; j < n; j++)
+            System.out.println("*");
+        i = i / 2;
+    }
 
 number of iterations of `while` loop is O(log(n))
 time of body of `while` is the sum of
@@ -119,7 +121,7 @@ in the recursive calls.
 
 To determine the `time_per_level`:
 
-    time_per_level = number_calls_per_level * time_per_call
+    time_per_level = number_calls_per_level (not big-O) * time_per_call
 
 To determine `number_calls` occuring within each level, one needs to
 analyze the code to see how many recursive calls can be spawned by one
@@ -255,7 +257,7 @@ Let's go through some of the autograder's tests for the
         assertTrue(Utils.is_permutation(M, Utils.append(Utils.array_to_list(A),
                                                  Utils.array_to_list(B))));
         // Check that the merge was done in place.
-        assertTrue(Utils.is_permutation(M, N1));
+        assertTrue(Utils.equals(M, N1));
     }
 
 ## Big, Randomized Test for merge `sort`
@@ -275,4 +277,31 @@ Let's go through some of the autograder's tests for the
         }
     }
 
-## 
+## Common and Big Tests for BinaryTree Iterator
+
+    private void test_next_helper(ArrayList<Integer> expected,
+                                  BinaryTree<Integer> T) {
+        int j = 0;
+        for (Iterator<Integer> i = T.begin(); !i.equals(T.end()); i.advance()) {
+            assertTrue(j != expected.size()); // to catch error in Iter.equals
+            assertEquals(expected.get(j).intValue(), i.get().intValue());
+            ++j;
+        }
+    }
+
+    public void test_advance() throws Exception {
+        Integer expected[] = {2, 5, 5, 6, 7, 8};
+        test_next_helper(new ArrayList<Integer>(Arrays.asList(expected)), T);
+    }
+
+    @Test
+    public void test_advance_big() throws Exception {
+        Random r = new Random(0);
+        for (int n = 0; n != 100; ++n) {
+            ArrayList<Integer> expected = new ArrayList<>();
+            for (int i = 0; i != n; ++i)
+                expected.add(r.nextInt(100));
+            BinaryTree<Integer> bigT = new BinaryTree<>(expected);
+            test_next_helper(expected, bigT);
+        }
+    }

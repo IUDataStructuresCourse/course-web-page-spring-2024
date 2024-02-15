@@ -164,13 +164,13 @@ We see that from n=4 and onwards, 2n² is greater than n² + n + 10, so
 we choose k = 4. We have some emprical evidence that we've made the
 correct choices, but to know for sure, we prove the following theorem.
 
-**Theorem** ∀ n ≥ 4, n² + n + 10 ≤ 2 n².
+**Theorem** ∀ n. if n ≥ 4 then n² + n + 10 ≤ 2 n².
 
 Proof. We proceed by induction on n.
 * Base case (n = 0) The theorem is trivially true
     because it's not true that 0 ≥ 4.
-* Induction case. Let n be any integer such that n ≥ 4
-    and n² + n + 10 ≤ 2 n² (IH). We need to show that
+* Induction case. Let n be any integer.
+    If n ≥ 4 then n² + n + 10 ≤ 2 n² (IH). We need to show that
 
 		(n+1)² + (n+1) + 10 ≤ 2 (n+1)²
 

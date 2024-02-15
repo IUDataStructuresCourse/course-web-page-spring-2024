@@ -124,6 +124,7 @@ Feb. 8 | [Code Review (Flood It!), Hash Tables](./lectures/hash-tables.md) ([vid
 Feb. 8 or 9 | | | [Lab 3: Next Prev Binary Tree](./lab3) | [code](https://autograder.luddy.indiana.edu/web/project/924), [test](https://autograder.luddy.indiana.edu/web/project/943)
 Feb. 12 | | | <mark>Lab 3 due</mark> |
 Feb. 13 | [Recipes for Time Analysis and Testing](./lectures/analysis-and-testing-recipes.md)
+Feb. 15 | [Heaps and Priority Queues](./lectures/heaps.md)
 Feb. 15 or 16 | | | [Project 2: Segment Intersection](./proj2-seg-int) | [code](https://autograder.luddy.indiana.edu/web/project/929), [test](https://autograder.luddy.indiana.edu/web/project/944)
 Feb. 19 | | | <mark>Project 2 due</mark> |
 March 5 | **Midterm Exam** (in class)
