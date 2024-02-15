@@ -85,10 +85,10 @@ Office hours with TAs are in Luddy Hall Room 0121.
 Time    | Monday            | Tuesday    | Wednesday    | Thursday    | Friday
 11am    | Anuj              |            | Chenchao     |             | 
 12pm    | Anuj, Aaron       |            | Chenchao     | Niloy       |
-1pm     | Tianyu            |            |              | Ganesh      | Meet
+1pm     | Tianyu, Luke      |            |              | Ganesh      | Meet
 2pm     | Tianyu            |            |              | Ganesh      |
 3pm     | Niloy             | Kyle       | Calvin       | Kyle        | Aaron
-4pm     | Niloy (unil 4:30) | Luke       | Calvin       | Meet        |
+4pm     | Niloy (unil 4:30) |            | Calvin       | Meet        |
 5pm     |                   | Luke       |              |             |
 
 
@@ -113,20 +113,21 @@ Jan. 18 or 19 |                                                     |           
 Jan. 22 | | | Lab 1 due |
 Jan. 23 | [Linked Lists and Interfaces](./lectures/linked-lists.md) | Ch. 3 sec. 1-5 |
 Jan. 25 | [More Interfaces, Binary Trees](./lectures/binary-trees.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_m7ud77ew)) | Ch. 3 sec. 6-7,<br> Ch. 4 sec. 1-2
-Jan. 25 or 26 | | | [Project 1: Flood It](./proj1-flood-it), [Quiz 1](https://iu.instructure.com/courses/2201400/quizzes/4164125) | [code](https://autograder.luddy.indiana.edu/web/project/922)
+Jan. 25 or 26 | | | Lab: work on <br> [Project 1: Flood It](./proj1-flood-it), <br> [Quiz 1](https://iu.instructure.com/courses/2201400/quizzes/4164125) | [code](https://autograder.luddy.indiana.edu/web/project/922)
 Jan. 29 | | | Project 1 due |
 Jan. 30 | [Binary Search Trees](./lectures/binary-search-trees.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_vorn49a7))                  | Ch. 4 sec. 3 and 7  |
 Feb. 1  | [Balanced Search Trees (AVL)](./lectures/balanced-search-trees.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_8g6xcmvu)) | Ch. 4 sec. 4 |
 Feb. 1 or 2 | | | [Lab 2: Merge Sort on Linked Lists](./lab2) | [code](https://autograder.luddy.indiana.edu/web/project/936), [test](https://autograder.luddy.indiana.edu/web/project/942)
-Feb. 5 | | | <mark>Lab 2 due</mark> |
+Feb. 5 | | | Lab 2 due |
 Feb. 6 | [More AVL](./lectures/more-avl-trees.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_383q33uk))
 Feb. 8 | [Code Review (Flood It!), Hash Tables](./lectures/hash-tables.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_2lijykzx)) | Ch. 5 sec. 1,2,3,5,6
 Feb. 8 or 9 | | | [Lab 3: Next Prev Binary Tree](./lab3) | [code](https://autograder.luddy.indiana.edu/web/project/924), [test](https://autograder.luddy.indiana.edu/web/project/943)
-Feb. 12 | | | <mark>Lab 3 due</mark> |
+Feb. 12 | | | Lab 3 due |
 Feb. 13 | [Recipes for Time Analysis and Testing](./lectures/analysis-and-testing-recipes.md)
-Feb. 15 | [Heaps and Priority Queues](./lectures/heaps.md)
-Feb. 15 or 16 | | | [Project 2: Segment Intersection](./proj2-seg-int) | [code](https://autograder.luddy.indiana.edu/web/project/929), [test](https://autograder.luddy.indiana.edu/web/project/944)
-Feb. 19 | | | <mark>Project 2 due</mark> |
+Feb. 15 | [Heaps and Priority Queues](./lectures/heaps.md) | Ch. 6 sec. 1-4, 9 |
+Feb. 15 or 16 | | | Lab: work on <br> [Project 2: Segment Intersection](./proj2-seg-int), <br> [<mark>Quiz 2</mark>](https://iu.instructure.com/courses/2201400/quizzes/4171264) | [code](https://autograder.luddy.indiana.edu/web/project/929), [test](https://autograder.luddy.indiana.edu/web/project/944)
+Feb. 22 or 23 | | | Lab: finish <br> [Project 2: Segment Intersection](./proj2-seg-int) | [code](https://autograder.luddy.indiana.edu/web/project/929), [test](https://autograder.luddy.indiana.edu/web/project/944)
+Feb. 26 | | | <mark>Project 2 due</mark> |
 March 5 | **Midterm Exam** (in class)
 March 10 - 17 | **Spring Break**
 April 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
