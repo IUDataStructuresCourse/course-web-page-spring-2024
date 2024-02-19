@@ -124,3 +124,30 @@ In Java:
         }
     }
 
+## Testing rbegin and rend
+
+	public class BinaryTreeTest {
+
+		BinaryTree<Integer> T;
+
+		@BeforeEach
+		public void setUp() throws Exception {
+			ArrayList<Integer> A = new ArrayList<>(Arrays.asList(1, 3, 4, 8, 9, 21, 32));
+			T = new BinaryTree<>(A);
+
+		}
+		@Test
+		public void test() {
+			t2();
+		}
+		public void t2() {
+			ArrayList<Integer> rexpected = new ArrayList<>(Arrays.asList(32, 21, 9, 8, 4,3,1));
+			ArrayList<Integer> reverseReal = new ArrayList<>();
+			for (BinaryTree<Integer>.Iter riter = T.rbegin(); 
+			     ! riter.equals(T.rend());
+				 riter.retreat()){
+				reverseReal.add(riter.get());
+			}
+			assertEquals(rexpected,reverseReal);}
+		}
+    }
