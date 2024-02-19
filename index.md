@@ -126,8 +126,12 @@ Feb. 12 | | | Lab 3 due |
 Feb. 13 | [Recipes for Time Analysis and Testing](./lectures/analysis-and-testing-recipes.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_suf7596w))
 Feb. 15 | [Heaps and Priority Queues](./lectures/heaps.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_d98gzzu8)) | Ch. 6 sec. 1-4, 9 |
 Feb. 15 or 16 | | | Lab: work on <br> [Project 2: Segment Intersection](./proj2-seg-int), <br> [<mark>Quiz 2</mark>](https://iu.instructure.com/courses/2201400/quizzes/4171264) | [code](https://autograder.luddy.indiana.edu/web/project/929), [test](https://autograder.luddy.indiana.edu/web/project/944)
+Feb. 20 | [Priority Queues, Code Review of Binary Trees](./lectures/priority-queue-binary-tree.md)
+Feb. 22 | [Binomial Queues](./lectures/binomial-queues.md) | Ch. 6 sec. 8 |
 Feb. 22 or 23 | | | Lab: finish <br> [Project 2: Segment Intersection](./proj2-seg-int) | [code](https://autograder.luddy.indiana.edu/web/project/929), [test](https://autograder.luddy.indiana.edu/web/project/944)
 Feb. 26 | | | <mark>Project 2 due</mark> |
+Feb. 26 | [Quicksort](./lectures/quicksort.md) | Ch. 7, sec. 1-7 | 
+Feb. 28 | Review for Midterm Exam
 March 5 | **Midterm Exam** (in class)
 March 10 - 17 | **Spring Break**
 April 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
