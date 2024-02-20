@@ -66,13 +66,15 @@ the last child, which is B₀.
 Consider the number of nodes at each depth within a binomial tree.
 
     depth
-    0    o 1  o 1  o   1     _o    1
+    0    o 1  o 1  o   1     _o    1     B4   1
               |    |\      _/ |\
-    1         o 1  o o 2  o   o o  3
+    1         o 1  o o 2  o   o o  3          4
                    |      |\  |
-    2              o   1  o o o    3
+    2              o   1  o o o    3          6
                           |
-    3                     o        1
+    3                     o        1          4
+	
+	4                                         1
 
 So the name binomial tree comes from there being n choose k nodes at
 depth k of tree Bn.
@@ -137,7 +139,7 @@ addition. The following is an exerpt from the `PList` class.
 
     class PList<T> {
         T data;
-        PList<T> next;
+        final PList<T> next;
         PList(T d, PList<T> nxt) { data = d; next = nxt; }
 
         public static <T> PList<T> addFront(T first, PList<T> rest);
