@@ -263,8 +263,10 @@ In the `BinomialQueue`, we use `insert` to implement `push` as follows.
 ### Merge Operation
 
 The merge function takes two binomial forests, ordered by increasing
-height, and turns them into a single forest.  This algorithm is
-analogous to the merge of merge sort.  
+height, and turns them into a single forest.  This operation
+can be implemented with a couple different algorithms.
+One of them is analogous to the merge of merge sort.
+The other algorithm is analogous to addition of binary numbers.
 
 Examples:
 
