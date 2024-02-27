@@ -1,4 +1,4 @@
-# Lab 5: Binomial Heaps
+# Lab 4: Binomial Heaps
 
 ## Overview
 
