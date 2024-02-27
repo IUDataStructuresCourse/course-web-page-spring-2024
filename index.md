@@ -134,7 +134,7 @@ Feb. 27 | [Quicksort](./lectures/quicksort.md) | Ch. 7, sec. 1-7 |
 Feb. 29 | Review for Midterm Exam
 Feb. 29 and Mar. 1 | | | No Lab Assignment
 Mar. 5 | **Midterm Exam** (in class)
-Mar. 7 or 8 | | | [Lab 4](./lab4) | [code](https://autograder.luddy.indiana.edu/web/project/930), [test](https://autograder.luddy.indiana.edu/web/project/937)
+Mar. 7 or 8 | | | [Lab 4: Binomial Heaps](./lab4) | [code](https://autograder.luddy.indiana.edu/web/project/930), [test](https://autograder.luddy.indiana.edu/web/project/937)
 Mar. 10 - 17 | **Spring Break**
 Apr. 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
 
