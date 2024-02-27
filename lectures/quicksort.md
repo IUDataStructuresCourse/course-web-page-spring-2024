@@ -17,10 +17,12 @@ Algorithm overview:
 Implementation:
 
     static void quicksort(int[] A, int begin, int end) {
-        if (begin != end) {
-            int pivot = partition(A, begin, end);
-            quicksort(A, begin, pivot);
-            quicksort(A, pivot+1, end);
+	    if (begin == end) { // base case, empty half-open interval
+		  return; // do nothing
+		} else {
+            int pivot_position = partition(A, begin, end);
+            quicksort(A, begin, pivot_position);
+            quicksort(A, pivot_position+1, end);
         }
     }
 
@@ -48,7 +50,7 @@ Simple implementation:
       ArrayList<Integer> R = new ArrayList<Integer>();
       int pivot = A[end - 1];
       for (int i = begin; i != end - 1; ++i) {
-         if (A[i] ≤ pivot) { L.add(A[i]); }
+         if (A[i] ≤ pivot) { L.add(A[i]); }     // O(1)
          else { R.add(A[i]);  }
       }
       int pivot_loc = copy(L, A, begin);
@@ -56,6 +58,10 @@ Simple implementation:
       copy(R, A, pivot_loc + 1);
       return pivot_loc;
     }
+	
+Time complexity: O(n)
+Space complexity: O(n)
+	
 
 ### Partition in-place
 
@@ -122,6 +128,46 @@ Space-efficient implementation:
        swap(A, i, end-1);
        return i;
     }
+
+### Student exercise
+
+Apply quicksort to the array, write the state of the array after each
+step within the partitioning
+    
+    [6,1,2,3]
+
+quicksort(A, 0, 4)
+- partition around 3
+
+    [|6|1,2|3]
+    [1|6|2|3]
+    [1,2|6|3]
+    [1,2|3|6]
+
+- quicksort(A, 0, 2)  (doesn't change anything)
+  * partition around 2
+
+        [||1|2]  
+        [1|||2]
+        [1|2|]
+
+  * quicksort(A,0,1)
+      - partition around 1
+
+          [|||1]
+          [|1|]
+
+      - quicksort(A,0,0) returns immediately
+      - quicksort(A,2,2) returns immediately
+  * quicksort(A,2,2) returns immediately
+- quicksort(A, 3, 4)
+    * partition around 6
+
+            [|||6]
+            [|6|]
+
+    * quicksort(A,3,3) returns immediately
+    * quicksort(A,4,4) returns immediately
 
 ### Random Pivot
 
@@ -215,46 +261,6 @@ After the loop:
  So the proof is complete.
 
 ### Time complexity of partition: Θ(n)
-
-### Student exercise
-
-Apply quicksort to the array, write the state of the array after each
-step within the partitioning
-    
-    [6,1,2,3]
-
-quicksort(A, 0, 4)
-- partition around 3
-
-    [|6|1,2|3]
-    [1|6|2|3]
-    [1,2|6|3]
-    [1,2|3|6]
-
-- quicksort(A, 0, 2)  (doesn't change anything)
-  * partition around 2
-
-        [||1|2]  
-        [1|||2]
-        [1|2|]
-
-  * quicksort(A,0,1)
-      - partition around 1
-
-          [|||1]
-          [|1|]
-
-      - quicksort(A,0,0) returns immediately
-      - quicksort(A,2,2) returns immediately
-  * quicksort(A,2,2) returns immediately
-- quicksort(A, 3, 4)
-    * partition around 6
-
-            [|||6]
-            [|6|]
-
-    * quicksort(A,3,3) returns immediately
-    * quicksort(A,4,4) returns immediately
 
 ## Worst-case time complexity of quicksort
 

@@ -104,7 +104,7 @@ This looks familiar, now we can rotate right.
             50(A)
 
 
-### Insert Example with Two Violations (not really!)
+### Another Insert Example
 
       _6[2]_
      /      \

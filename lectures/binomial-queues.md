@@ -2,7 +2,7 @@
 
 Overview:
 1. Binomial Trees and Heaps
-2. Binomial Forests and Queues
+2. Binomial Forests and Priority Queues
 
 ## Binomial Trees and Heaps
 
