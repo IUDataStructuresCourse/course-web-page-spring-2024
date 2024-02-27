@@ -16,16 +16,17 @@ Algorithm overview:
 
 Implementation:
 
-    static void quicksort(int[] A, int begin, int end) {
-	    if (begin == end) { // base case, empty half-open interval
-		  return; // do nothing
-		} else {
-            int pivot_position = partition(A, begin, end);
-            quicksort(A, begin, pivot_position);
-            quicksort(A, pivot_position+1, end);
-        }
-    }
-
+```
+void quicksort(int[] A, int begin, int end) {
+	if (begin == end) { // base case, empty
+	  return; // do nothing
+	} else {
+		int pivot_pos = partition(A, begin, end);
+		quicksort(A, begin, pivot_pos);
+		quicksort(A, pivot_pos+1, end);
+	}
+}
+```
 ## Partition
 
 The `partition` function chooses the pivot and then rearranges the
@@ -91,7 +92,7 @@ swap 3 with 7
 
     [2,1,3|8,7|5,6|4]
     [2,1,3|8,7,5|6|4]
-    [2,1,3|8,7,5,6|4]
+    [2,1,3|8,7,5,6||4]
 
 To finish off, we need to put 4 (the pivot) into the middle.
 swap 4 with 8
@@ -116,19 +117,20 @@ if A[j] > pivot, just move on to the next j
 
 Space-efficient implementation:
 
-    static int partition(int[] A, int begin, int end) {
-       int pivot = A[end-1];
-       int i = begin;
-       for (int j = begin; j != end-1; ++j) {
-          if (A[j] ≤ pivot) {
-             swap(A, i, j);
-             ++i;
-          }
-       }
-       swap(A, i, end-1);
-       return i;
-    }
-
+```
+int partition(int[] A, int begin, int end) {
+   int pivot = A[end-1];
+   int i = begin;
+   for (int j = begin; j != end-1; ++j) {
+	  if (A[j] ≤ pivot) {
+		 swap(A, i, j);
+		 ++i;
+	  }
+   }
+   swap(A, i, end-1);
+   return i;
+}
+```
 ### Student exercise
 
 Apply quicksort to the array, write the state of the array after each
@@ -143,6 +145,7 @@ quicksort(A, 0, 4)
     [1|6|2|3]
     [1,2|6|3]
     [1,2|3|6]
+	 0 1 2 3 4
 
 - quicksort(A, 0, 2)  (doesn't change anything)
   * partition around 2
@@ -191,14 +194,20 @@ Let T be the region [j,end-1)    (T for "to-do")
 
 The postcondition that we want to prove is:
 
-    let pivot = partition(A, start, end)
+    let pivot_loc = partition(A, start, end)
 
-    for i in [start,pivot), A[i] ≤ A[pivot]
-    for i in [pivot+1,end), A[pivot] < A[i]
+    for i in [start,pivot_loc), A[i] ≤ A[pivot_loc]
+    for i in [pivot_loc+1,end), A[pivot_loc] < A[i]
 
 loop invariant:
 * all the elements in L are less than or equal to the pivot, and
 * all the elements in G are greater than the pivot
+
+Recipe for checking a loop invariant:
+* prove that it is true at the start of the loop
+* for a hypothetical iteration of the loop, 
+  assume the loop invariant is true and show that it is
+  true at the end of one step of the loop.
 
 At the start of the loop:
 
@@ -210,7 +219,11 @@ L and G are both empty, so the loop invariant holds trivially
 In the loop:
 
            |--L--|--G--|--T--|p|
-                i       j
+                  i     j
+
+           |--L--||--T--|p|
+                  i
+				  j
 
 there are two cases to consider
 
@@ -234,6 +247,9 @@ there are two cases to consider
 
 2. A[j] > pivot
 
+           |--L--|--G--|--T--|p|
+                  i     j
+
    We add A[j] to the G region by incrementing j.
    We have A[j] > pivot and the rest of G hasn't changed,
    so every elt. of G is greater than pivot.
@@ -241,18 +257,18 @@ there are two cases to consider
 
 After the loop:
 
- We have L = [start,i), G = [i,end-1)
+ We have L = [start,i), G = [i,end-1), and T = [j, end-1) but loop condition says j == end-1.
 
        |---L---|---G---|p|
-              i
+                i
 
  We swap the pivot p with the first elt. of G (at i)
 
        |---L---|p|---G---|
 
- Let pivot = i.
+ Let pivot_loc = i.
 
- Now we have L = [start,pivot), G = [pivot+1,end).
+ Now we have L = [start,pivot_loc), G = [pivot+1,end).
 
  Every element of L is less than A[pivot].
 
@@ -267,9 +283,15 @@ After the loop:
   Suppose that each time we partition, it turns out
   that everything ends up in L. So the recursive call
   to sort L is T(n-1) and G is T(0).
+
+      T(0) = 1
+      T(n) = T(n-1) + T(0) + n
       
-      T(n) = T(n-1) + T(0) + Θ(n)
-      
+	  T(n) = T(n-1) + T(o) + n
+	       = (T(n-2) + T(0) + n-1) + T(o) + n
+		   = T(n-2) + 2 + n + n-1
+		   = T(n-3) + 3 + n + n-1 + n-2
+	  
       T(n) in O(n²)
 
 ## Best-case time complexity
