@@ -2,8 +2,10 @@
 
 Topics
 
-* Projects
+* Labs and Projects
+    * Array Search
     * Flood It: time complexity, Java collection classes
+	* Merge Sort on Linked Lists
     * Segment Intersection: BST and AVL
 * Arrays, array algorithms e.g. search, rotate, Java's ArrayList
 * Half-open ranges
