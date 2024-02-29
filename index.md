@@ -125,17 +125,18 @@ Feb. 8 or 9 | | | [Lab 3: Next Prev Binary Tree](./lab3) | [code](https://autogr
 Feb. 12 | | | Lab 3 due |
 Feb. 13 | [Recipes for Time Analysis and Testing](./lectures/analysis-and-testing-recipes.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_suf7596w))
 Feb. 15 | [Heaps and Priority Queues](./lectures/heaps.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_d98gzzu8)) | Ch. 6 sec. 1-4, 9 |
-Feb. 15 or 16 | | | Lab: work on <br> [Project 2: Segment Intersection](./proj2-seg-int), <br> [<mark>Quiz 2</mark>](https://iu.instructure.com/courses/2201400/quizzes/4171264) | [code](https://autograder.luddy.indiana.edu/web/project/929), [test](https://autograder.luddy.indiana.edu/web/project/944)
+Feb. 15 or 16 | | | Lab: work on <br> [Project 2: Segment Intersection](./proj2-seg-int), <br> [Quiz 2](https://iu.instructure.com/courses/2201400/quizzes/4171264) | [code](https://autograder.luddy.indiana.edu/web/project/929), [test](https://autograder.luddy.indiana.edu/web/project/944)
 Feb. 20 | [Priority Queues, Code Review of Binary Trees](./lectures/priority-queue-binary-tree.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_r4998ze6))
 Feb. 22 | [Binomial Queues](./lectures/binomial-queues.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_2u62nvbp)) | Ch. 6 sec. 8 |
 Feb. 22 or 23 | | | Lab: finish <br> [Project 2: Segment Intersection](./proj2-seg-int) | [code](https://autograder.luddy.indiana.edu/web/project/929), [test](https://autograder.luddy.indiana.edu/web/project/944)
-Feb. 26 | | | <mark>Project 2 due</mark> |
+Feb. 26 | | | Project 2 due |
 Feb. 27 | [Quicksort](./lectures/quicksort.md) | Ch. 7, sec. 1-7 | 
 Feb. 29 | [Review for Midterm Exam](./lectures/midterm-review.md)
 Feb. 29 and Mar. 1 | | | No Labs
-Mar. 5 | **Midterm Exam** (in class)
+Mar. 5 | **<mark>Midterm Exam</mark>** (in class)
 Mar. 7 or 8 | | | [Lab 4: Binomial Heaps](./lab4) | [code](https://autograder.luddy.indiana.edu/web/project/930), [test](https://autograder.luddy.indiana.edu/web/project/937)
 Mar. 10 - 17 | **Spring Break**
+Mar. 18 | | | <mark>Lab 4 due</mark> |
 Apr. 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
 
 **Resources**
