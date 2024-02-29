@@ -46,8 +46,10 @@ Example that requires a more interesting choice of k.
         --- | ------- | ----
         1   |  101    | 1
         2   |  102    | 4
+		... |  ...    | ...
         10  |  110    | 100
-        11  |  111    | 121
+        11  |  111    | 121    <---
+		12  |  112    | 144
 
         choose k = 11, c = 1
         for all n ≥ 11, n + 100 ≤ n²
