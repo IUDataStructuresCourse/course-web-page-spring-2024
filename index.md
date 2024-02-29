@@ -130,8 +130,8 @@ Feb. 20 | [Priority Queues, Code Review of Binary Trees](./lectures/priority-que
 Feb. 22 | [Binomial Queues](./lectures/binomial-queues.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_2u62nvbp)) | Ch. 6 sec. 8 |
 Feb. 22 or 23 | | | Lab: finish <br> [Project 2: Segment Intersection](./proj2-seg-int) | [code](https://autograder.luddy.indiana.edu/web/project/929), [test](https://autograder.luddy.indiana.edu/web/project/944)
 Feb. 26 | | | <mark>Project 2 due</mark> |
-Feb. 27 | [Quicksort](./lectures/quicksort.md) | Ch. 7, sec. 1-7 | 
-Feb. 29 | [Review for Midterm Exam](./lectures/midterm-review.md)
+Feb. 27 | [Quicksort](./lectures/quicksort.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_eaih0uhc)) | Ch. 7, sec. 1-7 | 
+Feb. 29 | [Review for Midterm Exam](./lectures/midterm-review.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_1o6n2wus))
 Feb. 29 and Mar. 1 | | | No Labs
 Mar. 5 | **Midterm Exam** (in class)
 Mar. 7 or 8 | | | [Lab 4: Binomial Heaps](./lab4) | [code](https://autograder.luddy.indiana.edu/web/project/930), [test](https://autograder.luddy.indiana.edu/web/project/937)

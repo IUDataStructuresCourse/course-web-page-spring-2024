@@ -32,13 +32,15 @@ Simplest example
 
         g(n) = n²
 
-        f(n) in O(g(n))
+		n in O(n²)?
 
         choose k = 0, c = 1
 
         for all n ≥ 0, n ≤ n² 
 
 Example that requires a more interesting choice of k.
+
+        show that n + 100 ∈ O(n^2)
 
         f(n) = n + 100
 
@@ -48,6 +50,7 @@ Example that requires a more interesting choice of k.
         --- | ------- | ----
         1   |  101    | 1
         2   |  102    | 4
+		3   |  103    | 9
 		... |  ...    | ...
         10  |  110    | 100
         11  |  111    | 121    <---
@@ -58,6 +61,8 @@ Example that requires a more interesting choice of k.
 
 Example that requires a more interesting choice of c.
 
+        3 * n ∈ O(n)
+
         f(n) = 3 n
 
         g(n) = n
@@ -65,8 +70,29 @@ Example that requires a more interesting choice of c.
         if we try c=1, no choice of k will work.
 
         choose c = 3, then any reasonable k will work
+		
+		    3 n / n <= c n / n 
+			3 <= c
 
         for all n ≥ 0, 3n ≤ 3n.
+
+
+
+        5n^2 + 3n + 10 in   O(n^2)
+		   choose c=6
+
+Exponents and logarithm
+
+(2 * x) / 2 = x
+
+log(2^x) = x
+
+log(2^0) = log(1) = 0   (n = 1)
+log(2^1) = log(2) = 1   (n = 2)
+log(2^2) = log(4) = 2   (n = 4)
+log(2^3) = 3   (n = 8)
+log(2^4) = 4   (n = 16)
+
 
 Ex. 3.1-1
 
@@ -99,6 +125,22 @@ traversals:
 * in-order: left, current, right
 * post-order; left, right, current
 
+                     _____ 25____
+                    /            \
+                 __15__           50
+                /      \         /
+               10       22      35
+              /  \     /       / 
+             4    12  16      31 
+
+pre order traversal: 25, 15, 10, 4, 12, 22, 16, 50, 35, 31
+in order traversal:  4, 10, 12, 15, 16, 22, 25, 31, 35, 50
+post order traversal: 4, 12, 10, 16, 22, 15, 31, 35, 50, 25
+
+pre-order breadth first:
+      25, 15, 50, 10, 22, 35, 4, 12, 16, 31
+
+
 first/last methods
 
 next/previous methods
@@ -125,8 +167,10 @@ Example tree:
                  __15__           50
                 /      \         /
                10       22      35
-              /  \             / 
-             4    12          31 
+              /  \     /       / 
+             4    12  16      31 
+
+in order travel: 4, 10, 12, 15, 16, 22, 25, 31, 35, 50
 
 search
 
@@ -253,6 +297,16 @@ Here are the interfaces:
     interface BiPredicate {
 	    boolean test(T t, U u);
 	}
+
+    public static <T> T max(Sequence<T> s, T zero, BiPredicate<T, T> less) {
+	   T bestyet = zero;
+	   for (iter = s.begin(); ! iter.equals(s.end()); iter.advance()) {
+	      if (less.test(bestyet, iter.get()))
+		     bestyet = iter.get();
+	   }
+	   return bestyet;
+    }
+
 
 ## Linked Lists
 

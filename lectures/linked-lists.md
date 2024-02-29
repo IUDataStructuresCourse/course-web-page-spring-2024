@@ -189,7 +189,7 @@ List implementation of Sequence
 	   }
        ...
        Iter<T> begin() {
-	     return new ListIter(head);
+	     return new ListIter(this.head);
 	   }
        Iter<T> end() {
 	     return new ListIter(null);

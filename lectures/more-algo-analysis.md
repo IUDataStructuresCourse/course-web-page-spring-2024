@@ -204,12 +204,22 @@ Answer:
 	* get: O(n)
 	* contains: O(n)
 	* remove: O(1)
+    * size: O(1)
 
 * ArrayList
 	* add: O(1)*
 	* get: O(1)
+	* set: O(1)
 	* contains: O(n)
 	* remove: O(n)
+    * size: O(1)
+
+HashSet
+HashMap
+
+TreeSet  (Balanced Binary Search Tree)
+    * contains: O(log(n))
+TreeMap  (Balanced Binary Search Tree)
 
 # Common complexity classes:
 
