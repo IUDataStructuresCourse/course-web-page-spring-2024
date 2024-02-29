@@ -132,9 +132,11 @@ Feb. 22 or 23 | | | Lab: finish <br> [Project 2: Segment Intersection](./proj2-s
 Feb. 26 | | | <mark>Project 2 due</mark> |
 Feb. 27 | [Quicksort](./lectures/quicksort.md) | Ch. 7, sec. 1-7 | 
 Feb. 29 | [Review for Midterm Exam](./lectures/midterm-review.md)
-March 5 | **Midterm Exam** (in class)
-March 10 - 17 | **Spring Break**
-April 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
+Feb. 29 and Mar. 1 | | | No Lab Assignment
+Mar. 5 | **Midterm Exam** (in class)
+Mar. 7 or 8 | | | [Lab 4: Binomial Heaps](./lab4) | [code](https://autograder.luddy.indiana.edu/web/project/930), [test](https://autograder.luddy.indiana.edu/web/project/937)
+Mar. 10 - 17 | **Spring Break**
+Apr. 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
 
 **Resources**
 

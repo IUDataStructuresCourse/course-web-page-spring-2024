@@ -1,4 +1,4 @@
-# Lab 5: Binomial Heaps
+# Lab 4: Binomial Heaps
 
 ## Overview
 
@@ -7,15 +7,15 @@ by implementing the `isHeap()` method in the `BinomialHeap` and
 `BinomialQueue` classes and the `insert()` and `merge()`
 methods in the `BinomialQueue` class.
 
-Please review the lecture notes [here](./lectures/Oct-16) before you start.
+Please review the lecture notes [here](./lectures/binomial-queues) before you start.
 
 ## Support Code and Submission
 
 + Student support code is at [link](https://github.com/IUDataStructuresCourse/binomial-queue-student-support-code).
 + Submit your code file `BinomialQueue.java` ([Problem 1 and 2](#problem-1-binomialheap)) to
-  [link](https://autograder.luddy.indiana.edu/web/project/701).
+  [link](https://autograder.luddy.indiana.edu/web/project/930).
 + Submit your test file `StudentTest.java` ([Problem 3](#problem-3-testing)) to
-  [link](https://autograder.luddy.indiana.edu/web/project/708).
+  [link](https://autograder.luddy.indiana.edu/web/project/937).
 
 ## Problem Set
 
@@ -102,4 +102,4 @@ Create tests in `StudentTest.java` which thoroughly test the public
 
 -----------------
 
-* You have reached the end of Lab 5. Yay!
+* You have reached the end of Lab 4. Yay!
