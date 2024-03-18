@@ -133,11 +133,13 @@ Feb. 26 | | | Project 2 due |
 Feb. 27 | [Quicksort](./lectures/quicksort.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_eaih0uhc)) | Ch. 7, sec. 1-7 | 
 Feb. 29 | [Review for Midterm Exam](./lectures/midterm-review.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_1o6n2wus))
 Feb. 29 and Mar. 1 | | | No Labs
-Mar. 5 | **<mark>Midterm Exam</mark>** (in class)
+Mar. 5 | **Midterm Exam** (in class)
 Mar. 7 | [Sorting in Linear Time](./lectures/sort-linear.md) | Ch. 7 sec. 11
 Mar. 7 or 8 | | | [Lab 4: Binomial Heaps](./lab4) | [code](https://autograder.luddy.indiana.edu/web/project/930), [test](https://autograder.luddy.indiana.edu/web/project/937)
 Mar. 10 - 17 | **Spring Break**
 Mar. 18 | | | <mark>Lab 4 due</mark> |
+Mar. 21 or 22 | | | [Lab 5: Generic Quicksort](./lab5) | [code](https://autograder.luddy.indiana.edu/web/project/906), [test](https://autograder.luddy.indiana.edu/web/project/938)
+Mar. 25 | | | <mark>Lab 5 due</mark> |
 Apr. 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
 
 **Resources**

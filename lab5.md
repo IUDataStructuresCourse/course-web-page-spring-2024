@@ -1,4 +1,4 @@
-# Lab 6: Generic Quicksort
+# Lab 5: Generic Quicksort
 
 ## Problem Description
 
@@ -29,10 +29,10 @@ Test `quicksort()` thoroughly in `StudentTest.java`.
   * There are a few helper functions in `Algorithms.java` that you may use,
     for example, `iter_swap()` swaps the elements at iterator positions `i` and `j`.
 + Submit your code file `QuickSort.java` to
-  [link](https://autograder.luddy.indiana.edu/web/project/699).
+  [link](https://autograder.luddy.indiana.edu/web/project/906).
 + Submit your test file `StudentTest.java` to
-  [link](https://autograder.luddy.indiana.edu/web/project/709).
+  [link](https://autograder.luddy.indiana.edu/web/project/938).
 
 -----------------
 
-* You have reached the end of Lab 6. Yay!
+* You have reached the end of Lab 5. Yay!
