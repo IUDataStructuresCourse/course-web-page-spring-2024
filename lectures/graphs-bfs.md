@@ -62,6 +62,7 @@ representation is
 
 Adjacency lists are good for storing sparse graphs.
 
+
 * Space: O(n + m).
 * Edge detection given two vertices: O(n)
 * Edge insert: O(1)
