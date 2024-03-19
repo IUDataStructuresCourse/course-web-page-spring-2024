@@ -138,6 +138,8 @@ Mar. 7 | [Sorting in Linear Time](./lectures/sort-linear.md) | Ch. 7 sec. 11
 Mar. 7 or 8 | | | [Lab 4: Binomial Heaps](./lab4) | [code](https://autograder.luddy.indiana.edu/web/project/930), [test](https://autograder.luddy.indiana.edu/web/project/937)
 Mar. 10 - 17 | **Spring Break**
 Mar. 18 | | | <mark>Lab 4 due</mark> |
+Mar. 19 | [Graphs and Breadth-first Search](./lectures/graphs-bfs.md) | Ch. 9, sec. 1, sec. 3.1
+Mar. 21 | [Depth-first Search](./lectures/dfs.md) | Ch. 9 sec. 3
 Apr. 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
 
 **Resources**

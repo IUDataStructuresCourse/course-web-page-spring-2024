@@ -113,7 +113,7 @@ Where does A[4]=8 go? L[8]=6, 6-1=5.
 Subtract one from L[8].
 
     L = [0, 0, 2, 3, 4, 5, 5, 5, 5]
-         0  1  2  3  4  5  6  7  8  
+         0  1  2  3  4  5  6  7  8
 
 Where does A[3]=2 go? L[2]=2, 2-1=1.
 
@@ -122,17 +122,19 @@ Where does A[3]=2 go? L[2]=2, 2-1=1.
 Subtract one from L[2].
     
     L = [0, 0, 1, 3, 4, 5, 5, 5, 5]
-         0  1  2  3  4  5  6  7  8  
+         0  1  2  3  4  5  6  7  8
          
 where does 2 go? 1-1=0
 
     B = [2, 2, 0, 3, 0, 8]
     L = [0, 0, 0, 3, 4, 5, 5, 5, 5]
+         0  1  2  3  4  5  6  7  8
 
 where does 5 go? 5-1=4
 
     B = [2, 2, 0, 3, 5, 8]
     L = [0, 0, 0, 3, 4, 4, 5, 5, 5]
+         0  1  2  3  4  5  6  7  8
 
 where does 3 go? 3-1=2
 
@@ -143,11 +145,11 @@ Counting sort in Java:
 
 ```java
 static void counting_sort(int[] A, int[] B, int k) {
-   int[] C = new int[k+1]; // counts of each element of A
-   int[] L = new int[k+1];  // L[j] = number of elements less or equal j.
+   int[] C = new int[k+1]; // counts of each element of A     O(n)
+   int[] L = new int[k+1];  // L[j] = number of elements less or equal j.    O(n)
    // stage 1: counting
    for (int i = 0; i != A.length; ++i) { // O(n)
-	  ++C[A[i]];
+	  C[A[i]] = 1 + C[A[i]];
    }
    // stage 2: cummulative sum
    L[0] = C[0];
@@ -197,10 +199,23 @@ Example:
      720      329     457    720
      355      839     657    839
 
+try it backwards
+
+     V        V        V
+     329     329     329      720
+     457     355     720      355
+     657     457     436      436
+     839  -> 436  -> 839  ->  457
+     436     657     355      657
+     720     720     457      329
+     355     839     657      839
+
+
+
     static void radix_sort(int[] A, int d) {
-       int[] B = new int[A.length];
-       for (int i = 0; i != d; ++i) { // O(n*d)
-          counting_sort(A, B, 10, extract_digit(i,d)); // k=10, O(n+10) = O(n)
+       int[] B = new int[A.length]; // O(n)
+       for (int i = 0; i != d; ++i) { // O(n * d)
+          counting_sort(A, B, 10, extract_digit(i,d)); // O(n+k), k=10, O(n+10) = O(n)
           // swap A and B
           for (int j = 0; j != A.length; ++j) { // O(n)
              int tmp = A[j];
@@ -237,7 +252,7 @@ from an element.
        }
     }
 
-Time complexity of radix_sort: O(d (n + k))
+Time complexity of radix_sort: O(d * n)
 
 ## Bucket Sort
 
