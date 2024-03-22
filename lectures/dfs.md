@@ -32,22 +32,23 @@ that started from A but not in the search that started from E.
 There are two ways to implement DFS. The first is like the algorithm
 for BFS, but replaces the queue with a stack.
 
+    stack.push(start)
     while not stack.empty()
 	  u = stack.pop()
+      visited[v] = true
 	  for v in G.adjacent(u)
 	    if not visited[v]
-		  visited[v] = true
-		  parent[v] = u
+		  parent_map[v] = u
 		  stack.push(v)
 
 The second algorithm for DFS is recursive:
 
-    DFS(u, G, parent, visited) =
+    DFS(u, G, parent_map, visited) =
+      visited[v] = true
 	  for v in G.adjacent(u)
 	    if not visited[v]
-	      visited[v] = true
-		  parent[v] = u
-		  DFS(v, G, parent, visited)
+		  parent_map[v] = u
+		  DFS(v, G, parent_map, visited)
 
 DFS and BFS both are good choices for generic search problems, that is,
 when you're searching for a vertex.
