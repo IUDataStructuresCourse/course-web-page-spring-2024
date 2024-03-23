@@ -18,7 +18,7 @@ void quicksort(Iterator<E> begin, Iterator<E> end) {
 
 Your implementation should maintain the time complexity of quicksort:
 it should have worst case $O(n^2)$ time complexity and average case
-$O(nlog(n))$ time complexity.
+$O(n\log(n))$ time complexity.
 
 Test `quicksort()` thoroughly in `StudentTest.java`.
 
