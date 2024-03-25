@@ -1,4 +1,4 @@
-# Lab 7: Connected Components (DFS)
+# Lab 6: Connected Components (DFS)
 
 In an undirected graph, a *connected component* is a maximal
 subset of vertices for which there is a path between every
@@ -39,9 +39,9 @@ perform the depth-first search.
 + Student support code is at [link](https://github.com/IUDataStructuresCourse/connected-components-student-support-code).
   Please make sure to go through existing code before you start.
 + Submit your code file `ConnectedComponents.java` to
-  [link](https://autograder.luddy.indiana.edu/web/project/702).
+  [link](https://autograder.luddy.indiana.edu/web/project/931).
 + Submit your test file `StudentTest.java` to
-  [link](https://autograder.luddy.indiana.edu/web/project/705).
+  [link](https://autograder.luddy.indiana.edu/web/project/934).
 
 ## Example
 
@@ -49,4 +49,4 @@ perform the depth-first search.
 
 -----------------
 
-* You have reached the end of Lab 7. Yay!
+* You have reached the end of Lab 6. Yay!
