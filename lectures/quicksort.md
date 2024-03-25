@@ -18,13 +18,13 @@ Implementation:
 
 ```
 void quicksort(int[] A, int begin, int end) {
-	if (begin == end) { // base case, empty
-	  return; // do nothing
-	} else {
-		int pivot_pos = partition(A, begin, end);
-		quicksort(A, begin, pivot_pos);
-		quicksort(A, pivot_pos+1, end);
-	}
+    if (begin == end) { // base case, empty
+      return; // do nothing
+    } else {
+        int pivot_pos = partition(A, begin, end);
+        quicksort(A, begin, pivot_pos);
+        quicksort(A, pivot_pos+1, end);
+    }
 }
 ```
 ## Partition
@@ -59,10 +59,10 @@ Simple implementation:
       copy(R, A, pivot_loc + 1);
       return pivot_loc;
     }
-	
+    
 Time complexity: O(n)
 Space complexity: O(n)
-	
+    
 
 ### Partition in-place
 
@@ -103,17 +103,17 @@ Looking at a half-way point in the run gives us a good idea
 for what the algorithm needs to do.
 
     [2,1|7,8|3,5,6|4]
-       i     j
+         i   j
 
 if A[j] ≤ pivot, swap it with first greater-than elt., increment i and j
 
     [2,1,3|8,7|5,6|4]
-         i     j
+           i   j
 
 if A[j] > pivot, just move on to the next j
 
     [2,1,3|8,7,5|6|4]
-         i       j
+           i     j
 
 Space-efficient implementation:
 
@@ -122,10 +122,10 @@ int partition(int[] A, int begin, int end) {
    int pivot = A[end-1];
    int i = begin;
    for (int j = begin; j != end-1; ++j) {
-	  if (A[j] ≤ pivot) {
-		 swap(A, i, j);
-		 ++i;
-	  }
+      if (A[j] ≤ pivot) {
+         swap(A, i, j);
+         ++i;
+      }
    }
    swap(A, i, end-1);
    return i;
@@ -145,12 +145,12 @@ quicksort(A, 0, 4)
     [1|6|2|3]
     [1,2|6|3]
     [1,2|3|6]
-	 0 1 2 3 4
+     0 1 2 3 4
 
 - quicksort(A, 0, 2)  (doesn't change anything)
   * partition around 2
 
-        [||1|2]  
+        [||1|2]
         [1|||2]
         [1|2|]
 
@@ -223,7 +223,7 @@ In the loop:
 
            |--L--||--T--|p|
                   i
-				  j
+                  j
 
 there are two cases to consider
 
@@ -287,11 +287,11 @@ After the loop:
       T(0) = 1
       T(n) = T(n-1) + T(0) + n
       
-	  T(n) = T(n-1) + T(o) + n
-	       = (T(n-2) + T(0) + n-1) + T(o) + n
-		   = T(n-2) + 2 + n + n-1
-		   = T(n-3) + 3 + n + n-1 + n-2
-	  
+      T(n) = T(n-1) + T(o) + n
+           = (T(n-2) + T(0) + n-1) + T(o) + n
+           = T(n-2) + 2 + n + n-1
+           = T(n-3) + 3 + n + n-1 + n-2
+      
       T(n) in O(n²)
 
 ## Best-case time complexity
