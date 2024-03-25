@@ -143,6 +143,7 @@ Mar. 21 | [Depth-first Search](./lectures/dfs.md) | Ch. 9 sec. 6
 Mar. 21 or 22 | | | [Lab 5: Generic Quicksort](./lab5) | [code](https://autograder.luddy.indiana.edu/web/project/906), [test](https://autograder.luddy.indiana.edu/web/project/938)
 Mar. 25 | | | <mark>Lab 5 due</mark> |
 Mar. 26 | [Shortest Paths](./lectures/shortest-paths.md) | Ch. 9 sec. 3
+Mar. 28 | [Union Find](./lectures/union-find.md) | Ch. 8
 Apr. 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
 
 **Resources**
