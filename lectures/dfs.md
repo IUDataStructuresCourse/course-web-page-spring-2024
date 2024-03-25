@@ -35,7 +35,7 @@ for BFS, but replaces the queue with a stack.
     stack.push(start)
     while not stack.empty()
 	  u = stack.pop()
-      visited[v] = true
+      visited[u] = true
 	  for v in G.adjacent(u)
 	    if not visited[v]
 		  parent_map[v] = u
@@ -44,7 +44,7 @@ for BFS, but replaces the queue with a stack.
 The second algorithm for DFS is recursive:
 
     DFS(u, G, parent_map, visited) =
-      visited[v] = true
+      visited[u] = true
 	  for v in G.adjacent(u)
 	    if not visited[v]
 		  parent_map[v] = u
