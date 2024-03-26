@@ -28,7 +28,7 @@ in the graph. Other alternatives are:
 
 ## Algorithm Preview
 
-- Bellman-Ford: O(nm)
+- Bellman-Ford: O(n m)
 - Disjktra: 
 	* using min-heap: O((n+m) log(n))
 	* using Fibonnaci heap: O(n log(n) + m)
@@ -36,7 +36,7 @@ in the graph. Other alternatives are:
 
 Brute force: compute the length of every path
 
-But this is exponential time: there are O(2^n) paths.
+But this is exponential time: there are O(2ⁿ) paths.
 Here's a worst-case scenario.
 
 ![**Graph with an exponential number of paths.**](./digraph11.png)
