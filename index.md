@@ -144,7 +144,7 @@ Mar. 21 or 22 | | | [Lab 5: Generic Quicksort](./lab5) | [code](https://autograd
 Mar. 25 | | | <mark>Lab 5 due</mark> |
 Mar. 26 | [Shortest Paths](./lectures/shortest-paths.md) | Ch. 9 sec. 3
 Mar. 28 | [Union Find](./lectures/union-find.md) | Ch. 8
-Mar. 28 or 29 | | | [Lab 6: Connected Components](./lab6) | [code](https://autograder.luddy.indiana.edu/web/project/931), [test](https://autograder.luddy.indiana.edu/web/project/934)
+Mar. 28 or 29 | | | [Lab 6: Connected Components](./lab6) <br> [Quiz 3](https://iu.instructure.com/courses/2201400/quizzes/4185224) | [code](https://autograder.luddy.indiana.edu/web/project/931), [test](https://autograder.luddy.indiana.edu/web/project/934)
 Apr. 1 | | | <mark>Lab 6 due</mark> |
 Apr. 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
 
