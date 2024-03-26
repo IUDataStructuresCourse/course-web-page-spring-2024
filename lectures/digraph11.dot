@@ -1,5 +1,4 @@
 digraph G {
-  size = "2,2";
 
   { rank = same; v0 v2 v4 }
   { rank = same; v1 v3 }
