@@ -1,5 +1,8 @@
 # Union-Find and Incremental Connected Components
 
+The Union-Find data structure (aka Disjoint Sets) is for efficiently
+representing members of an equivalence relation.
+
 ## Overview
 
 * Example Applications
@@ -102,11 +105,11 @@
 * `union`: append one list to the other, then update the pointer in the
    elements of one of the lists.
 
-* time complexity
+* time complexity of a sequence of operations
 
     n: the number of `make_set` operations (i.e., the number of elements)
 
-    m: the number of `make_set`, `union`, and `find_set` operations
+    m: the number of `make_set`, `union`, and `find` operations
 
     `make_set`: O(1)
 
@@ -147,9 +150,10 @@ Each node in the tree has a parent pointer.
 
           class UnionFind<N> implements DisjointSets<N>
           {
-              Map<N,N> parent;
+              HashMap<N,N> parent;
+              HashMap<N,Integer> rank;
 
-              public UnionFind(Map<N,N> p) {
+              public UnionFind(HashMap<N,N> p) {
                   parent = p; 
               }
               public void make_set(N x) {

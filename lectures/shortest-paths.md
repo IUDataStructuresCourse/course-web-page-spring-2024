@@ -4,6 +4,11 @@ We have seen the shortest path problem where each edge counts as
 distance 1 and we used BFS to solve it. Now we consider graphs where
 each edge has a real number for its *weight*.
 
+Motivation for the shortest path problem:
+- internet packet routing
+- driving routes
+- minimizing flight duration
+
 Notation: We write w(u,v) or w(e) for the *weight* of an edge.
 
 **Definition** The *weight of a path* is the sum of the weights of its
@@ -12,11 +17,6 @@ edges.  We also use the term *distance* for the weight of a path.
 So for path p = e₁, e₂, ..., eᵣ
 
     w(p) = Σ{i∈1..r} w(eᵢ)
-
-Motivation for the shortest path problem:
-- internet packet routing
-- driving routes
-- minimizing flight duration
 
 As with BFS, we'll focus on the single-source shortest-paths problem:
 finding the shortest path from a source vertex to every other vertex
