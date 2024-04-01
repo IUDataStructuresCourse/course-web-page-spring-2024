@@ -148,6 +148,7 @@ Mar. 28 or 29 | | | [Lab 6: Connected Components](./lab6) <br> [Quiz 3](https://
 Apr. 1 | | | <mark>Lab 6 due</mark> |
 Apr. 4 or 5 | | | Lab: work on <br> [Project 3: Routing Wires](./proj3-routing-wires) | [code](https://autograder.luddy.indiana.edu/web/project/933)
 Apr. 11 or 12 | | | Lab: finish <br> [Project 3: Routing Wires](./proj3-routing-wires) | [code](https://autograder.luddy.indiana.edu/web/project/933)
+Apr. 15 | | | <mark>Project 3 due</mark> |
 Apr. 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
 
 **Resources**
