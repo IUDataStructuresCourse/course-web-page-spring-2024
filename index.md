@@ -141,11 +141,13 @@ Mar. 18 | | | Lab 4 due |
 Mar. 19 | [Graphs and Breadth-first Search](./lectures/graphs-bfs.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_wjlji04p)) | Ch. 9, sec. 1, sec. 3.1
 Mar. 21 | [Depth-first Search](./lectures/dfs.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_m8w7a122)) | Ch. 9 sec. 6
 Mar. 21 or 22 | | | [Lab 5: Generic Quicksort](./lab5) | [code](https://autograder.luddy.indiana.edu/web/project/906), [test](https://autograder.luddy.indiana.edu/web/project/938)
-Mar. 25 | | | <mark>Lab 5 due</mark> |
+Mar. 25 | | | Lab 5 due |
 Mar. 26 | [Shortest Paths](./lectures/shortest-paths.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_lkian02b)) | Ch. 9 sec. 3
 Mar. 28 | [Union Find](./lectures/union-find.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_a473zgt3))| Ch. 8
 Mar. 28 or 29 | | | [Lab 6: Connected Components](./lab6) <br> [Quiz 3](https://iu.instructure.com/courses/2201400/quizzes/4185224) | [code](https://autograder.luddy.indiana.edu/web/project/931), [test](https://autograder.luddy.indiana.edu/web/project/934)
 Apr. 1 | | | <mark>Lab 6 due</mark> |
+Apr. 4 or 5 | | | Lab: work on <br> [Project 3: Routing Wires](./proj3-routing-wires) | [code](https://autograder.luddy.indiana.edu/web/project/933)
+Apr. 11 or 12 | | | Lab: finish <br> [Project 3: Routing Wires](./proj3-routing-wires) | [code](https://autograder.luddy.indiana.edu/web/project/933)
 Apr. 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
 
 **Resources**
