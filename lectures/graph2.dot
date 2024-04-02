@@ -1,5 +1,4 @@
 graph G {
-  size="2.5,1.5";
 
   {rank = same; A B C }
   {rank = same; D E F }
