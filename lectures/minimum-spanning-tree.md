@@ -177,12 +177,14 @@ Demo of Kruskal's algorithm
         ArrayList<Edge<V>> edges = new ArrayList<Edge<V>>();
         for (Edge<V> e : G.edges())
             edges.add(e);
+        // bucket sort O(n), mergesort O(n log n)			
         sort(edges, new CompareWeight<V>(weight));
-        for (Edge<V> e : edges) 
+        for (Edge<V> e : edges) {
             if (sets.find(e.source()) != sets.find(e.target())) {
                 T.add(e);
                 sets.union(e.source(), e.target());
             }
+		}
     }
 
 ### Time complexity
