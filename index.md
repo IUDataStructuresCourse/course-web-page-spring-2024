@@ -146,8 +146,8 @@ Mar. 26 | [Shortest Paths](./lectures/shortest-paths.md) ([video](https://iu.med
 Mar. 28 | [Union Find](./lectures/union-find.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_a473zgt3))| Ch. 8
 Mar. 28 or 29 | | | [Lab 6: Connected Components](./lab6) <br> [Quiz 3](https://iu.instructure.com/courses/2201400/quizzes/4185224) | [code](https://autograder.luddy.indiana.edu/web/project/931), [test](https://autograder.luddy.indiana.edu/web/project/934)
 Apr. 1 | | | <mark>Lab 6 due</mark> |
-Apr. 2 | [Minimum Spanning Tree](./lectures/minimum-spanning-tree.md) | Ch. 9 sec. 5 | 
-Apr. 4 | [Backtracking](./lectures/backtracking.md) and [Testing Connected Components](./lectures/testing-connected-components.md) | Ch. 10 sec. 5
+Apr. 2 | [Minimum Spanning Tree](./lectures/minimum-spanning-tree.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_lym41urq)) | Ch. 9 sec. 5 | 
+Apr. 4 | [Backtracking](./lectures/backtracking.md) and [Testing Connected Components](./lectures/testing-connected-components.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_qcfpi0ti)) | Ch. 10 sec. 5
 Apr. 4 or 5 | | | Lab: work on <br> [Project 3: Routing Wires](./proj3-routing-wires) | [code](https://autograder.luddy.indiana.edu/web/project/933)
 Apr. 11 or 12 | | | Lab: finish <br> [Project 3: Routing Wires](./proj3-routing-wires) | [code](https://autograder.luddy.indiana.edu/web/project/933)
 Apr. 15 | | | <mark>Project 3 due</mark> |

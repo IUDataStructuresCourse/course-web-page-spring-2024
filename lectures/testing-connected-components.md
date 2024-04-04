@@ -6,12 +6,34 @@
             UndirectedAdjacencyList G = generateRandomGraph(n);
             HashMap<Integer,Integer> rep = new HashMap<>();
             ConnectedComponents.connected_components(G, rep);
-            ???
+            
+			// compare to alternative trusted implementation
+            HashMap<Integer,Integer> good_rep = new HashMap<>();
+			good_connected_components(G, good_rep);
+			
+			// assertEquals(rep, good_rep); no! solutions are not unique
+			
+			// all pairs of vertices
+			for (Integer u : G.vertices()) {
+			  for (Integer v : G.vertices()) {
+				 // path from u to v iff rep[u] == rep[v]
+				 if (good_rep[u] == good_rep[v]) {
+				   assertTrue(rep[u] == rep[v])
+				 } else {
+				   assertFalse(rep[u] == rep[v])
+				 }
+			  }
+			}
+			
         }
     }
 
 How do we check whether `connected_components` produced the correct output?
 That is, whether `rep` is correct?
+
+
+
+
 
 [Lab 6: Connected Components](https://iudatastructurescourse.github.io/course-web-page-spring-2024/lab6)
 
