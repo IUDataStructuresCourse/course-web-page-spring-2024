@@ -149,6 +149,8 @@ Apr. 1 | | | <mark>Lab 6 due</mark> |
 Apr. 2 | [Minimum Spanning Tree](./lectures/minimum-spanning-tree.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_lym41urq)) | Ch. 9 sec. 5 | 
 Apr. 4 | [Backtracking](./lectures/backtracking.md) and [Testing Connected Components](./lectures/testing-connected-components.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_qcfpi0ti)) | Ch. 10 sec. 5
 Apr. 4 or 5 | | | Lab: work on <br> [Project 3: Routing Wires](./proj3-routing-wires) | [code](https://autograder.luddy.indiana.edu/web/project/933)
+Apr. 9 | [Dynamic Programming](./lectures/dynamic-programming.md) | Ch. 10, sec. 3
+Apr. 11 | [DNA Alignment](./lectures/DNA-alignment.md) 
 Apr. 11 or 12 | | | Lab: finish <br> [Project 3: Routing Wires](./proj3-routing-wires) | [code](https://autograder.luddy.indiana.edu/web/project/933)
 Apr. 15 | | | <mark>Project 3 due</mark> |
 Apr. 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
