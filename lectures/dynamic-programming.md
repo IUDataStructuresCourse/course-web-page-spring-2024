@@ -116,7 +116,7 @@ static CutResult cut_rod(int[] P, int n) {
 	  for (int i = 1; i != n+1; ++i) {
 	     // recursively solve the subproblem
 		 CutResult rest = cut_rod(P, n - i);
-		 // compute the solution based on this choice
+		 // compute the metric based on this choice
 		 int cost = P[i] + rest.cost;
 		 // record the best choice so-far
 		 if (best_yet == null || best_yet.cost < cost) {
@@ -129,6 +129,37 @@ static CutResult cut_rod(int[] P, int n) {
 }
 ```
 
+memoized version:
+
+```
+static CutResult cut_rod(int[] P, int n, CutResult[] R) {
+   if (R[n] != null)
+     return R[n];
+   if (n == 0) { // base case
+      CutResult res = new CutResult(0, 0, null);
+      R[0] = res;
+	  return res;
+   } else { // recursive
+	  CutResult best_yet = null;
+	  // try all possible choices of the next cut
+	  for (int i = 1; i != n+1; ++i) {
+	     // recursively solve the subproblem
+		 CutResult rest = cut_rod(P, n - i, R);
+		 // compute the metric based on this choice
+		 int cost = P[i] + rest.cost;
+		 // record the best choice so-far
+		 if (best_yet == null || best_yet.cost < cost) {
+			best_yet = new CutResult(i, cost, rest);
+		 }
+	  }
+	  // Commit to the best choice as the solution
+	  R[n] = best_yet;
+	  return best_yet;
+   }
+}
+```
+
+
 ## Pattern for recursive solution to optimal substructure
 
 1. figure out how to identify subproblems
@@ -138,7 +169,7 @@ static CutResult cut_rod(int[] P, int n) {
 3. recursive case
 	a) try all possible choices of decomposing current problem into subproblems
 	b) recursively solve the subproblems
-	c) compute the solution based on each alternative
+	c) compute the metric based on each alternative
 	d) choose the best one
 
 ## Overlapping Subproblems
@@ -259,7 +290,8 @@ static int cut_rod_dyn_prog(int[] P, int n) {
 	// Solve the rest of the problems, bottom-up
 	for (int j = 1; j != n+1; ++j) {
 		CutResult best = null;
-		for (int i = 1; i != j+1; ++i) { // iterating over possible choices
+        // iterating over possible choices
+		for (int i = 1; i != j+1; ++i) {
 			CutResult rest = R[j - i];
 			int cost = P[i] + rest.cost;
 			if (best == null || best.cost < cost) {

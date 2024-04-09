@@ -153,6 +153,7 @@ Apr. 9 | [Dynamic Programming](./lectures/dynamic-programming.md) | Ch. 10, sec.
 Apr. 11 | [DNA Alignment](./lectures/DNA-alignment.md) 
 Apr. 11 or 12 | | | Lab: finish <br> [Project 3: Routing Wires](./proj3-routing-wires) | [code](https://autograder.luddy.indiana.edu/web/project/933)
 Apr. 15 | | | <mark>Project 3 due</mark> |
+Apr. 18 or 19 | | | <mark>Quiz 4</mark>
 Apr. 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
 
 **Resources**
