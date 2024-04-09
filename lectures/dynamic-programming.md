@@ -1,7 +1,7 @@
 # Dynamic Programming
 
 Overview
-* purpose: solve optimization problems, that is find the solution that
+* purpose: solve optimization problems, that is find a solution that
   has the best metric among many feasible solutions
 * recursive solutions to problems with optimial substructure
 * memoization for problems with overlapping subproblems
@@ -146,7 +146,9 @@ static CutResult cut_rod(int[] P, int n) {
 Sometimes the same subproblems occur over and over.
 
 Consider the problem tree (which corresponds to the procedure call
-tree) for `cut_rod`.
+tree) for `cut_rod`. Notice that `cut_rod(0)` appears 10 times,
+`cut_rod(1)` appears 6 times, `cut_rod(2)` appears 3 times, and
+`cut_rod(3)` appears twice.
 
         cut_rod(5)
         |- cut_rod(4)
