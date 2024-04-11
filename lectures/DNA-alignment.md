@@ -1,4 +1,4 @@
-# DNA Sequence Alignment (aka. Edit Distance)
+# DNA Sequence Alignment (aka. Edit Distance) via Dynamic Programming
 
 Overview
 
@@ -60,7 +60,7 @@ A better alignment:
 
 	_GA_TCG_GCA_T_
 	..|.|.|.|.|.|.
-	C_AAT_GTG AATC
+	C_AAT_GTG_AATC
 
     score = (6 × 2) + (8 × -1) = 4
 
@@ -160,11 +160,38 @@ To memoize the results, we can use a 2D table indexed by i and j.
 	T[i][0] = i * -1      for i = 1...|X|
 	T[i][j] = max(M,I,D)  for j = 1...|Y| and i = 1...|X|
 			  where
-			  M = T[i-1][j-1] + score(X[i-1], Y[j-1])   // M for match/mismatch
+			  M = score(X[i-1], Y[j-1]) + T[i-1][j-1]   // M for match/mismatch
 			  I = T[i][j-1] - 1                         // I for insert
 			  D = T[i-1][j] - 1                         // D for delete
 
     Example:
+
+          Y =            G     G     A
+          j =      0  |  1  |  2  |  3
+              --------------------------
+        X i = 0 |  0  |I:-1 |I:-2 |I: -3
+          G   1 |D:-1 |M:2  |M:1
+          A   2 |D:-2 |D:1  |
+          A   3 |D:-3 | 
+
+    Evaluating the 3 options for each cell in the table (each prefix of X and Y)
+	i=1, j=1  (align "G" and "G")
+	  M=+2+0=+2  (diagonal NW) *** winner! ***
+	  I=-1-1=-2  (left)
+	  D=-1-1=-2  (up)
+
+	i=2, j=1  (align "GA" and "G")
+	  M=-2-1=-3  (diagonal NW)
+	  I=-1-2=-3  (left)
+	  D=-1+2=+1  (up)    *** winner! ***
+
+	i=1, j=2  (align "G" and "GG")
+	  M=+2-1=+1     *** winner! ***
+	  I=-1+2=+1
+	  D=-1-2=-3
+
+
+    Complete Solution:
 
           Y =            G     G     A
           j =      0  |  1  |  2  |  3
@@ -174,7 +201,7 @@ To memoize the results, we can use a 2D table indexed by i and j.
           A   2 |D:-2 |D:1  |M:0  |M:3
           A   3 |D:-3 |D:0  |I:-1 |D:2
 
-    A solution:
+    The alignment:
 
         X= _GAA
             ||
