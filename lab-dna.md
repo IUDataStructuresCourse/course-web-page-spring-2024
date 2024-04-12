@@ -1,4 +1,4 @@
-# Lab 8: DNA Sequence Alignment
+# Lab: DNA Sequence Alignment
 
 ## Overview
 
@@ -28,6 +28,8 @@ every possible prefix of the alignment. More specifically, the entry
 at row i and column j contains the score of the best match between the
 first i characters of x and the first j characters of y.
 
+**[Example]**
+
 ![](./assets/images/lab8/gui.png)
 
 The image above shows the results of aligning `ACACCC` with `GCCTCGA`.
@@ -48,23 +50,21 @@ The alignment can be written textually like this:
 ```
 
 
-## Support code and submission
-
-+ Student support code is at [link](https://github.com/IUDataStructuresCourse/dna-alignment-student-support-code).
-  Please make sure to go through existing code, especially `Result.java` and the example tests
-  in `StudentTest.java`, before you start.
-+ Submit your code file `Judge.java` and `SequenceAligner.java` to
-  [link](https://autograder.luddy.indiana.edu/web/project/695).
-+ Submit your test file `StudentTest.java` to
-  [link](https://autograder.luddy.indiana.edu/web/project/711).
-
 ## Tasks
 
-There are some tasks for you to complete in the `Judge` class. A Judge
+**[YOUR TASK]** There are some tasks for you to complete in the `Judge` class. A Judge
 encapsulates the costs associated with matches, mismatches, and
 gaps. You will need to implement a method to score two aligned
 characters and a method to score all characters in two aligned
 strings.
+
+**[Specifications]**
++ `public int score(char a, char b)`: Returns the score associated with the two characters, `a` and `b`.
+    If at least one character is a gap, return `gapCost`.
+    Otherwise if `a` and `b` are equal, return `matchCost`;
+    if they are not equal, return `mismatchCost`.
++ `public int score(String s1, String s2)`: Returns the score associated with the two strings, `s1` and `s2`.
+
 
 The `Result` class is provided for you in its entirety, but you should
 read the code carefully because you will need to store instances of
@@ -79,15 +79,45 @@ back through the path of choices, we represent the mutation with a
 appears in the optimal solution to the original alignment problem. The
 GUI highlights marked cells when the user selects 'Show path'.
 
-Most of the work for this project involves implementing the TODO
-methods in `SequenceAligner`. Pay attention to the time bounds given
-in the comments. Use the Testing class to guide your
-development. Write some of your own tests.
+**[YOUR TASK]** Most of the work for this project involves implementing the
+`TODO` methods in `SequenceAligner`. Write your own tests to guide your
+development. Pay attention to the time bounds.
+
+**[Specifications]**
+
++ `private void fillCache()`: Solves the alignment problem using the _bottom-up_
+    dynamic programming algorithm described in lecture. The array `cache[i][j]`
+    will hold the result of solving the alignment problem for the first `i` characters
+    in string `x` and the first `j` characters in string `y`.
+    Your algorithm must run in $O(n m)$ time, where n is the length of `x`
+    and m is the length of `y`.
++ `public Result getResult(int i, int j)`: Returns the result of solving the alignment
+    problem for the first `i` characters in `x` and the first `j` characters in `y`.
+    The method should find the result in O(1) time by looking into the cache.
++ `private void traceback()`: Marks the path by tracing back through parent pointers, 
+     starting with the lower right corner of the cache. Call `markPath()`
+     on each `Result` along the path. The GUI will highlight all such marked cells
+     when you check 'Show path'. As you're tracing back along the path, build
+     the aligned strings in `alignedX` and `alignedY` (using `Constants.GAP_CHAR`
+     to denote a gap in the strand).
+     Your algorithm must run in $O(n + m)$ time, where n is the length of `x`
+     and m is the length of `y`.
 
 The `Driver` class will launch a GUI to help you visualize the
 algorithm. Be sure to read the comments to see how you can modify the
 nucleotides in the generated sequence to see how small changes to the
 DNA strands affects the solution.
+
+
+## Support code and submission
+
++ Student support code is at [link](https://github.com/IUDataStructuresCourse/dna-alignment-student-support-code).
+  Please make sure to go through existing code, especially `Result.java` and the example tests
+  in `StudentTest.java`, before you start.
++ Submit your code file `Judge.java` and `SequenceAligner.java` to
+  [link](https://autograder.luddy.indiana.edu/web/project/926).
++ Submit your test file `StudentTest.java` to
+  [link](https://autograder.luddy.indiana.edu/web/project/940).
 
 -----------------
 

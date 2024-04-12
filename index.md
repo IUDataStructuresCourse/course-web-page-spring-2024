@@ -155,7 +155,7 @@ Apr. 11 or 12 | | | Lab: finish <br> [Project 3: Routing Wires](./proj3-routing-
 Apr. 15 | | | <mark>Project 3 due</mark> |
 Apr. 16 | More Dynamic Programming
 Apr. 18 | [Greedy Algorithms](./lectures/greedy.md)
-Apr. 18 or 19 | | | <mark>Quiz 4</mark>
+Apr. 18 or 19 | | | [Lab: DNA Sequence Alignment](./lab-dna) , <br> <mark>Quiz 4</mark> | [code](https://autograder.luddy.indiana.edu/web/project/926), [test](https://autograder.luddy.indiana.edu/web/project/940)
 Apr. 23 | Code Review (Routing Wires)
 Apr. 25 | Review for Final Exam
 Apr. 30 | **Final Exam** 11:30am for 1724; 8am for 14377.
