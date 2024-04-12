@@ -60,7 +60,7 @@ strings.
 
 **[Specifications]**
 + `public int score(char a, char b)`: Returns the score associated with the two characters, `a` and `b`.
-    If at least one character is a gap, return `gapCost`.
+    If `a` or `b` is a gap, return `gapCost`.
     Otherwise if `a` and `b` are equal, return `matchCost`;
     if they are not equal, return `mismatchCost`.
 + `public int score(String s1, String s2)`: Returns the score associated with the two strings, `s1` and `s2`.
