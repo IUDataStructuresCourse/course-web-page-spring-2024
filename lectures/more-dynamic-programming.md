@@ -191,7 +191,7 @@ Putting this together, we have
         return best_result;
     }
     
-We can then read off from the chain of `Result` object to obtain the
+We can then read off from the chain of `Result` objects to obtain the
 set of choices.
 
     public static HashSet<String>
