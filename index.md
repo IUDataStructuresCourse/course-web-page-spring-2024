@@ -153,7 +153,7 @@ Apr. 9 | [Dynamic Programming](./lectures/dynamic-programming.md) ([video](https
 Apr. 11 | [DNA Alignment](./lectures/DNA-alignment.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_9jx1jjnl))
 Apr. 11 or 12 | | | Lab: finish <br> [Project 3: Routing Wires](./proj3-routing-wires) | [code](https://autograder.luddy.indiana.edu/web/project/933)
 Apr. 15 | | | <mark>Project 3 due</mark> |
-Apr. 16 | More Dynamic Programming
+Apr. 16 | [More Dynamic Programming](./lectures/more-dynamic-programming.md)
 Apr. 18 | [Greedy Algorithms](./lectures/greedy.md)
 Apr. 18 or 19 | | | [Lab: DNA Sequence Alignment](./lab-dna) , <br> <mark>Quiz 4</mark> | [code](https://autograder.luddy.indiana.edu/web/project/926), [test](https://autograder.luddy.indiana.edu/web/project/940)
 Apr. 22 | | | <mark>Lab DNA due</mark> |

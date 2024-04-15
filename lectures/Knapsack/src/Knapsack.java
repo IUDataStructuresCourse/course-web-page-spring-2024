@@ -9,6 +9,7 @@ class Result {
         calories = cal;
         rest = r;
     }
+
     String item;
     int calories;
     Result rest;
@@ -58,29 +59,24 @@ public class Knapsack {
     }
 
     static Result knapsack_aux2(int availableWeight,
-                                int nextItem,
+                                int numItemsRemaining,
                                 ArrayList<String> items,
                                 HashMap<String, Integer> weight,
                                 HashMap<String, Integer> calories) {
-        Result best_result = new Result("None", 0, null);
-        if (nextItem < 0)
-            return best_result;
-        String item = items.get(nextItem);
-        // Purchase the nextItem
+        if (numItemsRemaining == 0)
+            return new Result("None", 0, null);
+        String item = items.get(numItemsRemaining - 1);
+        // Don't purchase the current item
+        Result rest1 = knapsack_aux2(availableWeight,
+                numItemsRemaining - 1, items, weight, calories);
+        Result best_result = rest1;
+        // Purchase the current item
         if (weight.get(item) <= availableWeight) {
-            Result rest = knapsack_aux2(availableWeight - weight.get(item),
-                    nextItem - 1, items, weight, calories);
-            int new_calories = rest.calories + calories.get(item);
+            Result rest2 = knapsack_aux2(availableWeight - weight.get(item),
+                    numItemsRemaining - 1, items, weight, calories);
+            int new_calories = rest2.calories + calories.get(item);
             if (new_calories > best_result.calories) {
-                best_result = new Result(item, new_calories, rest);
-            }
-        }
-        // Don't purchase the nextItem
-        {
-            Result rest = knapsack_aux2(availableWeight,
-                    nextItem - 1, items, weight, calories);
-            if (rest.calories > best_result.calories) {
-                best_result = rest;
+                best_result = new Result(item, new_calories, rest2);
             }
         }
         return best_result;
@@ -92,7 +88,7 @@ public class Knapsack {
               HashMap<String, Integer> weight,
               HashMap<String, Integer> calories) {
         ArrayList<String> items_array = new ArrayList<>(items);
-        Result r = knapsack_aux2(availableWeight, items.size()-1, items_array, weight, calories);
+        Result r = knapsack_aux2(availableWeight, items.size(), items_array, weight, calories);
         HashSet<String> choices = new HashSet<>();
         while (r != null) {
             if (r.item != "None")
@@ -102,35 +98,32 @@ public class Knapsack {
         return choices;
     }
 
-    static Result knapsack_aux2_memo(int availableWeight,
-                                int nextItem,
-                                ArrayList<String> items,
-                                HashMap<String, Integer> weight,
-                                HashMap<String, Integer> calories, Result[][] R) {
-        Result best_result = new Result("None", 0, null);
-        if (nextItem < 0)
-            return best_result;
-        if (R[availableWeight][nextItem] != null)
-            return R[availableWeight][nextItem];
-        String item = items.get(nextItem);
-        // Purchase the nextItem
+    static Result knapsack_aux2_memo(int availableWeight, int numItemsRemaining,
+                                     ArrayList<String> items,
+                                     HashMap<String, Integer> weight,
+                                     HashMap<String, Integer> calories, Result[][] R) {
+        if (R[availableWeight][numItemsRemaining] != null)
+            return R[availableWeight][numItemsRemaining];
+        if (numItemsRemaining == 0) {
+            Result r = new Result("None", 0, null);
+            R[availableWeight][numItemsRemaining] = r;
+            return r;
+        }
+        String item = items.get(numItemsRemaining - 1);
+        // Don't purchase the numItemsRemaining
+        Result rest1 = knapsack_aux2_memo(availableWeight,
+                numItemsRemaining - 1, items, weight, calories, R);
+        Result best_result = rest1;
+        // Purchase the numItemsRemaining
         if (weight.get(item) <= availableWeight) {
-            Result rest = knapsack_aux2_memo(availableWeight - weight.get(item),
-                    nextItem - 1, items, weight, calories, R);
-            int new_calories = rest.calories + calories.get(item);
+            Result rest2 = knapsack_aux2_memo(availableWeight - weight.get(item),
+                    numItemsRemaining - 1, items, weight, calories, R);
+            int new_calories = rest2.calories + calories.get(item);
             if (new_calories > best_result.calories) {
-                best_result = new Result(item, new_calories, rest);
+                best_result = new Result(item, new_calories, rest2);
             }
         }
-        // Don't purchase the nextItem
-        {
-            Result rest = knapsack_aux2_memo(availableWeight,
-                    nextItem - 1, items, weight, calories, R);
-            if (rest.calories > best_result.calories) {
-                best_result = rest;
-            }
-        }
-        R[availableWeight][nextItem] = best_result;
+        R[availableWeight][numItemsRemaining] = best_result;
         return best_result;
     }
 
@@ -140,11 +133,11 @@ public class Knapsack {
               HashMap<String, Integer> weight,
               HashMap<String, Integer> calories) {
         ArrayList<String> items_array = new ArrayList<>(items);
-        Result[][] R = new Result[availableWeight+1][];
-        for (int i = 0; i != availableWeight+1; ++i) {
-            R[i] = new Result[items.size()+1];
+        Result[][] R = new Result[availableWeight + 1][];
+        for (int i = 0; i != availableWeight + 1; ++i) {
+            R[i] = new Result[items.size() + 1];
         }
-        Result r = knapsack_aux2_memo(availableWeight, items.size()-1, items_array, weight, calories, R);
+        Result r = knapsack_aux2_memo(availableWeight, items.size(), items_array, weight, calories, R);
         HashSet<String> choices = new HashSet<>();
         while (r != null) {
             if (r.item != "None")
@@ -155,34 +148,24 @@ public class Knapsack {
     }
 
     // Dynamic Programming Version
-    static Result knapsack_aux2_one(int availableWeight,
-                                     int nextItem,
-                                     ArrayList<String> items,
-                                     HashMap<String, Integer> weight,
-                                     HashMap<String, Integer> calories, Result[][] R) {
-        Result best_result = new Result("None", 0, null);
-        if (nextItem == 0)
-            return best_result;
-        if (R[availableWeight][nextItem] != null)
-            return R[availableWeight][nextItem];
-        String item = items.get(nextItem);
-        // Purchase the nextItem
+    static void knapsack_one(int availableWeight,
+                             int numItemsRemaining,
+                             ArrayList<String> items,
+                             HashMap<String, Integer> weight,
+                             HashMap<String, Integer> calories, Result[][] R) {
+        String item = items.get(numItemsRemaining - 1);
+        // Don't purchase the numItemsRemaining
+        Result rest1 = R[availableWeight][numItemsRemaining - 1];
+        Result best_result = rest1;
+        // Purchase the numItemsRemaining
         if (weight.get(item) <= availableWeight) {
-            Result rest = R[availableWeight - weight.get(item)][nextItem-1];
-            int new_calories = rest.calories + calories.get(item);
+            Result rest2 = R[availableWeight - weight.get(item)][numItemsRemaining - 1];
+            int new_calories = rest2.calories + calories.get(item);
             if (new_calories > best_result.calories) {
-                best_result = new Result(item, new_calories, rest);
+                best_result = new Result(item, new_calories, rest2);
             }
         }
-        // Don't purchase the nextItem
-        {
-            Result rest = R[availableWeight][nextItem-1];
-            if (rest.calories > best_result.calories) {
-                best_result = rest;
-            }
-        }
-        R[availableWeight][nextItem] = best_result;
-        return best_result;
+        R[availableWeight][numItemsRemaining] = best_result;
     }
 
     public static HashSet<String>
@@ -191,19 +174,19 @@ public class Knapsack {
               HashMap<String, Integer> weight,
               HashMap<String, Integer> calories) {
         ArrayList<String> items_array = new ArrayList<>(items);
-        Result[][] R = new Result[availableWeight+1][];
-        for (int i = 0; i != availableWeight+1; ++i) {
-            R[i] = new Result[items.size()+1];
+        Result[][] R = new Result[availableWeight + 1][];
+        for (int i = 0; i != availableWeight + 1; ++i) {
+            R[i] = new Result[items.size() + 1];
         }
-        for (int i = 0; i != availableWeight+1; ++i) {
+        for (int i = 0; i != availableWeight + 1; ++i) {
             R[i][0] = new Result("None", 0, null);
         }
-        for (int nextItem = 1; nextItem != items.size(); ++ nextItem) {
-            for (int availWeight = 0; availWeight != availableWeight+1; ++availWeight) {
-                knapsack_aux2_one(availWeight, nextItem, items_array, weight, calories, R);
+        for (int numItemsRemaining = 1; numItemsRemaining != items.size() + 1; ++numItemsRemaining) {
+            for (int availWeight = 0; availWeight != availableWeight + 1; ++availWeight) {
+                knapsack_one(availWeight, numItemsRemaining, items_array, weight, calories, R);
             }
         }
-        Result r = R[availableWeight][items.size()-1];
+        Result r = R[availableWeight][items.size()];
         HashSet<String> choices = new HashSet<>();
         while (r != null) {
             if (r.item != "None")

@@ -35,26 +35,18 @@ class KnapsackTest {
         expected.add("Salami");
         {
             HashSet<String> best_choice = Knapsack.knapsack1(10, items, weight, calories);
-            System.out.println("knapsack1");
-            Knapsack.print_items(best_choice);
             assertTrue(expected.equals(best_choice));
         }
         {
             HashSet<String> best_choice = Knapsack.knapsack2(10, items, weight, calories);
-            System.out.println("knapsack2");
-            Knapsack.print_items(best_choice);
             assertTrue(expected.equals(best_choice));
         }
         {
             HashSet<String> best_choice = Knapsack.knapsack3(10, items, weight, calories);
-            System.out.println("knapsack3");
-            Knapsack.print_items(best_choice);
             assertTrue(expected.equals(best_choice));
         }
         {
             HashSet<String> best_choice = Knapsack.knapsack4(10, items, weight, calories);
-            System.out.println("knapsack4");
-            Knapsack.print_items(best_choice);
             assertTrue(expected.equals(best_choice));
         }
 
