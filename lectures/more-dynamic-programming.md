@@ -118,9 +118,9 @@ Create a Result class to represent the choice of one item.
 
 Other data structures:
 
-  set of items left to choose from
-  item -> weight
-  item -> calories
+* set of items left to choose from
+* map from item to weight
+* map from item to calories
 
 Recursive function:
 
