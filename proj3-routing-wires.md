@@ -77,13 +77,14 @@ Note that a path can have the same source and destination points.
 ## Programming Task
 
 We need you to implement the `findPaths` method.  It takes the board
-and the points to be connected as arguments and returns a list of
+and the points to be connected (`goals`) as arguments and returns a list of
 paths. The board represents the entire chip. Each path represents the
 wire used to connect components represented by points. Each path
 connects a pair of points in the points array; avoiding obstacles and
 other paths while minimizing the total path length required to connect
 all points. If two points cannot be connected, then the path should be
-`null`.
+`null`. The `findPaths` method should update the board by marking the
+grid. However, it must not mutate the `goals` array list.
 
 Think of a simple way to minimize the path length. You can use the
 grid to mark the points that lie on a path.  You might want to use
