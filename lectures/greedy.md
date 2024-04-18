@@ -139,13 +139,13 @@ greedy algorithm for wedding planning.
 ```
 static LinkedList<Integer>
 activity_selector(Activity[] activity, int k, int n) {
-   int m = k + 1;
+   int m = k + 1; // O(1)
    // skip over activities that start too soon
-   while (m < n && activity[m].start < activity[k].finish)
+   while (m < n && activity[m].start < activity[k].finish)  // O(n)
       m += 1;
    if (m < n) {
       LinkedList<Integer> A = activity_selector(activity, m, n);
-      A.add(m);
+      A.add(m); // O(1)
       return A;
    } else {
       return new LinkedList<Integer>();
