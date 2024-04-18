@@ -63,10 +63,18 @@ the letter G from Y with a gap.
     X    _GAA                  
     Y    GGA_                  
 
+Because we did an insert, we move to the left one cell.
+
 So the best alignment of the strings X and Y is:
 
     X    _GAA
     Y    GGA_
+	     -1 2 2 -1 = 2
+
+Summary:
+D: move up
+I: move left
+M: move up and left (diagonal)
 
 
 ## Time Complexity
@@ -93,7 +101,7 @@ backpack and you are not allowed to split items.
     Oats            4              350
     Dry Salami      6              400 
 
-Recall the three steps in developming a dynamic programming solution.
+Recall the three steps in developing a dynamic programming solution.
 1. Create a recursive function that selects the best solution from
    all possible solutions.
 2. Memoize the recursive function to save time on overlapping
@@ -299,7 +307,8 @@ memoization.
         for (int i = 0; i != availableWeight + 1; ++i) {
             R[i] = new Result[items.size() + 1];
         }
-        Result r = knapsack_aux2_memo(availableWeight, items.size(), items_array, weight, calories, R);
+        Result r = knapsack_aux2_memo(availableWeight, items.size(), 
+		                              items_array, weight, calories, R);
         HashSet<String> choices = new HashSet<>();
         while (r != null) {
             if (r.item != "None")

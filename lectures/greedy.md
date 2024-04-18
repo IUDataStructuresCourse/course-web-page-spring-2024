@@ -155,14 +155,16 @@ activity_selector(Activity[] activity, int k, int n) {
 
 Recurrence Formula
 
-    T(n) = T(n-1) + O(n)
+    T(n) = T(n-1) + n
 	
-    T(n) = T(n-1) + O(n)
-         = (T(n-2) + O(n-1)) + O(n)
+    T(n) = T(n-1) + n
+         = (T(n-2) + n-1) + n
 		 ...
-		 = O(1) + O(2) + ... O(n-1) + O(n) = n^2/2   in O(n^2)
+		 = 1 + 2 + ... (n-1) + (n) = n^2/2
+		 
+	T(n) ∈ O(n^2)
 	 
-Time complexity:
+Time complexity of `activity_selector`:
 
     O(n^2)
 
@@ -243,7 +245,7 @@ A message uses letters A-H with the following number of occurences.
               
     Total length is 58.
 
-In general, the total number of bits to encode a string s using tree T
+In general, the total number of bits to encode a string using tree T
 is given by
 
     bits(s, T) = Σ(c∈C) freq(c,s) × depth(T,c)
@@ -258,8 +260,8 @@ We work from back to front with respect to the encoding, choosing
 which bits for which words. We want to pick the lowest frequency
 words first, because the longest codes go the farthest back.
 
-Intuition: make the choice that uses the fewest bits for the final
-encoded string.
+Intuition: make the choice that uses the fewest bits for the encoded
+string.
 
 1. Put the words (singleton trees) into a min priority queue
 where the priority is the frequency of the word.
@@ -272,7 +274,7 @@ where the priority is the frequency of the word.
         |- C[1]
 
 3. Push the new subtree into the queue.
-4. Go back to 2. as long as there is more than one item in the queue. 
+4. Go back to step 2 as long as there is more than one item in the queue. 
 
         24
         |-A[10]
