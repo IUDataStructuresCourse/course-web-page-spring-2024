@@ -159,7 +159,7 @@ Apr. 18 or 19 | | | [Lab: DNA Sequence Alignment](./lab-dna), <br> [<mark>Quiz 4
 Apr. 22 | | | <mark>Lab DNA due</mark> |
 Apr. 23 | Code Review (Routing Wires)
 Apr. 25 | Review for Final Exam
-Apr. 30 | **<mark>Final Exam</mark>** Note different times for different sections: 11:30am for 1724 (Jeremy) and 8am for 14377 (Funda).
+Apr. 30 | **<mark>Final Exam</mark>**  10:20am--12:20 pm for 1724 (Jeremy) and 8am--10am for 14377 (Funda).
 
 **Resources**
 
