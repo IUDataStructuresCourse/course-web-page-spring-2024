@@ -157,8 +157,8 @@ Apr. 16 | [More Dynamic Programming](./lectures/more-dynamic-programming.md) ([v
 Apr. 18 | [Greedy Algorithms](./lectures/greedy.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_f93hqb39))
 Apr. 18 or 19 | | | [Lab: DNA Sequence Alignment](./lab-dna), <br> [<mark>Quiz 4</mark>](https://iu.instructure.com/courses/2201400/quizzes/4194876) | [code](https://autograder.luddy.indiana.edu/web/project/926), [test](https://autograder.luddy.indiana.edu/web/project/940)
 Apr. 22 | | | <mark>Lab DNA due</mark> |
-Apr. 23 | Code Review (Routing Wires)
-Apr. 25 | Review for Final Exam
+Apr. 23 | [Code Review (Routing Wires)](./lectures/routing-wires.md)
+Apr. 25 | [Review for Final Exam](./lectures/final-review.md)
 Apr. 30 | **<mark>Final Exam</mark>**  10:20am--12:20 pm for 1724 (Jeremy) and 8am--10am for 14377 (Funda).
 
 **Resources**
