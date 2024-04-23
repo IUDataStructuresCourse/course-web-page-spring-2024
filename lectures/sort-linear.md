@@ -143,6 +143,8 @@ where does 3 go? 3-1=2
 
 Counting sort in Java:
 
+TODO: change from k + 1 to k -Jeremy
+
 ```java
 static void counting_sort(int[] A, int[] B, int k) {
    int[] C = new int[k+1]; // counts of each element of A     O(n)

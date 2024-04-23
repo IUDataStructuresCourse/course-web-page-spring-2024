@@ -7,13 +7,17 @@ public class Routing {
     public static ArrayList<Wire> findPaths(Board board, ArrayList<Endpoints> goals) {
         ArrayList<Wire> paths = new ArrayList<>();
         for (Endpoints point : goals) {
-            if (!board.isObstacle(point.start) && !board.isObstacle(point.end)) {
-                List<Coord> path = bfs(board, point.start, point.end);
-                if (path != null) {
-                    paths.add(new Wire(point.id, path));
-                    markPath(board, path, point.id);
-                }
-            }
+			List<Coord> path = bfs(board, point.start, point.end);
+			
+			if (path == null)
+			  return null;
+		    paths.add(new Wire(point.id, path));
+			markPath(board, path, point.id);
+	
+			if (path != null) {
+				paths.add(new Wire(point.id, path));
+				markPath(board, path, point.id);
+			}
         }
         return paths;
     }
@@ -42,11 +46,11 @@ public class Routing {
     private static List<Coord> reconstructPath(Map<Coord, Coord> parentMap, Coord current) {
         List<Coord> path = new ArrayList<>();
         Coord step = current;
-        while (step != null && parentMap.containsKey(step)) {
-            path.add(0, step);
+		// O(n^2)
+        while (step != null && parentMap.containsKey(step)) { // containsKey is O(1), O(n) iterations
+            path.add(0, step);   // add is O(n) !
             step = parentMap.get(step);
         }
-
         if (step != null) {  // Add the initial step if it's not null (should be the start)
             path.add(0, step);
         }
@@ -82,10 +86,13 @@ public static ArrayList<Wire> findPaths(Board board, ArrayList<Endpoints> goals)
 			Wire wire = new Wire(goal.id, route);
 			updateBoard(board, route, goal);
 			paths.add(wire);
+			// didn't add to sol?
 			i++;
 		} else {
-			for (Wire curr : paths)
+			for (Wire curr : paths) {
 				board.removeWire(curr);
+				// remove them from the sol
+			}
 			paths.clear();
 			ArrayList<Coord> newRoute = bfs(board, start, end, goal.id);
 			Wire wire = new Wire(goal.id, newRoute);
@@ -114,10 +121,9 @@ findPaths(Board board, ArrayList<Endpoints> goals) {
 private static void
 backtrack(Board board, ArrayList<Endpoints> goals, ArrayList<Endpoints> needsRouted, ArrayList<Wire> paths){
 	for (Endpoints goal: goals) {
-		if (needsRouted.contains(goal)) {
+		if (needsRouted.contains(goal)) { // O(n), use a HashSet instead
 			Coord start = goal.start;
 			Coord end = goal.end;
-			ArrayList<Coord> visited = new ArrayList<>();
 			ArrayList<Coord> path = bfs(board, start, end);
 			if (path!=null) {
 				Wire wire = new Wire(goal.id, path);
