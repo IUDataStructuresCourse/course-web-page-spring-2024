@@ -172,14 +172,7 @@ findPaths(Board board, ArrayList<Endpoints> goals) {
 }
 ```
 
-## Succeeded, but shouldn't have (11/11)
-
-Passes all the autograder tests, but fails on this board:
-
-	|  0   2   0   0   0   0 |
-	|  1   0   0   0   2   0 |
-	| -1   0   0   0   0   0 |
-	|  0   0   0   1   0   0 |
+## Succeeded, mysteriously (11/11)
 
 ```
 public static ArrayList<Wire> findPaths(Board board, ArrayList<Endpoints> goals) {
@@ -225,3 +218,11 @@ private static boolean findPathsRecursive(Board board, ArrayList<Endpoints> goal
 	return false;
 }
 ```
+
+Passes all the autograder tests, but fails on this board:
+
+	|  0   2   0   0   0   0 |
+	|  1   0   0   0   2   0 |
+	| -1   0   0   0   0   0 |
+	|  0   0   0   1   0   0 |
+
