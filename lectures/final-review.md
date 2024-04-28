@@ -99,7 +99,7 @@
                 largest = r;
             if (largest != i) {
                 swap(data, i, largest);
-                max_heapify(largest);
+                max_heapify(largest, length);
             }
         }
 
@@ -290,13 +290,13 @@
 
             Universe: Mary, Katie, Jeremy, Luke, John
 
-                                  {Mary} {Katie} {Jeremy} {Luke} {John}
-            Mary-Katie !       {Mary, Katie} {Jeremy} {Luke} {John}
-            Jeremy-Luke !      {Mary, Katie} {Jeremy, Luke} {John}
-            Katie-John !       {Mary, Katie, John} {Jeremy, Luke}
+                                  {^Mary} {^Katie} {^Jeremy} {^Luke} {^John}
+            Mary-Katie !       {^Mary, Katie} {^Jeremy} {^Luke} {^John}
+            Jeremy-Luke !      {^Mary, Katie} {Jeremy, ^Luke} {^John}
+            Katie-John !       {^Mary, Katie, John} {^Jeremy, Luke}
             Mary-John ?    Yes
             Jeremy-John ?  No
-            Luke-John !           {Mary, Katie, John,Jeremy, Luke}
+            Luke-John !           {^Mary, Katie, John,Jeremy, Luke}
             Jeremy-John ?  Yes
 
 * Basic implementation
@@ -306,7 +306,7 @@
 
         public class UnionFind<N> implements DisjointSets<N>
         {
-            Map<N,N> parent;
+            Map<N,N> parent; // key: an entity, value: the entity's parent
 
             public UnionFind(Map<N,N> p) {
                 parent = p; 
