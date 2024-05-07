@@ -158,18 +158,19 @@ Apr. 18 | [Greedy Algorithms](./lectures/greedy.md) ([video](https://iu.mediaspa
 Apr. 18 or 19 | | | [Lab: DNA Sequence Alignment](./lab-dna), <br> [Quiz 4](https://iu.instructure.com/courses/2201400/quizzes/4194876) | [code](https://autograder.luddy.indiana.edu/web/project/926), [test](https://autograder.luddy.indiana.edu/web/project/940)
 Apr. 22 | | | Lab DNA due |
 Apr. 23 | [Code Review (Routing Wires)](./lectures/routing-wires.md) ([video](https://iu.mediaspace.kaltura.com/media/t/1_8l5a9mcu))
-Apr. 25 | [Review for Final Exam](./lectures/final-review.md)
+Apr. 25 | [Review for Final Exam](./lectures/final-review.md) ([video]())
 Apr. 30 | **<mark>Final Exam</mark>**  10:20am--12:20 pm for 1724 (Jeremy) and 8am--10am for 14377 (Funda).
 
 **Resources**
 
-* Midterm Exams from
+* Midterm Exams 
   * 2021 [with solutions](./midterm-2021-solns.pdf)
      and [without solutions](./midterm-2021.pdf).
   * 2022 [with solutions](./midterm-a-2022.pdf)
      and [without solutions](./midterm-a-2022-questions.pdf).
 
-* Final Exam from
+* Final Exams
+  * 2024 [with solutions](./final-2024-solns.pdf)
   * 2021 [with solutions](./final-2021-solns.pdf)
      and [without solutions](./final-2021.pdf).
   * 2022 [with solutions](./final-2022-solns.pdf)
